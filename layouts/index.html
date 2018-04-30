@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    {{ partial "head" . }}
+  {{ partial "head" . }}
 </head>
 
 <body>
-      {{ partial "header" . }}
-      {{ partial "footer" . }}
+  {{ partial "header" . }}
+
+  <div class="tabs">
+    <div class="tab">
+      <input type="radio" id="check-tls" name="tab-group-1" checked>
+      <label for="check-tls">check for tls</label>
+      <div class="content">
+        <h2>Why is STARTTLS important?</h2>
+        <p>content content</p>
+      </div>
+    </div>
+    <div class="tab">
+      <input type="radio" id="submit-tls" name="tab-group-1" checked>
+      <label for="submit-tls">submit</label>
+      <div class="content">
+        <p>Are you an email administrator for a website that supports TLS?</p>
+      </div>
+    </div>
+  </div>
+
+  {{ partial "footer" . }}
 </body>
 </html>
