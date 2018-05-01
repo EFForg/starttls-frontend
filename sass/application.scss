@@ -32,9 +32,11 @@ section {
 a {
   background-color:transparent;
   -webkit-text-decoration-skip:objects;
+  text-decoration: none;
   &:active,
   &:hover {
     outline-width:0;
+    text-decoration: underline;
   }
 }
 
@@ -50,19 +52,21 @@ img {
 nav {
   background: $gray-light;
   display: inline-block;
+  text-align: center;
   width: 100%;
   ul {
     height: 2rem;
     list-style: none;
     margin: 1rem auto;
     padding: 0;
-    width: 90%;
+    // max-width: 320px;
+    width: 100%;
     li {
-      float: left;
+      font-size: 0.8rem;
       display: inline-block;
-      margin: 0 4%;
+      margin: 0 auto;
       text-align: center;
-
+      width: 4.7rem;
     }
   }
 }
@@ -74,22 +78,21 @@ header {
 }
 .main-content {
   padding: 0 0.5rem;
-  .tabs {
-    position: relative;
-    min-height: 200px; /* This part sucks */
-    clear: both;
-    margin: 25px 0;
-  }
 }
 footer {
   background: #333;
   color: white;
   padding: 1rem 0.5rem 3rem;
+  a {
+    color: white;
+  }
   h2,
   .footer-tagline{
     text-align: center;
   }
   ul {
+    font-size: 0.8rem;
+    line-height: 1rem;
     list-style: none;
     padding: 0 5%;
   }
