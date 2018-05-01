@@ -1,0 +1,28 @@
+
+nav {
+  background: $gray-light;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  ul {
+    height: 2rem;
+    list-style: none;
+    margin: 1rem auto;
+    padding: 0;
+    // max-width: 320px;
+    width: 100%;
+    li {
+      font-size: 0.8rem;
+      display: inline-block;
+      margin: 0 auto;
+      text-align: center;
+      width: 4.7rem;
+    }
+  }
+}
+header {
+  h1,
+  .tagline {
+    text-align: center;
+  }
+}

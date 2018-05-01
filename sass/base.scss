@@ -1,0 +1,49 @@
+
+/* base styles, using foundation 6 defaults */
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: sans-serif;
+  line-height: 1.15;
+}
+
+*,*::before,*::after {;
+  box-sizing: inherit
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  font-family: sans-serif;
+  font-weight:normal;
+  line-height:1.5;
+  color:#000;
+}
+
+article,
+aside,
+footer,
+header,
+section {
+  display:block;
+}
+
+a {
+  background-color:transparent;
+  -webkit-text-decoration-skip:objects;
+  text-decoration: none;
+  &:active,
+  &:hover {
+    outline-width:0;
+    text-decoration: underline;
+  }
+}
+
+img {
+  border-style: none;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+}
