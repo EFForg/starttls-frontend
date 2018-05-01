@@ -1,3 +1,111 @@
+@import 'variables/colors';
+
+/* base styles, using foundation 6 defaults */
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: sans-serif;
+  line-height: 1.15;
+}
+
+*,*::before,*::after {;
+  box-sizing: inherit
+}
 body {
-  background-color: white;
+  margin: 0;
+  padding: 0;
+  background: white;
+  font-family: sans-serif;
+  font-weight:normal;
+  line-height:1.5;
+  color:#000;
+}
+
+article,
+aside,
+footer,
+header,
+section {
+  display:block;
+}
+
+a {
+  background-color:transparent;
+  -webkit-text-decoration-skip:objects;
+  &:active,
+  &:hover {
+    outline-width:0;
+  }
+}
+
+img {
+  border-style: none;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+}
+
+nav {
+  background: $gray-light;
+  display: inline-block;
+  width: 100%;
+  ul {
+    height: 2rem;
+    list-style: none;
+    margin: 1rem auto;
+    padding: 0;
+    width: 90%;
+    li {
+      float: left;
+      display: inline-block;
+      margin: 0 4%;
+      text-align: center;
+
+    }
+  }
+}
+header {
+}
+.main-content {
+  padding: 0 0.5rem;
+  .tabs {
+    position: relative;
+    min-height: 200px; /* This part sucks */
+    clear: both;
+    margin: 25px 0;
+  }
+  .tab {
+    float: left;
+  }
+  .tab label {
+    background: #eee;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-left: -1px;
+    position: relative;
+    left: 1px;
+  }
+  .tab [type=radio] {
+    display: none;
+  }
+  .tab-content {
+    position: absolute;
+    top: 28px;
+    left: 0;
+    background: white;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  [type=radio]:checked ~ label {
+    background: white;
+    border-bottom: 1px solid white;
+    z-index: 2;
+  }
+  [type=radio]:checked ~ label ~ .tab-content {
+    z-index: 1;
+  }
 }
