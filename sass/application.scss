@@ -6,17 +6,16 @@
 .main-content {
   padding: 0 0.5rem;
   article.tool-check {
-    display: block;
     margin: 0 auto;
     background-color: white;
     section {
-      display: block;
-      width: 100%;
       height: 2em;
-      padding: 0 0.5rem;
       margin: 0 0 0.5rem 0;
+      max-height: 2rem;
       overflow: hidden;
-      transition: all 1s ease;
+      padding: 0 0.5rem;
+      transition: all 7s ease;
+      width: 100%;
       h3 {
         border-top: 1px solid gray;
         border-bottom: 1px solid gray;
@@ -29,14 +28,13 @@
           line-height: 2em;
           text-decoration: none;
           color: inherit;
-          //outline: 0 none;
+          outline: 0 none;
         }
       }
       &:target {
-        height: 15em;
+        height: auto;
+        max-height: 100rem;
         background-color: #fff;
-        h3 {
-        }
       }
     }
   }
