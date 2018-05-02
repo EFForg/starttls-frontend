@@ -8,8 +8,22 @@
   {{ partial "header" . }}
   <div class="main-content">
     <p>Secure your email server...</p>
-    <div class="check-email-domain">
-      form here...
+    <form id="how-secure">
+      <h2>How secure is your email server?</h2>
+      <input value="example.com"></input>
+      <button type="submit">check email domain</button>
+    </form>
+    <article class="tool-check">
+      <h2>What does this do?</h2>
+      <p>This tool checks whether your e-mail domain:</p>
+      <section id="supports">
+        <h3><a href="#supports">Supports STARTTLS</a></h3>
+        <p>This content appears on page 1.</p>
+      </section>
+      <section id="secure">
+        <h3><a href="#secure">Uses secure TLS parameters</a></h3>
+        <p>This content appears on page 2.</p>
+      </section>
     </div>
   </div>
   {{ partial "footer" . }}
