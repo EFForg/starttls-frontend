@@ -19,16 +19,18 @@
       h3 {
         border-top: 1px solid gray;
         border-bottom: 1px solid gray;
+        font-size: 1.2rem;
+        line-height: 1.3rem;
         width: 100%;
-        padding: 0;
+        padding: 0.5rem 0;
         margin: 0;
         a {
-          display: block;
-          width: 100%;
-          line-height: 2em;
-          text-decoration: none;
           color: inherit;
+          display: block;
+          height: 2rem;
+          text-decoration: none;
           outline: 0 none;
+          width: 100%;
         }
       }
       &:target {
