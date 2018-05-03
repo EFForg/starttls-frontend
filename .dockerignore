@@ -1,0 +1,12 @@
+# Ignore git
+.git
+.gitignore
+
+# Ignore Docker files
+Dockerfile
+.dockerignore
+
+# Ignore build
+node_modules
+public
+static/application.css
