@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   {{ partial "head" . }}
 </head>
 
-<body>
+<body class="index">
   {{ partial "header" . }}
   <div class="main-content">
     <p>Secure your email server...</p>
     <form id="how-secure">
       <h2>How secure is your email server?</h2>
-      <input value="example.com"></input>
-      <button type="submit">check email domain</button>
+      <input type="text" value="example.com"></input>
+      <input type="submit" value="check email domain"></input>
     </form>
     <article class="tool-check">
       <h2>What does this do?</h2>
