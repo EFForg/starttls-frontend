@@ -1,0 +1,103 @@
+$menu-width: 260px;
+$sidebar-color: $gray-dark;
+
+//body {
+//  > * {
+//    transition: transform 0.1s linear;
+//  }
+//}
+//
+//body.active {
+//
+//  overflow: hidden;
+//  > * {
+//    transform: translate3d(-$menu-width, 0, 0);
+//  }
+//
+//  nav {
+//    position: fixed;
+//    top: 0;
+//    left: 0;
+//  }
+//
+//}
+//
+.page-wrapper {
+  width: 100%;
+  float: left;
+  transition: width 0.3s ease;
+}
+#off-canvas {
+  background-color: $gray-dark;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: width 0.3s ease;
+  width: 0;
+  z-index: 100;
+
+  ul {
+    margin-top: 2.5em;
+    margin-left: 2.5em;
+    list-style-type: none;
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+  a {
+    color: rgba(255,255,255,0.9);
+    &:visited {
+      color: rgba(255,255,255,0.9);
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+#off-canvas:target {
+  width: $menu-width;
+}
+#off-canvas:target + .page-wrapper {
+  width: 80%;
+  .open-menu {
+     display: none;
+  }
+  .close-menu {
+     display: block;
+  }
+  .main-header {
+    width: 80%;
+    left: 20%;
+  }
+}
+
+#hamburger,
+.open-menu {
+  display: inline-block;
+  font-size: 32px;
+  position: absolute;
+  right: 9px;
+  top: 0px;
+  z-index: 1000;
+  @include susy-breakpoint($md) {
+    display: none;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#close {
+  position: absolute;
+  right: 9px;
+  top: 5px;
+  color: rgba(255,255,255,0.9);
+  font-size: 32px;
+  &:hover {
+    cursor: pointer;
+  }
+}

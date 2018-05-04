@@ -5,6 +5,8 @@
 </head>
 
 <body class="index">
+  {{ partial "off-canvas" . }}
+  <div class="page-wrapper"> <!-- for off-canvas menu -->
   {{ partial "header" . }}
   <div class="main-content">
     <p>Secure your email server...</p>
@@ -33,7 +35,7 @@
         <p>This content appears on page 4.</p>
       </section>
     </div>
-  </div>
   {{ partial "footer" . }}
+</div> <!--end page-wrapper-->
 </body>
 </html>
