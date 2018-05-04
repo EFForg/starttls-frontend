@@ -1,27 +1,6 @@
 $menu-width: 260px;
 $sidebar-color: $gray-dark;
 
-//body {
-//  > * {
-//    transition: transform 0.1s linear;
-//  }
-//}
-//
-//body.active {
-//
-//  overflow: hidden;
-//  > * {
-//    transform: translate3d(-$menu-width, 0, 0);
-//  }
-//
-//  nav {
-//    position: fixed;
-//    top: 0;
-//    left: 0;
-//  }
-//
-//}
-//
 .page-wrapper {
   width: 100%;
   float: left;
@@ -75,8 +54,8 @@ $sidebar-color: $gray-dark;
   }
 }
 
-#hamburger,
 .open-menu {
+  color: black;
   display: inline-block;
   font-size: 32px;
   position: absolute;

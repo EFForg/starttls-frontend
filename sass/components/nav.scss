@@ -22,6 +22,7 @@ nav {
     width: 100%;
     li {
       font-size: 0.8rem;
+      line-height: 1rem;
       display: inline-block;
       margin: 0 auto;
       text-align: center;
@@ -70,7 +71,6 @@ nav.main-nav {
       font-size: 0.9em;
     }
 
-
     display: flex;
     justify-content: space-around;
     margin-bottom: 0 !important;
@@ -111,7 +111,7 @@ nav.main-nav {
         text-transform: none;
         display: inline-block;
         position: absolute;
-        top: 0;
+        top: 10px;
         left: 0;
         text-align: center;
         width: 100%;
