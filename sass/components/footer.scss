@@ -5,9 +5,16 @@ footer {
   a {
     color: white;
   }
-  h2,
+
   .footer-tagline{
-    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 7px;
+    text-align: left;
+  }
+  .footer-logo{ // logo
+    float: left;
+    display: inline-block;
+    width: 55px;
   }
   .index {
     display: flex;
