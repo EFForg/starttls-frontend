@@ -31,12 +31,11 @@ nav {
   }
 }
 nav.main-nav {
-
-  img {
+  img { // logo
     position: absolute;
     display: block;
     width: 55px;
-    top: 10px;
+    top: 0;
     left: 0;
   }
 
