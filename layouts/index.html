@@ -1,41 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  {{ partial "head" . }}
-</head>
 
-<body class="index">
-  {{ partial "off-canvas" . }}
-  <div class="page-wrapper"> <!-- for off-canvas menu -->
-  {{ partial "header" . }}
-  <div class="main-content">
-    <p>Secure your email server...</p>
-    <form id="how-secure">
-      <h2>How secure is your email server?</h2>
-      <input type="text" value="example.com"></input>
-      <input type="submit" value="check email domain"></input>
-    </form>
-    <article class="tool-check">
-      <h2>What does this do?</h2>
-      <p>This tool checks whether your e-mail domain:</p>
-      <section id="supports">
-        <h3><a href="#supports">Supports STARTTLS</a></h3>
-        <p>This content appears on page 1.</p>
-      </section>
-      <section id="secure">
-        <h3><a href="#secure">Uses secure TLS parameters</a></h3>
-        <p>This content appears on page 2. This content appears on page 2.  This content appears on page 2. This content appears on page 2. This content appears on page 2. This content appears on page 2. This content appears on page 2. This content appears on page 2. This content appears on page 2. This content appears on page 2. This content appears on  </p>
-      </section>
-      <section id="valid">
-        <h3><a href="#valid">Presents a valid certificate</a></h3>
-        <p>This content appears on page 3.</p>
-      </section>
-      <section id="list">
-        <h3><a href="#list">Is on the STARTTLS policy list</a></h3>
-        <p>This content appears on page 4.</p>
-      </section>
-    </div>
-  {{ partial "footer" . }}
-</div> <!--end page-wrapper-->
-</body>
-</html>
+{{ partial "head" . }}
+
+{{ partial "off-canvas" . }}
+
+{{ partial "header" . }}
+<div class="main-content">
+  <p>Secure your email server...</p>
+  <form id="how-secure">
+    <h2>How secure is your email server?</h2>
+    <input type="text" value="example.com"></input>
+    <input type="submit" value="check email domain"></input>
+  </form>
+  <article class="accordion">
+    <h2>What does this do?</h2>
+    <p>This tool checks whether your e-mail domain:</p>
+    <section id="supports">
+      <h3><a href="#supports">Supports STARTTLS</a></h3>
+      <p>This content appears on page 1.</p>
+    </section>
+    <section id="secure">
+      <h3><a href="#secure">Uses secure TLS parameters</a></h3>
+      <p>This content appears on page 2. This content appears on page 2.  This content appears on page 2. This content appears on page 2. This content appears on page 2. This content appears on page 2. This content appears on page 2. This content appears on page 2. This content appears on page 2. This content appears on page 2. This content appears on  </p>
+    </section>
+    <section id="valid">
+      <h3><a href="#valid">Presents a valid certificate</a></h3>
+      <p>This content appears on page 3.</p>
+    </section>
+    <section id="list">
+      <h3><a href="#list">Is on the STARTTLS policy list</a></h3>
+      <p>This content appears on page 4.</p>
+    </section>
+  </article>
+</div>
+{{ partial "footer" . }}
