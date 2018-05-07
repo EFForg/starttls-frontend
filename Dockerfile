@@ -19,7 +19,7 @@ RUN tar xzf /usr/local/hugo/${HUGO_BINARY}.tar.gz -C /usr/local/hugo/ \
 ADD package.json ./package.json
 RUN yarn install
 
-COPY . .
+ADD . .
 
 RUN yarn run build \
   && mv ./public/* /usr/share/nginx/html
