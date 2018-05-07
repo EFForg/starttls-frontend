@@ -5,12 +5,12 @@
 ### Install
 
 1. [Install Hugo](https://gohugo.io/getting-started/installing/), eg. `sudo apt install hugo`.
-2. Install npm and Node.
-3. `npm install`
+2. Install yarn and Node.
+3. `yarn install`
 
 ### Run
 
-`npm run build` builds the site to `/public` once.
+`yarn run build` builds the site to `/public` once.
 
-`npm run serve` watches for changes and serves the site from memory at `localhost:1313`.
+`yarn run serve` watches for changes and serves the site from memory at `localhost:1313`.
 
