@@ -7,8 +7,8 @@ install:
   - sudo dpkg -i hugo*.deb
   - yarn install
 
-# cache:
-#   directories:
-#     - "node_modules"
+cache:
+  directories:
+    - "node_modules"
 
 script: yarn run lint && yarn run build
