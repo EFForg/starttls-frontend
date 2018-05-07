@@ -8,7 +8,6 @@ body {
   margin-top: $nav-height;
 }
 
-
 nav {
   background: $gray-light;
   display: inline-block;
@@ -31,6 +30,15 @@ nav {
   }
 }
 nav.main-nav {
+  background-color: $nav-color;
+  display: block;
+  height: $nav-height;
+  position: fixed;
+  left: 0;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 10;
   img { // logo
     position: absolute;
     display: block;
@@ -51,17 +59,6 @@ nav.main-nav {
     }
   }
 
-  z-index: 10;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-
-  height: $nav-height;
-  background-color: $nav-color;
 
   ul {
     padding: 0;
@@ -84,13 +81,6 @@ nav.main-nav {
 
     li {
       display: none;
-
-      &:nth-of-type(1) {  // logo
-        display: inline-block;
-        @include susy-breakpoint($md) {
-          display: none;
-        }
-      }
 
       @include susy-breakpoint($md) {
         display: inline-block;
@@ -143,9 +133,8 @@ nav.main-nav {
       }
 
     }
+    li.close-menu {
+      display: none !important;
+    }
   }
-}
-
-nav.main-nav {
-  position: fixed;
 }
