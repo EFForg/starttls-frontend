@@ -14,3 +14,4 @@
 
 `yarn run serve` watches for changes and serves the site from memory at `localhost:1313`.
 
+`yarn run lint` runs the sass linter.

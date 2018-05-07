@@ -4,10 +4,10 @@
   "description": "Static front end for the STARTTLS scanner",
   "scripts": {
     "sass:main": "node-sass sass/application.scss static/application.css",
-    "sass:watch": "onchange 'sass/*.scss*' -- npm run sass:main",
-    "build": "npm run sass:main && hugo",
-    "serve": "npm run sass:main && parallelshell 'npm run sass:watch' 'hugo serve'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass:watch": "onchange 'sass/*.scss*' -- yarn run sass:main",
+    "build": "yarn run sass:main && hugo",
+    "serve": "yarn run sass:main && parallelshell 'yarn run sass:watch' 'hugo serve'",
+    "lint": "./node_modules/.bin/sass-lint -vq"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,8 @@
     "node-sass": "^4.5.3",
     "onchange": "^3.2.1",
     "parallelshell": "^3.0.1"
+  },
+  "dependencies": {
+    "sass-lint": "^1.12.1"
   }
 }
