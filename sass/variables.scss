@@ -1,0 +1,21 @@
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+/* colors */
+$gray-light: #efefef;
+$gray: #cfcbcb;
+$gray-dark: #8d8a8a;
+
+/* fonts */
+$sans-serif: "Trebuchet", sans-serif;
+
+/* breakpoints */
+$xs: min-width 12em;
+$sm: min-width 23em;
+$ph: min-width 34em;
+$md: min-width 48em;
+$lg: min-width 66em;
+$xl: min-width 80em;
+
+// at 16px, that is 192, 268, 544, 768, 1056, and 1280px respectively
