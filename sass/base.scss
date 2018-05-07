@@ -1,11 +1,11 @@
 /**
- * Reset some basic elements
- */
+* Reset some basic elements
+*/
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* base styles, using foundation 6 defaults */
@@ -14,6 +14,8 @@ html {
   box-sizing: border-box;
   font-size: 100%;
   font-family: sans-serif;
+  min-height: 100%;
+  position: relative;
 }
 
 *,*::before,*::after {;
@@ -62,15 +64,15 @@ p {
 }
 
 /**
- * Clearfix
- */
+* Clearfix
+*/
 %clearfix {
 
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 
@@ -93,11 +95,11 @@ h4 {
 }
 
 
- p {
-   font-size: 14px;
-   line-height: 16px;
-   margin-bottom: 1rem;
- }
+p {
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 1rem;
+}
 
 
 // 11. Button
