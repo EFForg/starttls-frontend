@@ -2,14 +2,14 @@ form {
   background: $gray;
   padding: 2rem;
   font-family: $sans-serif;
-  margin:0 auto;
+  margin: 0 auto;
   max-width: 950px;
 
   label,
   .form-item label,
   .form-actions label {
     font-weight: 300;
-    font-size: .8rem;
+    font-size: 0.8rem;
     line-height: 1.5rem;
     text-transform: uppercase;
   }
@@ -20,7 +20,7 @@ form {
     border: 2px solid $gray-dark;
     color: $gray;
     font-family: $sans-serif;
-    font-size: .9rem;
+    font-size: 0.9rem;
     font-weight: 300;
     padding: 10px 5px;
     width: 100%;

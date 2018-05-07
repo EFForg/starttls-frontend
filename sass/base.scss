@@ -18,7 +18,7 @@ html {
   position: relative;
 }
 
-*,*::before,*::after {;
+*, *::before, *::after {;
   box-sizing: inherit;
 }
 body {
@@ -26,8 +26,8 @@ body {
   padding: 0;
   background: white;
   font-family: sans-serif;
-  font-weight:normal;
-  color:#000;
+  font-weight: normal;
+  color: #000;
 }
 
 article,
@@ -35,16 +35,16 @@ aside,
 footer,
 header,
 section {
-  display:block;
+  display: block;
 }
 
 a {
-  background-color:transparent;
-  -webkit-text-decoration-skip:objects;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
   text-decoration: none;
   &:active,
   &:hover {
-    outline-width:0;
+    outline-width: 0;
     text-decoration: underline;
   }
 }

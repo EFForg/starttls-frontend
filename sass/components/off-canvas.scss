@@ -26,9 +26,9 @@ $sidebar-color: $gray-dark;
     }
   }
   a {
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
     &:visited {
-      color: rgba(255,255,255,0.9);
+      color: rgba(255, 255, 255, 0.9);
     }
     &:hover {
       text-decoration: none;
@@ -44,10 +44,10 @@ $sidebar-color: $gray-dark;
   position: relative;
   right: $menu-width;
   .open-menu {
-     display: none;
+    display: none;
   }
   .close-menu {
-     display: block;
+    display: block;
   }
 
   .main-nav {
@@ -63,11 +63,11 @@ $sidebar-color: $gray-dark;
   right: 9px;
   top: 0px;
   z-index: 1000;
-  @include susy-breakpoint($md) {
-    display: none;
-  }
   &:hover {
     cursor: pointer;
+  }
+  @include susy-breakpoint($md) {
+    display: none;
   }
 }
 
@@ -75,7 +75,7 @@ $sidebar-color: $gray-dark;
   position: absolute;
   right: 9px;
   top: 5px;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 32px;
   &:hover {
     cursor: pointer;

@@ -1,6 +1,6 @@
 $nav-height: 60px;
-$nav-color:  rgba(255,255,255,0.95);
-$nav-font-color: rgba(255,255,255,0.75);
+$nav-color:  rgba(255, 255, 255, 0.95);
+$nav-font-color: rgba(255, 255, 255, 0.75);
 $nav-font-size: $base-font-size / 1.5;
 $nav-text-transform: lowercase;
 
@@ -61,39 +61,25 @@ nav.main-nav {
 
 
   ul {
-    padding: 0;
-    @include susy-breakpoint($lg) {
-      letter-spacing: 0.07em;
-      font-size: 0.9em;
-    }
-
     display: flex;
+    font-size: 0.75em;
     justify-content: space-around;
-    margin-bottom: 0 !important;
     list-style-type: none;
     line-height: $nav-height;
-    font-size: 0.75em;
     letter-spacing: 0em;
-
+    margin-bottom: 0;
+    padding: 0;
     &:after {
       content: "";
     }
 
     li {
       display: none;
-
-      @include susy-breakpoint($md) {
-        display: inline-block;
-      }
       text-align: center;
       text-transform: $nav-text-transform;
       font-size: $nav-font-size;
-      color: rgba(0,0,0,0.5);
-      @include susy-breakpoint($md) {
-        font-size: $base-font-size / 1.15;
-      }
-
       font-weight: 400;
+      color: rgba(0, 0, 0, 0.5);
 
       &.donate {
         color: red;
@@ -105,14 +91,6 @@ nav.main-nav {
         text-align: center;
         width: 100%;
         font-size: 1.5em;
-        @include susy-breakpoint($md) {
-          position: relative;
-          width: auto;
-          font-size: inherit;
-          @include susy-breakpoint($md) {
-            font-size: $base-font-size / 1.15;
-          }
-        }
         &:hover {
           &:after {
             position: absolute;
@@ -120,21 +98,31 @@ nav.main-nav {
             margin-left: 5px;
           }
         }
+        @include susy-breakpoint($md) {
+          position: relative;
+          width: auto;
+        }
       }
 
       &.active {
-        color: rgba(0,0,0,0.95);
+        color: rgba(0, 0, 0, 0.95);
       }
 
       &:hover {
         &:not(.donate) {
-          color: rgba(0,0,0,0.95);
+          color: rgba(0, 0, 0, 0.95);
         }
       }
-
+      @include susy-breakpoint($md) {
+        display: inline-block;
+      }
     }
     li.close-menu {
-      display: none !important;
+      display: none;
+    }
+    @include susy-breakpoint($lg) {
+      letter-spacing: 0.07em;
+      font-size: 0.9em;
     }
   }
 }
