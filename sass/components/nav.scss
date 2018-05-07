@@ -39,13 +39,6 @@ nav.main-nav {
   text-align: center;
   width: 100%;
   z-index: 10;
-  img { // logo
-    position: absolute;
-    display: block;
-    width: 55px;
-    top: 0;
-    left: 0;
-  }
 
   a {
     color: inherit;
@@ -117,12 +110,21 @@ nav.main-nav {
         display: inline-block;
       }
     }
+    li.menu-logo {
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 55px;
+    }
     li.close-menu {
       display: none;
     }
-    @include susy-breakpoint($lg) {
-      letter-spacing: 0.07em;
-      font-size: 0.9em;
+    @include susy-breakpoint($md) {
+      max-width: 750px;
+      li.menu-logo {
+        position: relative;
+      }
     }
   }
 }

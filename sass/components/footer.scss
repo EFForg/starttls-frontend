@@ -13,14 +13,29 @@ footer {
 
   .footer-tagline {
     font-size: 0.9rem;
-    margin-top: 7px;
     text-align: left;
+    .footer-logo { // logo
+      float: left;
+      display: inline-block;
+      width: 55px;
+    }
+    .tagline {
+      padding-top: 0.5rem;
+      @include susy-breakpoint($sm) {
+        padding-top: 0.7rem;
+      }
+      @include susy-breakpoint($md) {
+        float: left;
+      }
+    }
+    @include susy-breakpoint($md) {
+      clear: both;
+      margin: 0 auto;
+      max-width: 750px;
+      text-align: center;
+    }
   }
-  .footer-logo { // logo
-    float: left;
-    display: inline-block;
-    width: 55px;
-  }
+
   .index {
     display: flex;
     ul {
@@ -31,6 +46,11 @@ footer {
       margin: 1rem 0;
       padding: 0 0.2rem 0 0;
       width: 33%;
+    }
+    @include susy-breakpoint($md) {
+      clear: both;
+      margin: 0 auto;
+      max-width: 750px;
     }
   }
 }
