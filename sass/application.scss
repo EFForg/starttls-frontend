@@ -13,6 +13,9 @@
 
 .main-content {
   padding: 0 0.5rem 3rem;
+  .title {
+    margin: 1rem 0 2rem;
+  }
   article.accordion {
     margin: 0 auto;
     background-color: white;
@@ -24,7 +27,7 @@
       margin: 0 0 0.5rem 0;
       max-height: 2rem;
       overflow: hidden;
-      padding: 0 0.5rem;
+      padding: 0;
       transition: all 7s ease;
       width: 100%;
       h3 {

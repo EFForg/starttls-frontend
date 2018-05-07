@@ -118,7 +118,7 @@ nav.main-nav {
       width: 55px;
     }
     li.close-menu {
-      display: none;
+      display: none !important;
     }
     @include susy-breakpoint($md) {
       max-width: 750px;

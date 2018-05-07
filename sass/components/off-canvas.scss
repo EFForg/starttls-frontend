@@ -24,6 +24,9 @@ $sidebar-color: $gray-dark;
     li {
       margin-bottom: 0.5em;
     }
+    li.menu-logo {
+      display: none;
+    }
   }
   a {
     color: rgba(255, 255, 255, 0.9);
