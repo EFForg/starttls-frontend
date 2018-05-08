@@ -1,13 +1,6 @@
 $menu-width: 260px;
 $sidebar-color: $gray-dark;
 
-.page-wrapper {
-  float: left;
-  transition: width 0.3s ease;
-  height: 100%;
-  min-height: 100%;
-  width: 100%;
-}
 #off-canvas {
   background-color: $sidebar-color;
   display: block;

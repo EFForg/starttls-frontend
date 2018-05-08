@@ -31,12 +31,9 @@ body {
   min-height: 100%;
   margin: 0;
   padding: 0;
-  position: relative;
 }
 
 article,
-aside,
-footer,
 header,
 section {
   display: block;
@@ -67,9 +64,6 @@ p {
   line-height: 1.3rem;
 }
 
-/**
-* Clearfix
-*/
 %clearfix {
 
   &:after {
@@ -78,8 +72,6 @@ p {
     clear: both;
   }
 }
-
-
 
 h1 {
   font-size: 40px;
@@ -98,56 +90,8 @@ h4 {
   line-height: 20px;
 }
 
-
 p {
   font-size: 14px;
   line-height: 16px;
   margin-bottom: 1rem;
 }
-
-
-// 11. Button
-// ----------
-
-//  $button-font-family: inherit;
-//  $button-padding: 0.85em 1em;
-//  $button-margin: 0 0 $global-margin 0;
-//  $button-fill: solid;
-//  $button-background: $primary-color;
-//  $button-background-hover: scale-color($button-background, //  $lightness: -15%);
-//  $button-color: $white;
-//  $button-color-alt: $black;
-//  $button-radius: $global-radius;
-//  $button-hollow-border-width: 1px;
-//  $button-sizes: (
-//    tiny: 0.6rem,
-//    small: 0.75rem,
-//    default: 0.9rem,
-//    large: 1.25rem,
-//  );
-//  $button-palette: $foundation-palette;
-//  $button-opacity-disabled: 0.25;
-//  $button-background-hover-lightness: -20%;
-//  $button-hollow-hover-lightness: -50%;
-//  $button-transition: background-color 0.25s ease-out, color 0.25s //  ease-out;
-//
-//  // 15. Close Button
-//  // ----------------
-//
-//  $closebutton-position: right top;
-//  $closebutton-offset-horizontal: (
-//    small: 0.66rem,
-//    medium: 1rem,
-//  );
-//  $closebutton-offset-vertical: (
-//    small: 0.33em,
-//    medium: 0.5rem,
-//  );
-//  $closebutton-size: (
-//    small: 1.5em,
-//    medium: 2em,
-//  );
-//  $closebutton-lineheight: 1;
-//  $closebutton-color: $dark-gray;
-//  $closebutton-color-hover: $black;
-//

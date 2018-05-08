@@ -2,10 +2,8 @@ footer {
   background: #333;
   clear: both;
   color: white;
-  padding: 1rem 0.5rem 3rem;
-  position: absolute;
-  bottom: 0;
-  display: inline-block;
+  display: table-row;
+  height: 1px;
   width: 100%;
   a {
     color: white;
