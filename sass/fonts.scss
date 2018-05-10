@@ -2,14 +2,15 @@
 @font-face {
   font-family: 'WorkSans';
   font-style: normal;
-  font-weight: 700;
-  src: local('WorkSans Black'), local('WorkSans-Black'), url('fonts/WorkSans-Black.ttf') format('truetype');
+  font-weight: 400;
+  src: local('WorkSans Medium'), local('WorkSans-Medium'), url('fonts/WorkSans-Medium.ttf') format('truetype');
 }
+
 @font-face {
   font-family: 'WorkSans';
   font-style: normal;
-  font-weight: 400;
-  src: local('WorkSans Medium'), local('WorkSans-Medium'), url('fonts/WorkSans-Medium.ttf') format('truetype');
+  font-weight: 700;
+  src: local('WorkSans Black'), local('WorkSans-Black'), url('fonts/WorkSans-Black.ttf') format('truetype');
 }
 
 @font-face {
