@@ -5,6 +5,7 @@ WORKDIR /build
 
 ENV HUGO_VERSION 0.37.1
 ENV HUGO_BINARY hugo_${HUGO_VERSION}_linux-64bit
+# Checksum must match HUGO_VERSION
 ENV HUGO_CHECKSUM f7b57c4d9e406719e41c84a4a70d6b332826bf356a15615ed02a450134796f81
 
 RUN apk upgrade --update-cache \
