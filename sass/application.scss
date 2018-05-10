@@ -14,7 +14,11 @@
 
 .page-wrapper {
   float: left;
-  display: table;
+  display: table; // for old browsers
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-gap: 0;
   height: 100vh;
   transition: width 0.3s ease;
   width: 100%;
