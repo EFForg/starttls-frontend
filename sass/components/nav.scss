@@ -25,7 +25,6 @@ nav {
       display: inline-block;
       margin: 0 auto;
       text-align: center;
-      width: 4.7rem;
     }
   }
 }
@@ -55,11 +54,10 @@ nav.main-nav {
 
   ul {
     display: flex;
-    font-size: 0.75em;
+    font-size: 0.75rem;
     justify-content: space-around;
     list-style-type: none;
     line-height: $nav-height;
-    letter-spacing: 0em;
     margin-bottom: 0;
     padding: 0;
     &:after {
@@ -92,7 +90,9 @@ nav.main-nav {
           }
         }
         @include susy-breakpoint($md) {
+          font-size: 10px;
           position: relative;
+          top: 0;
           width: auto;
         }
       }

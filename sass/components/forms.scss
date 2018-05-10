@@ -30,21 +30,6 @@ form {
   }
 
   input[type=submit] {
-    background: $gray-light;
-    border: 2px solid $gray-dark;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: $sans-serif;
-    font-size: 1rem;
-    margin: 1rem 0;
-    padding: 10px 0;
-    text-decoration: none;
-    width: 100%;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-
-    &:hover {
-      background: rgba($gray-light, 0.8);
-    }
+    @include button-style();
   }
 }
