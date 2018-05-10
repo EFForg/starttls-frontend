@@ -6,9 +6,17 @@ $base-line-height: 1.5;
 $gray-light: #efefef;
 $gray: #cfcbcb;
 $gray-dark: #8d8a8a;
+$magenta: #f938bd;
+$teal: #20c9c9;
+$green: #72b559;
+$red: #bc3f69;
+$yellow: #ddb926;
 
 /* fonts */
-$sans-serif: "Trebuchet", sans-serif;
+$sans-serif: "WorkSans";
+$bold: "WorkSans-Black", sans-serif;
+$light: "WorkSans-Light", sans-serif;
+
 
 /* breakpoints */
 $xs: min-width 12em;
