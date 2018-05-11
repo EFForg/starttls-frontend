@@ -6,20 +6,30 @@ title: About/FAQ
 layout: single
 ---
 <article class="accordion">
-  <section id="work">
-    <h4><a href="#work">How does email work?</a></h4>
-    <p>This content appears on page 1.</p>
-  </section>
-  <section id="insecure">
-    <h4><a href="#insecure">How can my email be insecure?</a></h4>
-    <p>This content appears on page 2. This content appears on page 2.  This content appears on page 2. This content appears on page 2. This content appears on page 2. This content appears on page 2. This content appears on page 2. This content appears on page 2. This content appears on page 2. This content appears on page 2. This content appears on  </p>
-  </section>
-  <section id="end-to-end">
-    <h4><a href="#end-to-end">Does STARTTLS provide end-to-end encryption?</a></h4>
-    <p>This content appears on page 3.</p>
-  </section>
-  <section id="provider">
-    <h4><a href="#provider">If I use webmail on a secure (HTTPS) site, ...</a></h4>
-    <p>This content appears on page 4.</p>
-  </section>
+  <ul>
+    <li>
+      <input type="checkbox" checked>
+      <i></i>
+      <h4>How does email work?</h4>
+      <p>Email is sooooo complicated.</p>
+    </li>
+    <li>
+      <input type="checkbox" checked>
+      <i></i>
+      <h4>How can my email be insecure?</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </li>
+    <li>
+      <input type="checkbox" checked>
+      <i></i>
+      <h4>Does STARTTLS provide end-to-end encryption?</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </li>
+    <li>
+      <input type="checkbox" checked>
+      <i></i>
+      <h4>If I use webmail on a secure (HTTPS) site, ...</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </li>
+  </ul>
 </article>
