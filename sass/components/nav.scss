@@ -50,7 +50,12 @@ nav.main-nav {
       color: inherit;
     }
   }
-
+  a.open-menu {
+    display: inline-block;
+    @include susy-breakpoint($md) {
+      display: none;
+    }
+  }
 
   ul {
     display: flex;
