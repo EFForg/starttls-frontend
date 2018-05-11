@@ -30,6 +30,9 @@ $sidebar-color: $gray-dark;
   a.open-menu {
     display: none;
   }
+  a.close-menu {
+    text-decoration: none;
+  }
 }
 
 #off-canvas:target {
