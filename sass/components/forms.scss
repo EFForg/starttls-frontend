@@ -17,11 +17,12 @@ form {
   input[type=email],
   textarea {
     border: 2px solid $gray-dark;
-    color: $gray;
+    color: $gray-dark;
     font-family: $sans-serif;
-    font-size: 0.9rem;
-    font-weight: 300;
+    font-size: 1.1rem;
+    font-weight: 400;
     padding: 10px 5px;
+    text-align: center;
     width: 100%;
     &::placeholder {
       color: #2D2D2D;
