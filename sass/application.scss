@@ -32,44 +32,7 @@
   .title {
     margin: 1rem 0 2rem;
   }
-  article.accordion {
-    margin: 0 auto;
-    background-color: white;
-    h2 {
-      margin: 1rem 0 1.5rem;
-    }
-    section {
-      height: 2em;
-      margin: 0 0 0.5rem 0;
-      max-height: 2rem;
-      overflow: hidden;
-      padding: 0;
-      transition: all 7s ease;
-      width: 100%;
-      h4 {
-        border-top: 1px solid gray;
-        border-bottom: 1px solid gray;
-        font-size: 1.2rem;
-        line-height: 1.3rem;
-        width: 100%;
-        padding: 0.5rem 0;
-        margin: 0;
-      }
-      h4 a {
-        color: inherit;
-        display: block;
-        height: 2rem;
-        text-decoration: none;
-        outline: 0 none;
-        width: 100%;
-      }
-      &:target {
-        height: auto;
-        max-height: 100rem;
-        background-color: #fff;
-      }
-    }
-  }
+
   @include susy-breakpoint($md) {
     margin: 0 auto;
     max-width: 750px;
