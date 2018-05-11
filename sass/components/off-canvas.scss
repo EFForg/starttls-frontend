@@ -25,13 +25,10 @@ $sidebar-color: $gray-dark;
     }
   }
   a {
-    color: rgba(255, 255, 255, 0.9);
-    &:visited {
-      color: rgba(255, 255, 255, 0.9);
-    }
-    &:hover {
-      text-decoration: none;
-    }
+    color: white;
+  }
+  a.open-menu {
+    display: none;
   }
 }
 
@@ -42,7 +39,7 @@ $sidebar-color: $gray-dark;
   margin-top: -60px;
   position: relative;
   right: $menu-width;
-  .open-menu {
+  a.open-menu {
     display: none;
   }
   .close-menu {
