@@ -35,7 +35,7 @@
 
   @include susy-breakpoint($md) {
     margin: 0 auto;
-    max-width: 48rem;
+    max-width: $max-column-width;
   }
 
 }
