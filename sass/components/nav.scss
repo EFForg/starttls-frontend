@@ -78,31 +78,6 @@ nav.main-nav {
       font-weight: 400;
       color: rgba(0, 0, 0, 0.5);
 
-      &.donate {
-        color: red;
-        text-transform: none;
-        display: inline-block;
-        position: absolute;
-        top: 10px;
-        left: 0;
-        text-align: center;
-        width: 100%;
-        font-size: 1.5em;
-        &:hover {
-          &:after {
-            position: absolute;
-            content: '❤';
-            margin-left: 5px;
-          }
-        }
-        @include susy-breakpoint($md) {
-          font-size: 10px;
-          position: relative;
-          top: 0;
-          width: auto;
-        }
-      }
-
       &.active {
         color: black;
       }
@@ -115,6 +90,22 @@ nav.main-nav {
       @include susy-breakpoint($md) {
         display: inline-block;
         margin-top: 0.9rem;
+      }
+      &.donate {
+        display: inline-block;
+        @include susy-breakpoint(0 48rem) {
+          @include button-style();
+          margin: 0 auto;
+          position: absolute;
+          width: 9rem;
+        }
+        @include susy-breakpoint($md) {
+          color: red;
+          font-size: 10px;
+          position: relative;
+          top: 0;
+          width: auto;
+        }
       }
     }
     li.menu-logo {
