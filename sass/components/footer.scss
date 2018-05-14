@@ -18,13 +18,13 @@ footer {
       width: 55px;
     }
     .tagline {
-      padding-top: 0.5rem;
       @include susy-breakpoint($sm) {
         padding-top: 0.7rem;
       }
       @include susy-breakpoint($md) {
         float: left;
       }
+      padding-top: 0.5rem;
     }
     @include susy-breakpoint($md) {
       clear: both;

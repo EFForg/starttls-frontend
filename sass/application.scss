@@ -16,7 +16,6 @@
 
 .page-wrapper {
   float: left;
-  display: table; // for old browsers
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto;

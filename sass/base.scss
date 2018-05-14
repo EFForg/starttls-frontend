@@ -22,6 +22,10 @@ html {
   box-sizing: inherit;
 }
 body {
+  @include susy-breakpoint($md) {
+    font-size: 18px;
+    line-height: 22px;
+  }
   background: white;
   color: #000;
   font-size: 16px;
@@ -32,10 +36,6 @@ body {
   min-height: 100%;
   margin: 0;
   padding: 0;
-  @include susy-breakpoint($md) {
-    font-size: 18px;
-    line-height: 22px;
-  }
 }
 
 article,

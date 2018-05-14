@@ -51,11 +51,11 @@ nav.main-nav {
     }
   }
   a.open-menu {
-    display: inline-block;
-    margin-top: 0.3em;
     @include susy-breakpoint($md) {
       display: none;
     }
+    display: inline-block;
+    margin-top: 0.3em;
   }
 
   ul {
@@ -92,7 +92,6 @@ nav.main-nav {
         margin-top: 0.9rem;
       }
       &.donate {
-        display: inline-block;
         @include susy-breakpoint(0 48rem) {
           @include button-style();
           margin: 0 auto;
@@ -106,6 +105,7 @@ nav.main-nav {
           top: 0;
           width: auto;
         }
+        display: inline-block;
       }
     }
     li.menu-logo {

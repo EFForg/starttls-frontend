@@ -101,8 +101,8 @@ input[type=radio]:checked + label:before {
     perspective: 900;
     padding: 0;
     margin: 0;
-
     li {
+      @extend .flipIn;
       position: relative;
       padding: 0;
       margin: 0;
@@ -110,8 +110,6 @@ input[type=radio]:checked + label:before {
       padding-top: 0.5rem;
       border-top: 1px solid $gray-dark;
       animation-delay: 0.5s;
-      @extend .flipIn;
-
       &:last-of-type {
         padding-bottom: 0;
       }
@@ -121,14 +119,14 @@ input[type=radio]:checked + label:before {
         transform: translate( -6px , 0 );
         margin-top: 0.5rem;
         right: 0;
-
         &:before , &:after { //down arrow
+          @extend .transition;
           content: "";
           position: absolute;
           background-color: $gray-dark;
           width: 3px;
           height: 9px;
-          @extend .transition;
+
         }
         &:before {
           transform: translate( -2px , 0 ) rotate( 45deg );
