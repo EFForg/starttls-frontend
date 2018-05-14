@@ -3,12 +3,20 @@ $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
 /* colors */
-$gray-light: #efefef;
-$gray: #cfcbcb;
-$gray-dark: #8d8a8a;
+$gray-light: #edf1f4;
+$gray: #d3dbe2;
+$gray-dark: #aeb6c1;
+$magenta: #f938bd;
+$cyan: #20c9c9;
+$green: #72b559;
+$red: #bc3f69;
+$yellow: #ddb926;
 
 /* fonts */
-$sans-serif: "Trebuchet", sans-serif;
+$sans-serif: "WorkSans";
+$bold: "WorkSans-Black", sans-serif;
+$light: "WorkSans-Light", sans-serif;
+
 
 /* breakpoints */
 $xs: min-width 12em;
@@ -19,3 +27,6 @@ $lg: min-width 66em;
 $xl: min-width 80em;
 
 // at 16px, that is 192, 268, 544, 768, 1056, and 1280px respectively
+
+$max-button-width: 23rem;
+$max-column-width: 48rem;

@@ -1,14 +1,10 @@
 $menu-width: 260px;
 $sidebar-color: $gray-dark;
 
-.page-wrapper {
-  float: left;
-  transition: width 0.3s ease;
-  width: 100%;
-}
 #off-canvas {
   background-color: $sidebar-color;
   display: block;
+  font-weight: 400;
   height: 100%;
   overflow: hidden;
   position: fixed;
@@ -24,15 +20,18 @@ $sidebar-color: $gray-dark;
     li {
       margin-bottom: 0.5em;
     }
+    li.menu-logo {
+      display: none;
+    }
   }
   a {
-    color: rgba(255,255,255,0.9);
-    &:visited {
-      color: rgba(255,255,255,0.9);
-    }
-    &:hover {
-      text-decoration: none;
-    }
+    color: white;
+  }
+  a.open-menu {
+    display: none;
+  }
+  .close-menu a {
+    text-decoration: none;
   }
 }
 
@@ -43,11 +42,11 @@ $sidebar-color: $gray-dark;
   margin-top: -60px;
   position: relative;
   right: $menu-width;
-  .open-menu {
-     display: none;
+  a.open-menu {
+    display: none;
   }
   .close-menu {
-     display: block;
+    display: block;
   }
 
   .main-nav {
@@ -57,17 +56,17 @@ $sidebar-color: $gray-dark;
 
 .open-menu {
   color: black;
-  display: inline-block;
+  display: none;
   font-size: 32px;
   position: absolute;
   right: 9px;
   top: 0px;
   z-index: 1000;
-  @include susy-breakpoint($md) {
-    display: none;
-  }
   &:hover {
     cursor: pointer;
+  }
+  @include susy-breakpoint($md) {
+    display: inline-block;
   }
 }
 
@@ -75,7 +74,7 @@ $sidebar-color: $gray-dark;
   position: absolute;
   right: 9px;
   top: 5px;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 32px;
   &:hover {
     cursor: pointer;

@@ -1,15 +1,16 @@
 form {
   background: $gray;
   padding: 2rem;
-  font-family: $sans-serif;
-  margin:0 auto;
+  margin: 0 auto 2rem;
   max-width: 950px;
-
+  h4 {
+    text-align: center;
+  }
   label,
   .form-item label,
   .form-actions label {
     font-weight: 300;
-    font-size: .8rem;
+    font-size: 0.8rem;
     line-height: 1.5rem;
     text-transform: uppercase;
   }
@@ -18,11 +19,15 @@ form {
   input[type=email],
   textarea {
     border: 2px solid $gray-dark;
-    color: $gray;
+    color: $gray-dark;
+    display: block;
     font-family: $sans-serif;
-    font-size: .9rem;
-    font-weight: 300;
+    font-size: 1.1rem;
+    font-weight: 400;
     padding: 10px 5px;
+    margin: 1rem auto;
+    max-width: $max-button-width;
+    text-align: center;
     width: 100%;
     &::placeholder {
       color: #2D2D2D;
@@ -30,21 +35,7 @@ form {
   }
 
   input[type=submit] {
-    background: $gray-light;
-    border: 2px solid $gray-dark;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: $sans-serif;
-    font-size: 1rem;
-    margin: 1rem 0;
-    padding: 10px 0;
-    text-decoration: none;
-    width: 100%;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-
-    &:hover {
-      background: rgba($gray-light, 0.8);
-    }
+    @include button-style();
+    max-width: $max-button-width;
   }
 }
