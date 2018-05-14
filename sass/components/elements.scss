@@ -40,6 +40,7 @@ button {
   @extend .button2;
   background: black;
 }
+
 input[type=checkbox],
 input[type=radio] {
   position: relative;
@@ -110,6 +111,7 @@ input[type=radio]:checked + label:before {
       border-top: 1px solid $gray-dark;
       animation-delay: 0.5s;
       @extend .flipIn;
+
       &:last-of-type {
         padding-bottom: 0;
       }
@@ -147,7 +149,7 @@ input[type=radio]:checked + label:before {
             margin-top: 0;
             max-height: 0;
             opacity: 0;
-            transform: translate( 0 , 50% );
+            transform: translate( 0 , 100% );
           }
           &~i {
             &:before {
@@ -158,6 +160,14 @@ input[type=radio]:checked + label:before {
             }
           }
         }
+      }
+      p {
+        @extend .transition;
+        overflow: hidden;
+        max-height: 800px;
+        position: relative;
+        opacity: 1;
+        transform: translate( 0, 0 );
       }
     }
   }
