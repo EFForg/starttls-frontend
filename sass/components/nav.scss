@@ -52,6 +52,7 @@ nav.main-nav {
   }
   a.open-menu {
     display: inline-block;
+    margin-top: 0.3em;
     @include susy-breakpoint($md) {
       display: none;
     }
@@ -103,16 +104,17 @@ nav.main-nav {
       }
 
       &.active {
-        color: rgba(0, 0, 0, 0.95);
+        color: black;
       }
 
       &:hover {
         &:not(.donate) {
-          color: rgba(0, 0, 0, 0.95);
+          color: black;
         }
       }
       @include susy-breakpoint($md) {
         display: inline-block;
+        margin-top: 0.9rem;
       }
     }
     li.menu-logo {
@@ -126,8 +128,9 @@ nav.main-nav {
       display: none !important;
     }
     @include susy-breakpoint($md) {
-      max-width: 750px;
+      max-width: 48rem;
       li.menu-logo {
+        margin-top: 0;
         position: relative;
       }
     }

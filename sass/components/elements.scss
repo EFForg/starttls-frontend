@@ -1,7 +1,45 @@
-.button {
+.button,
+button {
   @include button-style();
 }
 
+.button2 {
+  background: $gray-dark;
+  color: white;
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 400;
+  height: 65px;
+  line-height: 1.2rem;
+  padding: 1rem 5rem 0.1rem 2rem;
+  position: relative;
+  width: 300px;
+  a {
+    color: white;
+  }
+  &:before , &:after {  //arrow
+    content: "";
+    background-color: white;
+    height: 17px;
+    position: absolute;
+    width: 4px;
+  }
+  &:before {
+    transform: translate( -2px , 0 ) rotate( -45deg );
+    right: 1.45rem;
+    top: 1em;
+  }
+  &:after {
+    transform: translate( 2px , 0 ) rotate( 45deg );
+    right: 1.75rem;
+    top: 1.7rem;
+  }
+}
+
+.button2-black {
+  @extend .button2;
+  background: black;
+}
 input[type=checkbox],
 input[type=radio] {
   position: relative;
@@ -49,10 +87,9 @@ input[type=radio]:checked + label:before {
     animation: flipdown 0.5s ease both;
   }
   .no-select {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: black;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
-    -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
@@ -83,7 +120,7 @@ input[type=radio]:checked + label:before {
         margin-top: 0.5rem;
         right: 0;
 
-        &:before , &:after {
+        &:before , &:after { //down arrow
           content: "";
           position: absolute;
           background-color: $gray-dark;
