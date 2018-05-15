@@ -18,8 +18,8 @@ form {
   input[type=text],
   input[type=email],
   textarea {
+    color: #2D2D2D;
     border: 2px solid $gray-dark;
-    color: $gray-dark;
     display: block;
     font-family: $sans-serif;
     font-size: 1.1rem;
@@ -30,7 +30,7 @@ form {
     text-align: center;
     width: 100%;
     &::placeholder {
-      color: #2D2D2D;
+      color: $gray-dark;
     }
   }
 
