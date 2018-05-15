@@ -4,7 +4,7 @@
   "description": "Static front end for the STARTTLS scanner",
   "scripts": {
     "sass:main": "node-sass sass/application.scss static/application.css",
-    "sass:watch": "onchange 'sass/*.scss*' -- yarn run sass:main",
+    "sass:watch": "onchange 'sass/**/*.scss*' -- yarn run sass:main",
     "build": "yarn run sass:main && hugo",
     "serve": "yarn run sass:main && parallelshell 'yarn run sass:watch' 'hugo serve'",
     "lint": "./node_modules/.bin/sass-lint -vq"
