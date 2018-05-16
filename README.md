@@ -14,6 +14,8 @@
 
 `yarn run serve` watches for changes and serves the site from memory at `localhost:1313`.
 
+If the Scanner API is running on under a different hostname, you can set it using the API_HOSTNAME environment variable, e.g. `API_HOSTNAME="http://localhost:8080" yarn run serve`.
+
 `yarn run lint` runs the sass linter.
 
 ### Docker
