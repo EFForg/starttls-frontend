@@ -6,11 +6,7 @@
 {{ partial "header" . }}
 <div class="main-content">
   <p>Secure your email server...</p>
-  <form id="how-secure">
-    <h4>How secure is your email server?</h4>
-    <input type="text" placeholder="example.com"></input>
-    <input type="submit" value="check email domain"></input>
-  </form>
+  {{ partial "scan-form" . }}
   <article class="accordion">
     <ul>
       <li>
