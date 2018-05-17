@@ -13,7 +13,7 @@ layout: single
         STARTTLS Policy List</h4>
 
         <div class="accordion-content">
-          <h3>BE SURE TO READ THE STARTTLS EVERYWHERE POLICY LIST GUIDELINES</h3>
+          <h4>BE SURE TO READ THE STARTTLS EVERYWHERE POLICY LIST GUIDELINES</h4>
 
           <p>You—the email system administrator of this domain—have read through the Policy List Guidelines. You are aware of how STARTTLS Everywhere might affect your email service in the future.</p>
 
@@ -33,14 +33,14 @@ layout: single
                 You’ll receive an email from STARTTLS Everywhere letting you know that your domain did not pass athe test, and details about the failure. You’ll need to adjust your settings and repeat step 1: submitting your email and mailserver details  Mx hostname and email through our webform.</li>
               </ol>
 
-              <h3>IF YOUR DOMAIN PASSES ALL TESTS</h3>
+              <h4>IF YOUR DOMAIN PASSES ALL TESTS</h4>
               <p>Once your domain passes all of our tests for proper configuration of STARTTLS, we will add you to our queue for domains set to be approved.We will continue to test your domain over a period of time. If it continues to pass the tests, we will add your domain to our STARTTLS Policy List.</p>
 
               <p>You’ll receive an email confirmation from STARTTLS Everywhere once your domain is added to the list.</p>
 
               <p>If the domain doesn’t pass the checks, or seems unstable over time, you’ll receive an email from STARTTLS Everywhere letting you know that your domain did not pass the test. You’ll need to adjust your settings and resubmit your Mx hostname and email through our webform.</p>
 
-              <h3>ONCE YOUR DOMAIN IS ADDED TO THE STARTTLS EVERYWHERE POLICY LIST</h3>
+              <h4>ONCE YOUR DOMAIN IS ADDED TO THE STARTTLS EVERYWHERE POLICY LIST</h4>
 
               <p>Users of this list are expected to update the list at least once every 48 hours (and on average 24 hours). Once you're on the list, you can expect the changes to propagate within that amount of time.</p>
 
