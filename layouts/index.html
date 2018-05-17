@@ -47,9 +47,16 @@
         <i></i>
         <h4>Preloaded on our<a href="https://github.com/EFForg/starttls-everywhere" target="_blank"> STARTTLS policy list</a></h4>
         <div class="accordion-content">
-        <p>Even if you pass the above checks, someone sitting between your server and other mailservers can choose to drop “STARTTLS” messages and fool servers into thinking that the other side does not support TLS.</p>
-        <p>To prevent this from happening, if you pass all the previous checks, you can add your domain to our index of high-security email domains so servers have another point of reference to discover that you support STARTTLS encryption.</p>
-      </div>
+          <div class="overview">
+            <p>Even if you pass the above checks, someone sitting between your server and other mailservers can choose to drop “STARTTLS” messages and fool servers into thinking that the other side does not support TLS.</p>
+            <p>To prevent this from happening, if you pass all the previous checks, you can add your domain to our index of high-security email domains so servers have another point of reference to discover that you support STARTTLS encryption.</p>
+          </div>
+          <div class="success-content">
+          </div>
+          <div class="fail-content">
+            {{ partial "qualifies-for-policy-list" . }}
+          </div>
+        </div>
       </li>
     </ul>
   </article>

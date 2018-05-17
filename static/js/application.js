@@ -18,16 +18,26 @@ $(function() {
       success: function(data) {
         var reports = data.CheckResults.starttls.Reports;
         $.each(reports, function(name, result) {
-          if (result.Status === 0) {
-            $('#' + name).addClass('success');
-          } else {
-            $('#' + name).addClass('failure');
-          }
+          if (result.Status === 0)
+            $('#' + name).addClass('success')
+          else
+            $('#' + name).addClass('failure')
         });
 
+        $("#policy_list .overview").hide();
+        $("#policy_list .fail-content").show();
       }
     });
+  });
 
-
+  $("#do-manage-server").change(function(e) {
+    var manage = $(this).val();
+    if (manage === "yes") {
+      $("#add-your-domain").show();
+      $("#learn-to-secure").hide();
+    } else if (manage === "no") {
+      $("#learn-to-secure").show();
+      $("#add-your-domain").hide();
+    }
   });
 });
