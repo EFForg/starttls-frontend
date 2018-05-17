@@ -89,6 +89,7 @@ nav.main-nav {
       }
       @include susy-breakpoint($md) {
         display: inline-block;
+        flex-grow: 1;
         margin-top: 0.9rem;
       }
       &.donate {
@@ -119,10 +120,13 @@ nav.main-nav {
       display: none !important;
     }
     @include susy-breakpoint($md) {
-      max-width: 48rem;
+      max-width: 54rem;
       li.menu-logo {
         margin-top: 0;
         position: relative;
+        img {
+          width: 55px;
+        }
       }
     }
   }

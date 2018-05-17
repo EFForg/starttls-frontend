@@ -54,6 +54,10 @@ $sidebar-color: $gray-dark;
   }
 }
 
+#off-canvas:not(:target) + .page-wrapper {
+  right: 0;
+}
+
 .open-menu {
   color: black;
   display: none;
