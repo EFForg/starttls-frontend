@@ -4,14 +4,12 @@
 {{ partial "off-canvas" . }}
 
 {{ partial "header" . }}
+
 <div class="main-content">
   <p>Secure your email server with STARTTLS Everywhere!  Your email service can be insecure in <a href="https://www.eff.org/deeplinks/2014/12/email-encryption-surged-2014-still-needs-work-2014-review" target="_blank">numerous different ways</a>. This service performs a deep check of your email server's security configurations.</p>
   <p>STARTTLS Everywhere also provides <a href="https://github.com/EFForg/starttls-everywhere" target="_blank"> list of domains that support strong security</a>, so bad actors can’t interfere with your secure connections. If your server passes all our checks, add it to [our list]!</p>
-  <form id="how-secure">
-    <h4>How secure is your email server?</h4>
-    <input type="text" value="example.com"></input>
-    <input type="submit" value="check email domain"></input>
-  </form>
+
+  {{ partial "scan-form" . }}
 
   <h3>This tool checks whether your email domain…</h3>
 
@@ -26,7 +24,7 @@
         <p>This checks that your email server sends the STARTTLS command correctly, as well as accepting the STARTTLS command from other servers.</p>
       </div>
       </li>
-      <li class="accordion-title">
+      <li class="accordion-title" id="tls_version">
         <input type="checkbox" checked>
         <i></i>
         <h4>Uses a <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security" target="_blank">secure version of TLS</a></h4>
@@ -35,7 +33,7 @@
         <p>This checks that your email server does not allow establishing a valid TLS connection over SSLv2/3.</p>
       </div>
       </li>
-      <li class="accordion-title">
+      <li class="accordion-title" id="certificate">
         <input type="checkbox" checked>
         <i></i>
         <h4>Presents a <a href="https://en.wikipedia.org/wiki/X.509" target="_blank">valid certificate</a></h4>
@@ -44,7 +42,7 @@
         <p>In order for your certificate to be valid for your email domain, it should be unexpired, chain to a valid root from <a href="https://wiki.mozilla.org/CA/Included_Certificates" target="_blank">Mozilla’s CA certificates list</a>, and one of the names on the certificate should either match the domain (so the part of an email address after the @) or the server’s hostname.</p>
       </div>
       </li>
-      <li class="accordion-title">
+      <li class="accordion-title" id="policy_list">
         <input type="checkbox" checked>
         <i></i>
         <h4>Preloaded on our<a href="https://github.com/EFForg/starttls-everywhere" target="_blank"> STARTTLS policy list</a></h4>
