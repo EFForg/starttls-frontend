@@ -4,10 +4,14 @@ date: 2018-05-16T15:36:26-07:00
 draft: false
 layout: single
 ---
-<article>
-  <h2>Adding Your Domain to EFF’s  STARTTLS Policy List</h2>
-
-    <h4>BE SURE TO READ THE STARTTLS EVERYWHERE POLICY LIST GUIDELINES</h4>
+<article class="accordion">
+  <ul>
+    <li class="accordion-title">
+      <input type="checkbox" checked>
+      <i></i>
+      <h4>Adding Your Domain to EFF’s  STARTTLS Policy List</h4>
+      <div class="accordion-content">
+    <h5>BE SURE TO READ THE STARTTLS EVERYWHERE POLICY LIST GUIDELINES</h5>
 
     <p>You—the email system administrator of this domain—have read through the Policy List Guidelines. You are aware of how STARTTLS Everywhere might affect your email service in the future.</p>
 
@@ -39,8 +43,11 @@ layout: single
         <p>Users of this list are expected to update the list at least once every 48 hours (and on average 24 hours). Once you're on the list, you can expect the changes to propagate within that amount of time.</p>
 
         <p>Ready to get started? Fill out the form below.</p>
-
-
+        </div>
+        </li>
+      </ul>
+    </article>
+    <article>
         <h2>Add [your domain] to EFF’s  STARTTLS Policy List</h2>
 
           <p>By adding your domain, you’re protected from downgrade attacks so e-mail servers can send e-mail to you securely.</p>
@@ -55,8 +62,8 @@ layout: single
 
           <p>These hostnames can be [fully qualified domain names](hover: mx.eff.org) or [wildcard subdomains](hover: *.mx.eff.org).</p>
 
-          <div class="js-yes" id="add-domains">
-            <input type="text" value="mx.domain.org"></input>
+          <div class="js-yes add-domains">
+            <input type="text" value="mx.domain.org" class="domain-input"></input>
             <div class="add-another"> + Add another hostname</div>
           </div>
 
