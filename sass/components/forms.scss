@@ -1,32 +1,49 @@
 form {
-  background: $gray;
   padding: 2rem;
   margin: 0 auto 2rem;
   max-width: 950px;
   h4 {
     text-align: center;
   }
-  label,
-  .form-item label,
-  .form-actions label {
-    font-weight: 300;
-    font-size: 0.8rem;
-    line-height: 1.5rem;
-    text-transform: uppercase;
-  }
+}
 
+label,
+.form-item label,
+.form-actions label {
+  font-weight: 300;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  border: 2px solid $gray-dark;
+  display: block;
+  font-family: $sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  padding: 10px 5px;
+  margin: 1rem 0;
+  max-width: $max-button-width;
+  width: 100%;
+  &::placeholder {
+    color: #2D2D2D;
+  }
+}
+
+input[type=submit] {
+  @include button-style();
+  max-width: $max-button-width;
+}
+
+form#how-secure {
+  background: $gray;
   input[type=text],
   input[type=email],
   textarea {
-    color: #2D2D2D;
-    border: 2px solid $gray-dark;
-    display: block;
-    font-family: $sans-serif;
-    font-size: 1.1rem;
-    font-weight: 400;
-    padding: 10px 5px;
     margin: 1rem auto;
-    max-width: $max-button-width;
     text-align: center;
     width: 100%;
     &::placeholder {
