@@ -5,7 +5,7 @@
   "scripts": {
     "sass:main": "node-sass sass/application.scss static/application.css",
     "sass:watch": "onchange 'sass/**/*.scss*' -- yarn run sass:main",
-    "js:install": "cp node_modules/jquery/dist/jquery.min.js static/js/jquery.min.js",
+    "js:install": "mkdir static/vendor && cp node_modules/jquery/dist/jquery.min.js static/vendor/jquery.min.js",
     "build": "yarn run sass:main && hugo",
     "serve": "yarn run sass:main && parallelshell 'yarn run sass:watch' 'hugo serve'",
     "lint": "./node_modules/.bin/sass-lint -vq"
