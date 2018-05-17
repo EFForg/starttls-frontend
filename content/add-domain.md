@@ -60,14 +60,18 @@ layout: single
 
               <p>We’ll use this e-mail to notify you of the status of your domain and potential deliverability issues.</p>
 
-              <input type="text"></input>
+              <input type="text" value="yourname@hostname.org"></input>
               <h5>Mx Hostnames</h5>
               <p>What hostnames are your TLS certificates valid for? Let us know, so a DNS man-in-the-middle can’t lie to others about your hostnames. </p>
 
               <p>These hostnames can be [fully qualified domain names](hover: mx.eff.org) or [wildcard subdomains](hover: *.mx.eff.org).</p>
 
-              <input type="text"></input>
-              <span> + Add another hostname</span>
+              <input type="text" value="mx.domain.org"></input>
+              <span class="js-yes"> + Add another hostname</span>
+
+              <div class="js-no">
+              <input type="text" value="mx.domain.org"></input>
+              </div>
 
               <p>  When you request submission, we will queue [your domain] for submission for one week, and continually run security checks against [your domain]. If it continues to pass this validation, you’ll be added to the list! We will notify you of your domain status via the contact e-mail above.</p>
 
