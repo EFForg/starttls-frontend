@@ -6,7 +6,7 @@ layout: single
 ---
 <article class="accordion">
   <ul>
-    <li>
+    <li class="accordion-title">
       <input type="checkbox" checked>
       <i></i>
       <h4>Adding Your Domain to EFF’s
@@ -47,7 +47,7 @@ layout: single
               <p>Ready to get started? Fill out the form below.</p>
               </div>
         </li>
-        <li>
+        <li class="accordion-title">
           <input type="checkbox" checked>
           <i></i>
           <h4>Add [your domain} to EFF’s
