@@ -55,7 +55,7 @@ layout: single
 
           <p>These hostnames can be [fully qualified domain names](hover: mx.eff.org) or [wildcard subdomains](hover: *.mx.eff.org).</p>
 
-          <div class="js-yes">
+          <div class="js-yes" id="add-domains">
             <input type="text" value="mx.domain.org"></input>
             <div class="add-another"> + Add another hostname</div>
           </div>
