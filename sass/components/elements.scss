@@ -103,33 +103,41 @@ input[type=radio]:checked + label:before {
     margin: 0;
     li.accordion-title {
       @extend .flipIn;
+      animation-delay: 0.5s;
+      background: $gray-light url("images/check.svg") no-repeat;
+      background-size: 60px;
+      border-top: 4px solid white;
       position: relative;
-      padding: 0;
       margin: 0;
       padding-bottom: 0;
       padding-top: 0.5rem;
-      border-top: 1px solid $gray-dark;
-      animation-delay: 0.5s;
       &:last-of-type {
         padding-bottom: 0;
       }
-
+      h4 {
+        color: $charcoal;
+        font-weight: 700;
+        padding: 1rem 0 0.5rem 4rem;
+        a {
+          color: $charcoal;
+        }
+      }
       i {
         position: absolute;
         transform: translate( -6px , 0 );
-        margin-top: 0.5rem;
-        right: 0;
+        right: 1rem;
+        top: 1.8rem;
         &:before , &:after { //down arrow
           @extend .transition;
           content: "";
           position: absolute;
-          background-color: $gray-dark;
-          width: 3px;
-          height: 9px;
+          background-color: $charcoal;
+          width: 4px;
+          height: 12px;
 
         }
         &:before {
-          transform: translate( -2px , 0 ) rotate( 45deg );
+          transform: translate( -4px , 0 ) rotate( 45deg );
         }
         &:after {
           transform: translate( 2px , 0 ) rotate( -45deg );
@@ -151,7 +159,7 @@ input[type=radio]:checked + label:before {
           }
           &~i {
             &:before {
-              transform: translate( 2px , 0 ) rotate( 45deg );
+              transform: translate( 4px , 0 ) rotate( 45deg );
             }
             &:after {
               transform: translate( -2px , 0 ) rotate( -45deg );
@@ -163,6 +171,7 @@ input[type=radio]:checked + label:before {
         @extend .transition;
         overflow: hidden;
         max-height: 3000px;
+        padding: 1rem;
         position: relative;
         opacity: 1;
         transform: translate( 0, 0 );
