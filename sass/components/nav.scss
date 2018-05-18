@@ -1,8 +1,8 @@
 $nav-height: 60px;
-$nav-color:  rgba(255, 255, 255, 0.95);
-$nav-font-color: rgba(255, 255, 255, 0.75);
-$nav-font-size: $base-font-size / 1.5;
-$nav-text-transform: lowercase;
+$nav-color:  $cyan;
+$nav-font-color: $cyan;
+$nav-font-size: 1.1rem;
+$nav-text-transform: uppercase;
 
 body {
   margin-top: $nav-height;
@@ -58,7 +58,7 @@ nav {
       text-align: center;
       text-transform: $nav-text-transform;
       font-size: $nav-font-size;
-      font-weight: 400;
+      font-weight: 700;
       color: $cyan;
       a {
         color: $cyan;
@@ -73,32 +73,40 @@ nav {
       }
       @include susy-breakpoint($md) {
         display: inline-block;
-        font-size: 0.8rem;
+        font-size: 1rem;
         margin: 0.9rem auto 0;
         text-align: center;
         flex-grow: 1;
       }
       &.donate {
-        @include susy-breakpoint(0 48rem) {
+        display: inline-block;
+        margin: 0 auto;
+        width: 8rem;
+        a {
           @include button-style();
           background: black;
           color: $magenta;
           margin: 0 auto;
           position: absolute;
-          width: 9rem;
+          width: 8rem;
           &:hover {
             background: $magenta;
             color: black;
           }
+          @include susy-breakpoint($md) {
+            background: black;
+            border-width: 1px;
+            margin-left: 2rem;
+            padding: 0;
+            position: relative;
+            top: 0;
+            width: 5rem;
+          }
         }
         @include susy-breakpoint($md) {
-          color: $magenta;
-          font-size: 10px;
-          position: relative;
-          top: 0;
-          width: auto;
+          margin: 0.8rem 0 0;
+          width: 5rem;
         }
-        display: inline-block;
       }
     }
     li.menu-logo {
