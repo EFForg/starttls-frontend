@@ -29,7 +29,7 @@ nav {
   }
 }
 nav.main-nav {
-  background-color: $nav-color;
+  background-color: black;
   display: block;
   height: $nav-height;
   position: fixed;
@@ -40,7 +40,7 @@ nav.main-nav {
   z-index: 10;
 
   a {
-    color: inherit;
+    color: $cyan;
     display: inline-block;
     text-decoration: none;
     &:hover {
@@ -54,8 +54,9 @@ nav.main-nav {
     @include susy-breakpoint($md) {
       display: none;
     }
+    color: $cyan;
     display: inline-block;
-    margin-top: 0.3em;
+    margin-top: 0.6em;
   }
 
   ul {
@@ -79,12 +80,12 @@ nav.main-nav {
       color: rgba(0, 0, 0, 0.5);
 
       &.active {
-        color: black;
+        color: white;
       }
 
       &:hover {
         &:not(.donate) {
-          color: black;
+          color: white;
         }
       }
       @include susy-breakpoint($md) {
@@ -95,12 +96,18 @@ nav.main-nav {
       &.donate {
         @include susy-breakpoint(0 48rem) {
           @include button-style();
+          background: black;
+          color: $magenta;
           margin: 0 auto;
           position: absolute;
           width: 9rem;
+          &:hover {
+            background: $magenta;
+            color: black;
+          }
         }
         @include susy-breakpoint($md) {
-          color: red;
+          color: $magenta;
           font-size: 10px;
           position: relative;
           top: 0;
