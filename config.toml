@@ -1,3 +1,6 @@
 baseURL = "https://starttls-everywhere.org/"
 languageCode = "en-us"
 title = "STARTTLS Everywhere"
+[blackfriday]
+  plainIDAnchors = true
+  hrefTargetBlank = true
