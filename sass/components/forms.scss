@@ -20,7 +20,6 @@ input[type=text],
 input[type=email],
 textarea {
   border: 2px solid $gray-dark;
-  color: $gray-dark;
   display: block;
   font-family: $sans-serif;
   font-size: 1.1rem;
@@ -47,5 +46,14 @@ form#how-secure {
     border: none;
     margin: 1rem auto;
     text-align: center;
+    width: 100%;
+    &::placeholder {
+      color: $gray-dark;
+    }
+  }
+
+  input[type=submit] {
+    @include button-style();
+    max-width: $max-button-width;
   }
 }
