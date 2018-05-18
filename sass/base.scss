@@ -74,30 +74,30 @@ img {
 }
 
 h1 {
+  @include susy-breakpoint($md) {
+    padding: 0;
+  }
   font-size: 40px;
   line-height: 40px;
   padding: 0 1rem;
+}
+h2 {
   @include susy-breakpoint($md) {
     padding: 0;
   }
-}
-h2 {
   font-size: 30px;
   line-height: 33px;
   padding: 0 1rem;
+}
+h3 {
   @include susy-breakpoint($md) {
     padding: 0;
   }
-}
-h3 {
   font-size: 23px;
   font-weight: 700;
   line-height: 25px;
   margin-bottom: 1rem;
   padding: 0 1rem;
-  @include susy-breakpoint($md) {
-    padding: 0;
-  }
 }
 h4 {
   font-size: 18px;
@@ -108,11 +108,11 @@ h4 {
 }
 
 p {
-  margin-bottom: 1rem;
-  padding: 0 1rem;
   @include susy-breakpoint($md) {
     padding: 0;
   }
+  margin-bottom: 1rem;
+  padding: 0 1rem;
 }
 
 a {
