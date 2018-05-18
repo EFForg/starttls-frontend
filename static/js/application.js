@@ -18,10 +18,13 @@ $(function() {
       success: function(data) {
         var reports = data.CheckResults.starttls.Reports;
         $.each(reports, function(name, result) {
-          if (result.Status === 0)
+          if (result.Status === 0) {
             $('#' + name).addClass('success')
-          else
+            $('#' + name).removeClass('failure')
+          } else {
             $('#' + name).addClass('failure')
+            $('#' + name).removeClass('success')
+          }
         });
 
         $("#policy_list .overview").hide();
