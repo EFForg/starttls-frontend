@@ -17,8 +17,8 @@ $(function() {
     e.preventDefault();
 
     var $form = $(this),
-    domain = $form.find('input[name="domain"]').val(),
-    url = $form.attr('action');
+      domain = $form.find('input[name="domain"]').val(),
+      url = $form.attr('action');
 
     $.ajax({
       type: 'POST',
