@@ -9,26 +9,6 @@ body {
 }
 
 nav {
-  background: $gray-light;
-  display: inline-block;
-  text-align: center;
-  width: 100%;
-  ul {
-    height: 2rem;
-    list-style: none;
-    margin: 1rem auto;
-    padding: 0;
-    width: 100%;
-    li {
-      font-size: 0.8rem;
-      line-height: 1rem;
-      display: inline-block;
-      margin: 0 auto;
-      text-align: center;
-    }
-  }
-}
-nav.main-nav {
   background-color: black;
   display: block;
   height: $nav-height;
@@ -62,11 +42,13 @@ nav.main-nav {
   ul {
     display: flex;
     font-size: 0.75rem;
+    height: 2rem;
     justify-content: space-around;
-    list-style-type: none;
-    line-height: $nav-height;
-    margin-bottom: 0;
+    list-style: none;
+    line-height: 1rem;
+    margin: 1rem auto 0;
     padding: 0;
+    width: 100%;
     &:after {
       content: "";
     }
@@ -77,21 +59,24 @@ nav.main-nav {
       text-transform: $nav-text-transform;
       font-size: $nav-font-size;
       font-weight: 400;
-      color: rgba(0, 0, 0, 0.5);
-
-      &.active {
-        color: white;
-      }
-
-      &:hover {
-        &:not(.donate) {
+      color: $cyan;
+      a {
+        color: $cyan;
+        &.active {
           color: white;
+        }
+        &:hover {
+          &:not(.donate) {
+            color: white;
+          }
         }
       }
       @include susy-breakpoint($md) {
         display: inline-block;
+        font-size: 0.8rem;
+        margin: 0.9rem auto 0;
+        text-align: center;
         flex-grow: 1;
-        margin-top: 0.9rem;
       }
       &.donate {
         @include susy-breakpoint(0 48rem) {
