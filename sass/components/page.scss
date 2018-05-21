@@ -12,13 +12,16 @@
 .main-content {
   display: block;
   height: auto;
-  padding: 0 0 3rem;
+  padding: 0 1rem 3rem;
   .title {
     margin: 1rem 0 2rem;
   }
   @include susy-breakpoint($md) {
     margin: 0 auto;
     max-width: $max-column-width;
-    padding: 0 0.5rem 3rem;
   }
+}
+
+.main-content.home-page {
+  padding: 0 0 3rem;
 }
