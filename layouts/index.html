@@ -19,10 +19,21 @@
         <li class="accordion-title" id="{{ .key }}">
           <input type="checkbox" checked>
           <i></i>
-          <h4>{{ .overview.title | markdownify }}</h4>
-          <div class="accordion-content">
-            {{ .overview.body | markdownify }}
+
+          <div class="overview">
+
+            <h4 class="default-title">{{ .overview.title | markdownify }}</h4>
+            <h4 class="fail-title">{{ .fail.title | markdownify }}</h4>
+
+            <div class="accordion-content">
+              {{ .overview.body | markdownify }}
+              <div class="fail-body">
+                {{ .fail.body | markdownify }}
+              </div>
+            </div>
+
           </div>
+
         </li>
       {{ end }}
     </ul>

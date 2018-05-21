@@ -26,9 +26,6 @@ $(function() {
             $('#' + name).removeClass('success')
           }
         });
-
-        $("#policy_list .overview").hide();
-        $("#policy_list .fail-content").show();
       }
     });
   });

@@ -1,7 +1,17 @@
 #add-your-domain,
-#learn-to-secure,
-.success-content,
-.fail-content {
+#learn-to-secure {
   display: none;
+}
+
+.fail-title,
+.fail-body {
+  display: none;
+}
+
+.failure {
+  .fail-title,
+  .fail-body {
+    display: block;
+  }
 }
 
