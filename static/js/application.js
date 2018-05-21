@@ -1,7 +1,6 @@
 $(function() {
   $('.js-no').hide();
   $('.js-yes').show();
-
   $('.accordion-checkbox').click(function(){
       if (this.checked) {
           $('.accordion-title h4').css('color', '#666');
@@ -12,6 +11,10 @@ $(function() {
           $('.accordion-title h4 a').css('color', '#000');
       }
   })
+  $(".add-another").click(function(){
+    $(".add-domains").prepend('<input type="text" value="mx.domain.org"></input>');
+  })
+
 
   $('#how-secure').submit(function(e) {
     e.preventDefault();

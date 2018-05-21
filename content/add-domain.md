@@ -61,7 +61,7 @@ layout: single
 <p>What hostnames are your TLS certificates valid for? Let us know, so a DNS man-in-the-middle can’t lie to others about your hostnames. </p>
 <p>These hostnames can be [fully qualified domain names](hover: mx.eff.org) or [wildcard subdomains](hover: *.mx.eff.org).</p>
 
-<div class="js-yes">
+<div class="js-yes add-domains">
   <input type="text" value="mx.domain.org"></input>
   <div class="add-another"> + Add another hostname</div>
 </div>
