@@ -1,5 +1,13 @@
 header {
+  margin-top: 1rem;
   text-align: center;
+  .eff-project {
+    color: $gray-dark;
+    a {
+      color: $gray-dark;
+      text-decoration: underline;
+    }
+  }
   h1 {
     margin-bottom: 3px;
 
