@@ -81,14 +81,16 @@ nav {
       &.donate {
         display: inline-block;
         margin: 0 auto;
-        width: 8rem;
         a {
           @include button-style();
           background: black;
           color: $magenta;
           margin: 0 auto;
-          position: absolute;
-          width: 8rem;
+          padding: 0.5rem 0;
+          width: 11rem;
+          span.donate-mobile {
+            display: inline-block;
+          }
           &:hover {
             background: $magenta;
             color: black;
@@ -101,6 +103,9 @@ nav {
             position: relative;
             top: 0;
             width: 5rem;
+            span.donate-mobile {
+              display: none;
+            }
           }
         }
         @include susy-breakpoint($md) {
