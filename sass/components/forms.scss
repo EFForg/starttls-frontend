@@ -3,6 +3,7 @@ form {
   margin: 0 auto 2rem;
   max-width: 950px;
   h4 {
+    font-weight: 700;
     text-align: center;
   }
 }
@@ -39,10 +40,11 @@ input[type=submit] {
 }
 
 form#how-secure {
-  background: $gray;
+  background: $cyan;
   input[type=text],
   input[type=email],
   textarea {
+    border: none;
     margin: 1rem auto;
     text-align: center;
     width: 100%;

@@ -1,35 +1,15 @@
 $nav-height: 60px;
-$nav-color:  rgba(255, 255, 255, 0.95);
-$nav-font-color: rgba(255, 255, 255, 0.75);
-$nav-font-size: $base-font-size / 1.5;
-$nav-text-transform: lowercase;
+$nav-color:  $cyan;
+$nav-font-color: $cyan;
+$nav-font-size: 1.1rem;
+$nav-text-transform: uppercase;
 
 body {
   margin-top: $nav-height;
 }
 
 nav {
-  background: $gray-light;
-  display: inline-block;
-  text-align: center;
-  width: 100%;
-  ul {
-    height: 2rem;
-    list-style: none;
-    margin: 1rem auto;
-    padding: 0;
-    width: 100%;
-    li {
-      font-size: 0.8rem;
-      line-height: 1rem;
-      display: inline-block;
-      margin: 0 auto;
-      text-align: center;
-    }
-  }
-}
-nav.main-nav {
-  background-color: $nav-color;
+  background-color: black;
   display: block;
   height: $nav-height;
   position: fixed;
@@ -40,7 +20,7 @@ nav.main-nav {
   z-index: 10;
 
   a {
-    color: inherit;
+    color: $cyan;
     display: inline-block;
     text-decoration: none;
     &:hover {
@@ -54,18 +34,21 @@ nav.main-nav {
     @include susy-breakpoint($md) {
       display: none;
     }
+    color: $cyan;
     display: inline-block;
-    margin-top: 0.3em;
+    margin-top: 0.45em;
   }
 
   ul {
     display: flex;
     font-size: 0.75rem;
+    height: 2rem;
     justify-content: space-around;
-    list-style-type: none;
-    line-height: $nav-height;
-    margin-bottom: 0;
+    list-style: none;
+    line-height: 1rem;
+    margin: 0.5rem auto 0;
     padding: 0;
+    width: 100%;
     &:after {
       content: "";
     }
@@ -75,38 +58,60 @@ nav.main-nav {
       text-align: center;
       text-transform: $nav-text-transform;
       font-size: $nav-font-size;
-      font-weight: 400;
-      color: rgba(0, 0, 0, 0.5);
-
-      &.active {
-        color: black;
-      }
-
-      &:hover {
-        &:not(.donate) {
-          color: black;
+      font-weight: 700;
+      color: $cyan;
+      a {
+        color: $cyan;
+        &.active {
+          color: white;
+        }
+        &:hover {
+          &:not(.donate) {
+            color: white;
+          }
         }
       }
       @include susy-breakpoint($md) {
         display: inline-block;
+        font-size: 1rem;
+        margin: 0.9rem auto 0;
+        text-align: center;
         flex-grow: 1;
-        margin-top: 0.9rem;
       }
       &.donate {
-        @include susy-breakpoint(0 48rem) {
+        display: inline-block;
+        margin: 0 auto;
+        a {
           @include button-style();
+          background: black;
+          color: $magenta;
           margin: 0 auto;
-          position: absolute;
-          width: 9rem;
+          padding: 0.5rem 0;
+          width: 11rem;
+          span.donate-mobile {
+            display: inline-block;
+          }
+          &:hover {
+            background: $magenta;
+            color: black;
+          }
+          @include susy-breakpoint($md) {
+            background: black;
+            border-width: 1px;
+            margin-left: 2rem;
+            padding: 0;
+            position: relative;
+            top: 0;
+            width: 5rem;
+            span.donate-mobile {
+              display: none;
+            }
+          }
         }
         @include susy-breakpoint($md) {
-          color: red;
-          font-size: 10px;
-          position: relative;
-          top: 0;
-          width: auto;
+          margin: 0.8rem 0 0;
+          width: 5rem;
         }
-        display: inline-block;
       }
     }
     li.menu-logo {
