@@ -117,7 +117,8 @@ input[type=radio]:checked + label:before {
       h4 {
         color: $charcoal;
         font-weight: 700;
-        padding: 1rem 0 0.5rem 4rem;
+        margin-bottom: 0;
+        padding: 1rem 0 0 4rem;
         a {
           color: $charcoal;
         }
@@ -201,4 +202,8 @@ input[type=radio]:checked + label:before {
       transform: rotateX(0deg);
     }
   }
+}
+.add-another {
+  font-weight: 700;
+  margin-bottom: 2rem;
 }

@@ -74,51 +74,70 @@ img {
 }
 
 h1 {
-  @include susy-breakpoint($md) {
-    padding: 0;
-  }
-  font-size: 40px;
-  line-height: 40px;
-  padding: 0 1rem;
+  font-size: 36px;
+  line-height: 36px;
+  padding: 1rem 0;
 }
 h2 {
-  @include susy-breakpoint($md) {
-    padding: 0;
-  }
-  font-size: 30px;
-  line-height: 33px;
-  padding: 0 1rem;
+  font-size: 27px;
+  line-height: 27px;
+  padding: 1rem 0;
 }
 h3 {
-  @include susy-breakpoint($md) {
-    padding: 0;
-  }
   font-size: 23px;
   font-weight: 700;
-  line-height: 25px;
+  line-height: 23px;
   margin-bottom: 1rem;
-  padding: 0 1rem;
+  padding: 1rem 0;
 }
 h4 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 20px;
   margin-bottom: 1rem;
-  max-width: 90%;
+}
+h5  {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  padding: 1rem 0;
 }
 
 p {
-  @include susy-breakpoint($md) {
-    padding: 0;
-  }
   margin-bottom: 1rem;
-  padding: 0 1rem;
+  padding: 0 0 1rem;
 }
 
 a {
   color: $magenta;
   text-decoration: underline;
 
+}
+
+ol {
+  counter-reset: li-counter;
+  list-style-type: none;
+  margin: 0;
+  margin-left: 3em;
+  padding: 0 0 2rem;
+  li {
+    min-height: 3rem;
+    padding-left: 0.5rem;
+    position: relative;
+    &:before {
+      //border-right: 5px dotted black;
+      color: black;
+      content: counter(li-counter);
+      counter-increment: li-counter;
+      font-size: 1.1rem;
+      font-weight: 400;
+      line-height: 1;
+      position: absolute;
+      top: 0.2rem;
+      left: -0.6rem;
+      text-align: right;
+    }
+  }
 }
 .js-no {
   display: inline-block;
