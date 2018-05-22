@@ -8,10 +8,10 @@
   <p>{{ .Content }}
   </p>
   <ul>
-    {{ range .Data.Pages }}
+    {{ range .Data.Pages.ByWeight }}
     <li>
-      <h4>{{ .Title }}</h4>
-      <p>{{ .Content }}</p>
+      <h2>{{ .Title }}</h2>
+      <div>{{ .Content }}</div>
     </li>
     {{ end }}
   </ul>
