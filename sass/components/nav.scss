@@ -98,7 +98,6 @@ nav {
           @include susy-breakpoint($md) {
             background: black;
             border-width: 1px;
-            margin-left: 2rem;
             padding: 0;
             position: relative;
             top: 0;
@@ -110,7 +109,7 @@ nav {
         }
         @include susy-breakpoint($md) {
           margin: 0.8rem 0 0;
-          width: 5rem;
+          width: 8rem;
         }
       }
     }
