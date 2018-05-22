@@ -1,0 +1,48 @@
+list:
+- key: starttls
+  overview:
+    title: Supports [STARTTLS](https://en.wikipedia.org/wiki/Opportunistic_TLS)
+    body: |
+      “STARTTLS” is the command an email server sends if it wants to encrypt communications (using Transport Layer Security or “TLS”) with another email server. If your server supports STARTTLS, that means any other server that supports STARTTLS can communicate securely with it.
+
+      This checks that your email server sends the STARTTLS command correctly, as well as accepting the STARTTLS command from other servers.
+  fail:
+    title: Does not support STARTTLS
+    body: Body texted for failed starttls check
+- key: tls_version
+  overview:
+    title: Uses a <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security" target="_blank">secure version of TLS</a>
+    body: |
+      TLS has changed many times over the years. Researchers have discovered security flaws in some older versions, named “SSLv2” and “SSLv3”, so technologists across the internet are <a href="http://disablessl3.com/" target="_blank">working to deprecate</a> SSLv2/3.
+
+      This checks that your email server does not allow establishing a valid TLS connection over SSLv2/3.
+  fail:
+    title: Does not use a secure TLS version
+    body: Body texted for failed TLS version
+- key: certificate
+  overview:
+    title: Presents a <a href="https://en.wikipedia.org/wiki/X.509" target="_blank">valid certificate</a>
+    body: |
+      On the internet, even if you *think* you’re talking to a service like “eff.org”, it could be an impersonator pretending to be “eff.org”. Checking a mail server’s certificate ensures that you really are talking to the actual service.
+
+      In order for your certificate to be valid for your email domain, it should be unexpired, chain to a valid root from <a href="https://wiki.mozilla.org/CA/Included_Certificates" target="_blank">Mozilla’s CA certificates list</a>, and one of the names on the certificate should either match the domain (so the part of an email address after the @) or the server’s hostname.
+  fail:
+    title: Does not present a valid certificate
+    body: Body text for failed valid cert check
+- key: policy_list
+  overview:
+    title: Preloaded on our<a href="https://github.com/EFForg/starttls-everywhere" target="_blank"> STARTTLS policy list</a>
+    body: |
+      Even if you pass the above checks, someone sitting between your server and other mailservers can choose to drop “STARTTLS” messages and fool servers into thinking that the other side does not support TLS.
+
+      To prevent this from happening, if you pass all the previous checks, you can add your domain to our index of high-security email domains so servers have another point of reference to discover that you support STARTTLS encryption.
+  fail:
+    title: Fail title
+    body: Fail body
+    can_add: |
+      Your e-mail domain qualifies for the STARTTLS Policy List!
+
+      Even if you pass the above checks, someone sitting between your server and other mailservers can choose to not deliver any "STARTTLS" messages and fool servers into thinking that the other does not support TLS.
+
+      To prevent this from happening <a href="">add your domain</a> to our index of high-security e-mail domains so servers have another point of reference to discover that you support STARTTLS.
+    can_not_add:

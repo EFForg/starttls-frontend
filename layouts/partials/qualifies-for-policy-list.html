@@ -1,0 +1,9 @@
+{{ .Site.Data.checks.policy_list.fail.can_add | markdownify }}
+
+<select id="do-manage-server">
+  <option selected=true disabled=true>Do you manage this email server?</option>
+  <option value="yes">Yes, I manage this email server</option>
+  <option value="no">No, I do not manage this email server</option>
+</select>
+<div id="learn-to-secure"><a href=""><strong>Learn</strong> how to secure your mailserver</a></div>
+<button id="add-your-domain"><a href="/add-domain">How to add your domain</a></button>
