@@ -46,13 +46,9 @@ section {
 
 a {
   background-color: transparent;
+  color: black;
   -webkit-text-decoration-skip: objects;
-  text-decoration: none;
-  &:active,
-  &:hover {
-    outline-width: 0;
-    text-decoration: underline;
-  }
+  text-decoration: underline;
 }
 
 img {
@@ -106,12 +102,6 @@ h5  {
 p {
   margin-bottom: 1rem;
   padding: 0 0 1rem;
-}
-
-a {
-  color: $magenta;
-  text-decoration: underline;
-
 }
 
 ol {
