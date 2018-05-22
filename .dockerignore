@@ -10,4 +10,6 @@ static/application.css
 # Ignore documentation and config
 Dockerfile
 .dockerignore
+docker-compose.yml
+nginx.conf
 README.md
