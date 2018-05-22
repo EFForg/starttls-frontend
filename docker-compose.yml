@@ -1,0 +1,26 @@
+version: '2.1'
+services:
+  nginx:
+    image: electronicfrontierfoundation/starttls-frontend
+    ports:
+      - '80:80'
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    links:
+      - scanner
+    # Development
+    # build: .
+
+  scanner:
+    image: electronicfrontierfoundation/starttls-scanner
+    depends_on:
+      - db
+    links:
+      - db
+    environment:
+      DB_HOST: db
+
+  db:
+    image: electronicfrontierfoundation/starttls-db
+    environment:
+      POSTGRES_DB: starttls
