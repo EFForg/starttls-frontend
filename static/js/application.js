@@ -30,28 +30,39 @@ $(function() {
         domain: domain
       },
       success: function(data) {
-        var reports = data.CheckResults.starttls.Reports;
-        $.each(reports, function(name, result) {
-          if (result.Status === 0) {
-            $('#' + name).addClass('success')
-            $('#' + name).removeClass('failure')
-          } else {
-            $('#' + name).addClass('failure')
-            $('#' + name).removeClass('success')
-          }
+        // remove overview and any past search results.
+        $('.checks-overview').hide();
+        $('#add-your-domain').hide();
+        $('.result').remove();
+
+        $.each(data.results, function(hostname, result) {
+          var $result = $('#result-template').clone();
+          $result.removeAttr('id').addClass('result');
+          $result.find('.hostname').text(hostname);
+
+          $.each(result.checks, function(key, check) {
+            $check = $result.find('.' + key);
+            // check.status == 0 if the check succeeded
+            $check.addClass(check.status ? 'fail' : 'success')
+          });
+          $result.appendTo( $('article.accordion') );
+
+          // TODO conditional on qualifying for list
+          $('#add-your-domain').show();
         });
       }
     });
   });
 
-  $("#do-manage-server").change(function(e) {
-    var manage = $(this).val();
-    if (manage === "yes") {
-      $("#add-your-domain").show();
-      $("#learn-to-secure").hide();
-    } else if (manage === "no") {
-      $("#learn-to-secure").show();
-      $("#add-your-domain").hide();
+  $('#add-your-domain select').change(function(e) {
+    $('.add-domain-action').hide();
+    switch($(this).val()) {
+      case 'yes':
+        $(".add-domain-action.submit").show();
+        break;
+      case 'no':
+        $(".add-domain-action.learn").show();
+        break;
     }
   });
 });

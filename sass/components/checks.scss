@@ -1,17 +1,21 @@
+#result-template,
 #add-your-domain,
-#learn-to-secure {
+.add-domain-action.learn,
+.add-domain-action.submit {
   display: none;
 }
 
-.fail-title,
-.fail-body {
+.fail-title {
   display: none;
 }
 
-.failure {
-  .fail-title,
-  .fail-body {
+.fail {
+  .fail-title {
     display: block;
+  }
+
+  .default-title {
+    display: none;
   }
 }
 
