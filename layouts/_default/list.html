@@ -1,0 +1,19 @@
+{{ partial "head" . }}
+
+{{ partial "off-canvas" . }}
+
+{{ partial "header" . }}
+<div class="main-content">
+  <h1 class="title">{{ .Title }}</h1>
+  <p>{{ .Content }}
+  </p>
+  <ul>
+    {{ range .Data.Pages.ByWeight }}
+    <li>
+      <h2>{{ .Title }}</h2>
+      <div>{{ .Content }}</div>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ partial "footer" . }}

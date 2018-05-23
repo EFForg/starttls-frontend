@@ -15,10 +15,12 @@
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  transition: all 0.2s;
   width: 100%;
   &:hover {
-    background: white;
-    color: $magenta;
+    background: black;
+    border: 2px solid black;
+    color: white;
     text-decoration: none;
   }
 }

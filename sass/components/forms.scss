@@ -6,6 +6,10 @@ form {
     font-weight: 700;
     text-align: center;
   }
+  p {
+    font-weight: 400;
+    text-align: center;
+  }
 }
 
 label,
@@ -40,7 +44,7 @@ input[type=submit] {
 }
 
 form#how-secure {
-  background: $cyan;
+  background: $cyan-light;
   input[type=text],
   input[type=email],
   textarea {
