@@ -12,10 +12,8 @@
           <h5 class="default-title">{{ .title | markdownify }}</h5>
           <h5 class="fail-title">{{ .fail_title | markdownify }}</h5>
 
-          <div class="check-content">
-            {{ .body | markdownify }}
-            <div class="message"></div>
-          </div>
+          {{ .body | markdownify }}
+          <div class="message"></div>
 
         </div>
       {{ end }}
