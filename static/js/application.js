@@ -30,15 +30,21 @@ $(function() {
         domain: domain
       },
       success: function(data) {
-        var reports = data.CheckResults.starttls.Reports;
-        $.each(reports, function(name, result) {
-          if (result.Status === 0) {
-            $('#' + name).addClass('success')
-            $('#' + name).removeClass('failure')
-          } else {
-            $('#' + name).addClass('failure')
-            $('#' + name).removeClass('success')
-          }
+        // remove overview and any past search results.
+        $('#checks-overview').hide();
+        $('.result').remove();
+
+        $.each(data.results, function(hostname, result) {
+          var $result = $('#result-template').clone();
+          $result.removeAttr('id').addClass('result');
+          $result.find('.hostname').text(hostname);
+
+          $.each(result.checks, function(key, check) {
+            $check = $result.find('.' + key);
+            // check.status == 0 if the check succeeded
+            $check.addClass(check.status ? 'fail' : 'success')
+          });
+          $result.appendTo( $('article.accordion') );
         });
       }
     });

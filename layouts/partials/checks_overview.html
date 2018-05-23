@@ -1,0 +1,20 @@
+<ul id="checks-overview">
+  {{ range $.Site.Data.checks.list }}
+  <li class="accordion-title" id="{{ .key }}">
+      <input type="checkbox" checked class="accordion-checkbox">
+      <i></i>
+
+      <div class="overview">
+
+        <h4 class="default-title">{{ .title | markdownify }}</h4>
+
+        <div class="accordion-content">
+          {{ .body | markdownify }}
+          <div class="message"></div>
+        </div>
+
+      </div>
+
+    </li>
+  {{ end }}
+</ul>

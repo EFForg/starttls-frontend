@@ -14,29 +14,9 @@
   <h3>This tool checks whether your email domain…</h3>
 
   <article class="accordion">
-    <ul>
-      {{ range $.Site.Data.checks.list }}
-      <li class="accordion-title" id="{{ .key }}">
-          <input type="checkbox" checked class="accordion-checkbox">
-          <i></i>
-
-          <div class="overview">
-
-            <h4 class="default-title">{{ .overview.title | markdownify }}</h4>
-            <h4 class="fail-title">{{ .fail.title | markdownify }}</h4>
-
-            <div class="accordion-content">
-              {{ .overview.body | markdownify }}
-              <div class="fail-body">
-                {{ .fail.body | markdownify }}
-              </div>
-            </div>
-
-          </div>
-
-        </li>
-      {{ end }}
-    </ul>
+    {{ partial "checks_overview" . }}
+    {{ partial "result_template" . }}
   </article>
+
 </div>
 {{ partial "footer" . }}

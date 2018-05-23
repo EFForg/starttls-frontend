@@ -1,0 +1,22 @@
+<ul id="result-template">
+  <li class="accordion-title">
+    <input type="checkbox" checked class="accordion-checkbox">
+    <i></i>
+    <h4 class=hostname></h4>
+
+    {{ range $.Site.Data.checks.list }}
+      <div class="check {{ .key }}">
+
+        <h5 class="default-title">{{ .title | markdownify }}</h5>
+        <h5 class="fail-title">{{ .fail_title | markdownify }}</h5>
+
+        <div class="check-content">
+          {{ .body | markdownify }}
+          <div class="message"></div>
+        </div>
+
+      </div>
+    {{ end }}
+
+  </li>
+</ul>
