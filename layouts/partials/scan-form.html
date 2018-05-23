@@ -1,4 +1,4 @@
-<form id="how-secure" action="{{ safeURL (getenv "API_HOSTNAME") }}/api/scan" method="POST">
+<form id="scan" action="{{ safeURL (getenv "API_HOSTNAME") }}/api/scan" method="POST">
   <h4>How secure is your email server?</h4>
   <input type="text" name="domain" placeholder="example.com"></input>
   <input type="submit" value="check email domain"></input>
