@@ -9,42 +9,30 @@ footer {
   a {
     color: white;
   }
+  .footer-wrapper {
+    margin: 0 auto;
+    max-width: 750px;
+  }
 
-  .footer-tagline {
-    font-size: 1rem;
-    font-weight: 400;
-    text-align: left;
-    .footer-logo { // logo
-      float: left;
-      display: inline-block;
-      width: 55px;
-    }
-    .tagline {
-      @include susy-breakpoint($sm) {
-        padding-top: 0.7rem;
-      }
-      @include susy-breakpoint($md) {
-        float: left;
-      }
-      padding-top: 0.5rem;
-    }
-    @include susy-breakpoint($md) {
-      clear: both;
-      margin: 0 auto;
-      max-width: 750px;
-      text-align: center;
+
+  .footer-logo { // logo
+    float: left;
+    display: inline-block;
+    width: 100%;
+    img {
+      width: 300px;
     }
   }
+
 
   .index {
     @include susy-breakpoint($md) {
       display: flex;
-      margin: 0 auto;
-      max-width: 750px;
+      padding-left: 0;
     }
     clear: both;
     display: block;
-    padding-left: 1rem;
+    padding-left: 0.2rem;
     ul {
       flex: 0 1 auto;
       font-size: 1rem;
