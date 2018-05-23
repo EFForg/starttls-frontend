@@ -31,7 +31,8 @@ $(function() {
       },
       success: function(data) {
         // remove overview and any past search results.
-        $('#checks-overview').hide();
+        $('.checks-overview').hide();
+        $('#add-your-domain').hide();
         $('.result').remove();
 
         $.each(data.results, function(hostname, result) {
