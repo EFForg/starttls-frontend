@@ -45,19 +45,22 @@ $(function() {
             $check.addClass(check.status ? 'fail' : 'success')
           });
           $result.appendTo( $('article.accordion') );
+
+          // TODO conditional on qualifying for list
+          $('#add-your-domain').show();
         });
       }
     });
   });
 
-  $("#do-manage-server").change(function(e) {
+  $("#add-your-domain select").change(function(e) {
     var manage = $(this).val();
     if (manage === "yes") {
-      $("#add-your-domain").show();
-      $("#learn-to-secure").hide();
+      $("#add-your-domain .submit").show();
+      $(".learn-to-secure").hide();
     } else if (manage === "no") {
-      $("#learn-to-secure").show();
-      $("#add-your-domain").hide();
+      $(".learn-to-secure").show();
+      $("#add-your-domain .submit").hide();
     }
   });
 });

@@ -26,9 +26,3 @@ list:
     Even if you pass the above checks, someone sitting between your server and other mailservers can choose to drop “STARTTLS” messages and fool servers into thinking that the other side does not support TLS.
 
     To prevent this from happening, if you pass all the previous checks, you can add your domain to our index of high-security email domains so servers have another point of reference to discover that you support STARTTLS encryption.
-  can_add: |
-    Your e-mail domain qualifies for the STARTTLS Policy List!
-
-    Even if you pass the above checks, someone sitting between your server and other mailservers can choose to not deliver any "STARTTLS" messages and fool servers into thinking that the other does not support TLS.
-
-    To prevent this from happening <a href="">add your domain</a> to our index of high-security e-mail domains so servers have another point of reference to discover that you support STARTTLS.
