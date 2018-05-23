@@ -98,7 +98,6 @@ nav {
           @include susy-breakpoint($md) {
             background: black;
             border-width: 1px;
-            margin-left: 2rem;
             padding: 0;
             position: relative;
             top: 0;
@@ -110,16 +109,19 @@ nav {
         }
         @include susy-breakpoint($md) {
           margin: 0.8rem 0 0;
-          width: 5rem;
+          width: 8rem;
         }
       }
     }
     li.menu-logo {
       display: inline-block;
       position: absolute;
-      left: 0;
-      top: 0;
-      width: 55px;
+      left: 3%;
+      top: 8px;
+      width: 40px;
+      img {
+        width: 40px;
+      }
     }
     li.close-menu {
       display: none !important;
@@ -130,7 +132,7 @@ nav {
         margin-top: 0;
         position: relative;
         img {
-          width: 55px;
+          width: 44px;
         }
       }
     }

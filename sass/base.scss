@@ -106,6 +106,12 @@ h5  {
 p {
   margin-bottom: 1rem;
   padding: 0 0 1rem;
+  line-height: 26px;
+  a {
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid $magenta;
+  }
 }
 
 a {
