@@ -54,14 +54,15 @@ $(function() {
     });
   });
 
-  $("#add-your-domain select").change(function(e) {
-    var manage = $(this).val();
-    if (manage === "yes") {
-      $("#add-your-domain .submit").show();
-      $(".learn-to-secure").hide();
-    } else if (manage === "no") {
-      $(".learn-to-secure").show();
-      $("#add-your-domain .submit").hide();
+  $('#add-your-domain select').change(function(e) {
+    $('.add-domain-action').hide();
+    switch($(this).val()) {
+      case 'yes':
+        $(".add-domain-action.submit").show();
+        break;
+      case 'no':
+        $(".add-domain-action.learn").show();
+        break;
     }
   });
 });
