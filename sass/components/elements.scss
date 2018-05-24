@@ -117,56 +117,39 @@ input[type=radio]:checked + label:before {
     &:last-of-type {
       padding-bottom: 0;
     }
-    &:active,
-    &:hover {
-      color: black;
+    i {
+      position: absolute;
+      transform: translate( -6px , 0 );
+      right: 1rem;
+      top: 1.8rem;
+      &:before , &:after { //down arrow
+        @extend .transition;
+        content: "";
+        position: absolute;
+        background-color: $charcoal;
+        width: 4px;
+        height: 12px;
+      }
+      &:before {
+        transform: translate( -4px , 0 ) rotate( 45deg );
+      }
+      &:after {
+        transform: translate( 2px , 0 ) rotate( -45deg );
+      }
     }
   }
-  //i {
-  //  position: absolute;
-  //  transform: translate( -6px , 0 );
-  //  right: 1rem;
-  //  top: 1.8rem;
-  //  &:before , &:after { //down arrow
-  //    @extend .transition;
-  //    content: "";
-  //    position: absolute;
-  //    background-color: $charcoal;
-  //    width: 4px;
-  //    height: 12px;
-  //
-  //  }
-  //  &:before {
-  //    transform: translate( -4px , 0 ) rotate( 45deg );
-  //  }
-  //  &:after {
-  //    transform: translate( 2px , 0 ) rotate( -45deg );
-  //  }
-  //}
-  //input[type=checkbox] {
-  //  position: absolute;
-  //  cursor: pointer;
-  //  width: 100%;
-  //  height: 100%;
-  //  z-index: 1;
-  //  opacity: 0;
-  //  &:checked {
-  //    &~.accordion-content {
-  //      margin-top: 0;
-  //      max-height: 0;
-  //      opacity: 0;
-  //      transform: translate( 0 , 100% );
-  //    }
-  //    &~i {
-  //      &:before {
-  //        transform: translate( 4px , 0 ) rotate( 45deg //);
-  //      }
-  //      &:after {
-  //        transform: translate( -2px , 0 ) rotate( //-45deg );
-  //      }
-  //    }
-  //  }
-  //}
+
+  .active {
+    color: black;
+    i {
+      &:before {
+        transform: translate( 4px , 0 ) rotate( 45deg );
+      }
+      &:after {
+        transform: translate( -2px , 0 ) rotate( -45deg );
+      }
+    }
+  }
   .accordion-content {
     @extend .transition;
     padding: 0 18px;
