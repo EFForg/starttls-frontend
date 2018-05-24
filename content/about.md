@@ -1,43 +1,23 @@
 ---
 title: "About"
-date: 2018-05-04T13:54:39-07:00
+date: 2018-05-22T11:45:16-07:00
 draft: false
-title: About/FAQ
 layout: single
 ---
-<article class="accordion">
-  <ul>
-    <li class="accordion-title">
-      <input type="checkbox" checked class="accordion-checkbox">
-      <i></i>
-      <h4>How does email work?</h4>
-      <div class="accordion-content">
-      <p>Email is sooooo complicated.</p>
-      </div>
-    </li>
-    <li class="accordion-title">
-      <input type="checkbox" checked class="accordion-checkbox">
-      <i></i>
-      <h4>How can my email be insecure?</h4>
-      <div class="accordion-content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-    </li>
-    <li class="accordion-title">
-      <input type="checkbox" checked class="accordion-checkbox">
-      <i></i>
-      <h4>Does STARTTLS provide end-to-end encryption?</h4>
-      <div class="accordion-content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-    </li>
-    <li class="accordion-title">
-      <input type="checkbox" checked class="accordion-checkbox">
-      <i></i>
-      <h4>If I use webmail on a secure (HTTPS) site, ...</h4>
-      <div class="accordion-content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-    </li>
-  </ul>
-</article>
+STARTTLS Everywhere is a project to finally secure the delivery of email. It is created and maintained by the Electronic Frontier Foundation (EFF), a 501(c)3 nonprofit.
+
+We want to increase STARTTLS adoption, increase the number of mailservers that actually validate certificates, and offer a STARTTLS Policy List to help prevent downgrade attacks on email services.
+
+If you have questions about how STARTTLS Everywhere works, check out our FAQ. If you are an email service provider and are looking to be added to the STARTTLS Everywhere policy list, check out our guidelines here.
+
+If you like the project, consider donating!
+
+<h5>Statistics</h5>
+
+In 2015, researchers discovered that ~20% of the Alexa top million domains which have mailservers don’t use STARTTLS, and ~40% present invalid certificates <sup>[1]</sup>. In addition, STARTTLS commands from several countries were being regularly downgraded, as high as 96% of the time.
+
+<img src="/images/about-stats.png">
+
+These results are the motivation for this project.
+
+<small><sup>[1]</sup> Neither Snow Nor Rain Nor MITM . . . An Empirical Analysis of Email Delivery Security https://zakird.com/papers/mail.pdf</small>
