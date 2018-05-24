@@ -18,19 +18,22 @@ $(function() {
         $('#add-your-domain').hide();
         $('.result').remove();
 
-        $.each(data.results, function(hostname, result) {
-          var $result = $('#result-template').clone();
-          $result.removeAttr('id').addClass('result');
-          $result.find('.hostname').text(hostname);
+        $.each(data.preferred_hostnames, function(i, hostname) {
+          var result = data.results[hostname];
+          if (result) {
+            var $result = $('#result-template').clone();
+            $result.removeAttr('id').addClass('result');
+            $result.find('.hostname').text(hostname);
 
-          // result.status == 0 if the check succeeded
-          $result.addClass(result.status ? 'fail' : 'success');
+            // result.status == 0 if the check succeeded
+            $result.addClass(result.status ? 'fail' : 'success');
 
-          $.each(result.checks, function(key, check) {
-            $check = $result.find('.' + key);
-            $check.addClass(check.status ? 'fail' : 'success');
-          });
-          $result.appendTo( $('article.accordion') );
+            $.each(result.checks, function(key, check) {
+              $check = $result.find('.' + key);
+              $check.addClass(check.status ? 'fail' : 'success');
+            });
+            $result.appendTo( $('article.accordion') );
+          }
 
           // TODO conditional on qualifying for list
           $('#add-your-domain').show();
