@@ -7,7 +7,7 @@ $(function() {
   })
 
   //accordion
-  $(".accordion-title").click(function(){
+  $("body").on('click', '.accordion-title', function () {
     this.classList.toggle("active");
     var panel = $(this).next();
     if (panel.css("display") === "block") {
@@ -15,8 +15,8 @@ $(function() {
     } else {
       panel.css("display","block");
     }
-
   });
+
 
   //$(".accordion-title").click(function(){
   //  this.classList.toggle("active");
