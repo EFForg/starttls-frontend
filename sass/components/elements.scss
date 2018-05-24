@@ -99,9 +99,14 @@ input[type=radio]:checked + label:before {
 
   .accordion-title {
     @extend .flipIn;
+    @include susy-breakpoint($md) {
+      background-position: 1.2rem 0.4rem;
+      padding-left: 6rem;
+    }
     animation-delay: 0.5s;
-    background: $gray-light url("images/check.svg") no-repeat;
-    background-size: 60px;
+    background: $gray-light url("images/green-check-open.svg") no-repeat;
+    background-position: 0.2rem;
+    background-size: 40px;
     border-top: 4px solid white;
     position: relative;
     margin: 0;
@@ -110,7 +115,7 @@ input[type=radio]:checked + label:before {
     color: $charcoal;
     font-weight: 700;
     margin-bottom: 0;
-    padding: 1rem 0 0 4rem;
+    padding: 1rem 0 1rem 4rem;
     a {
       color: $charcoal;
     }
@@ -121,7 +126,7 @@ input[type=radio]:checked + label:before {
       position: absolute;
       transform: translate( -6px , 0 );
       right: 1rem;
-      top: 1.8rem;
+      top: 1.2rem;
       &:before , &:after { //down arrow
         @extend .transition;
         content: "";
@@ -151,10 +156,14 @@ input[type=radio]:checked + label:before {
     }
   }
   .accordion-content {
-    @extend .transition;
+  //  @extend .transition;
     padding: 0 18px;
     background-color: white;
-    display: none;
+  //  display: none;
+  height: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
   }
 }
 
