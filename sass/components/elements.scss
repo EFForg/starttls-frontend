@@ -123,7 +123,8 @@ input[type=radio]:checked + label:before {
     }
   }
 }
-.accordion-title {
+
+[class^="accordion-title"] {
   @extend .flipIn;
   @include susy-breakpoint($md) {
     background-position: 1.2rem 0.4rem;
@@ -171,6 +172,12 @@ input[type=radio]:checked + label:before {
   }
 }
 
+.accordion-title-fail {
+  background: $gray-light url("images/red-x-open.svg") no-repeat;
+}
+.accordion-title-success {
+  background: $gray-light url("images/green-check-open.svg") no-repeat;
+}
 .active {
   color: black;
   i {

@@ -1,7 +1,9 @@
 #result-template,
 #add-your-domain,
 .add-domain-action.learn,
-.add-domain-action.submit {
+.add-domain-action.submit,
+.accordion-title-fail,
+.accordion-title-success {
   display: none;
 }
 
@@ -18,4 +20,3 @@
     display: none;
   }
 }
-

@@ -2,6 +2,9 @@
 
     <div class="accordion-title"><span class="hostname"></span><i></i>
     </div>
+    <div class="accordion-title-fail"><span class="hostname"></span><i></i></div>
+    <div class="accordion-title-success"><span class="hostname"></span><i></i>
+    </div>
     <div class="accordion-content">
     {{ range $.Site.Data.checks.list }}
       {{ if ne .key "policy_list" }}
