@@ -156,14 +156,14 @@ input[type=radio]:checked + label:before {
     }
   }
   .accordion-content {
-  //  @extend .transition;
+    //  @extend .transition;
     padding: 0 18px;
     background-color: white;
-  //  display: none;
-  height: auto;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    display: none;
+    //height: auto;
+    //  max-height: 0;
+    //  overflow: hidden;
+    //  transition: max-height 0.2s ease-out;
   }
 }
 
