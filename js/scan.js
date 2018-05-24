@@ -23,10 +23,12 @@ $(function() {
           $result.removeAttr('id').addClass('result');
           $result.find('.hostname').text(hostname);
 
+          // result.status == 0 if the check succeeded
+          $result.addClass(result.status ? 'fail' : 'success');
+
           $.each(result.checks, function(key, check) {
             $check = $result.find('.' + key);
-            // check.status == 0 if the check succeeded
-            $check.addClass(check.status ? 'fail' : 'success')
+            $check.addClass(check.status ? 'fail' : 'success');
           });
           $result.appendTo( $('article.accordion') );
 
