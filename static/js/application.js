@@ -6,21 +6,18 @@ $(function() {
     $(".add-domains").prepend('<input type="text" value="mx.domain.org"></input>');
   })
 
-//accordion
-  var acc = document.getElementsByClassName("accordion-title");
-  var i;
+  //accordion
+  $(".accordion-title").click(function(){
+    this.classList.toggle("active");
+    var panel = $(this).next();
+    if (panel.css("display") === "block") {
+      panel.css("display","none");
+    } else {
+      panel.css("display","block");
+    }
 
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    });
-  }
+  });
+
 
   $('#how-secure').submit(function(e) {
     e.preventDefault();
