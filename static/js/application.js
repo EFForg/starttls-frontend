@@ -1,27 +1,33 @@
 $(function() {
   $('.js-no').hide();
   $('.js-yes').show();
-  $('.accordion-checkbox').click(function(){
-      if (this.checked) {
-          $('.accordion-title h4').css('color', '#666');
-          $('.accordion-title h4 a').css('color', '#666');
-      }
-      else {
-          $('.accordion-title h4').css('color', '#000');
-          $('.accordion-title h4 a').css('color', '#000');
-      }
-  })
+
   $(".add-another").click(function(){
     $(".add-domains").prepend('<input type="text" value="mx.domain.org"></input>');
   })
 
+//accordion
+  var acc = document.getElementsByClassName("accordion-title");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
 
   $('#how-secure').submit(function(e) {
     e.preventDefault();
 
     var $form = $(this),
-      domain = $form.find('input[name="domain"]').val(),
-      url = $form.attr('action');
+    domain = $form.find('input[name="domain"]').val(),
+    url = $form.attr('action');
 
     $.ajax({
       type: 'POST',
@@ -58,11 +64,11 @@ $(function() {
     $('.add-domain-action').hide();
     switch($(this).val()) {
       case 'yes':
-        $(".add-domain-action.submit").show();
-        break;
+      $(".add-domain-action.submit").show();
+      break;
       case 'no':
-        $(".add-domain-action.learn").show();
-        break;
+      $(".add-domain-action.learn").show();
+      break;
     }
   });
 });
