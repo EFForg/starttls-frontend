@@ -11,13 +11,13 @@
 
   {{ partial "scan-form" . }}
 
-  {{ partial "qualifies-for-policy-list" }}
 
   <h3 class="checks-overview">This tool checks whether your email domain…</h3>
 
   <article class="accordion">
-    {{ partial "checks_overview" . }}
-    {{ partial "result_template" . }}
+    {{ partial "checks-overview" . }}
+    {{ partial "result-template" . }}
+    {{ partial "qualifies-for-policy-list" }}
   </article>
 
 </div>
