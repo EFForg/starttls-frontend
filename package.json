@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "Static front end for the STARTTLS scanner",
   "scripts": {
-    "sass:main": "node-sass sass/application.scss static/application.css",
-    "sass:watch": "onchange 'sass/**/*.scss*' -- yarn run sass:main",
-    "js:install": "mkdir static/vendor && cp node_modules/jquery/dist/jquery.min.js static/vendor/jquery.min.js",
-    "build": "yarn run sass:main && hugo",
-    "serve": "yarn run sass:main && parallelshell 'yarn run sass:watch' 'hugo serve'",
+    "sass:build": "node-sass sass/application.scss static/application.css",
+    "sass:watch": "onchange 'sass/**/*.scss*' -- yarn run sass:build",
+    "js:install": "mkdir -p static/vendor && cp node_modules/jquery/dist/jquery.min.js static/vendor/jquery.min.js",
+    "js:build": "yarn run js:install && babel js --out-file static/application.js",
+    "js:watch": "yarn run js:install && babel js --watch --out-file static/application.js --source-maps",
+    "build": "yarn run sass:build && yarn run js:build && hugo",
+    "serve": "yarn run sass:build && parallelshell 'yarn run sass:watch' 'yarn run js:watch' 'hugo serve'",
     "lint": "./node_modules/.bin/sass-lint -vq"
   },
   "repository": {
@@ -20,6 +22,8 @@
   },
   "dependencies": {
     "autoprefixer": "^7.1.2",
+    "babel-cli": "^6.26.0",
+    "babel-preset-babili": "^0.1.4",
     "jquery": "^3.3.1",
     "node-sass": "^4.5.3",
     "onchange": "^3.2.1",
