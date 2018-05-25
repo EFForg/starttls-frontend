@@ -10,6 +10,6 @@ layout: single
 
 ## Otherwise, shoot us an email:
 
-Contact **<a href="mailto:starttls-policy@eff.org">starttls-policy@eff.org</a>** for any concerns about adding or updating an entry on the STARTTLS policy list.
+Contact **[starttls-policy@eff.org](mailto:starttls-policy@eff.org)** for any concerns about adding or updating an entry on the STARTTLS policy list.
 
-Let the community know at **<a href="mailto:starttls-everywhere@lists.eff.org">starttls-everywhere@lists.eff.org</a>** for any general questions about STARTTLS Everywhere!
+Let the community know at **[starttls-everywhere@lists.eff.org](mailto:starttls-everywhere@lists.eff.org)** for any general questions about STARTTLS Everywhere!
