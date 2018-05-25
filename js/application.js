@@ -17,7 +17,7 @@ $(function() {
     $(".add-domains").prepend('<input type="text" value="mx.domain.org"></input>');
   })
 
-  //select menu
+  //select menu for Do you manage this email server
   /*
   Reference: http://jsfiddle.net/BB3JK/47/
   */
