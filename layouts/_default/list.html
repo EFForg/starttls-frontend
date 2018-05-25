@@ -9,8 +9,7 @@
   </p>
   <ul>
     {{ range .Data.Pages.ByWeight }}
-    <li>
-      <h2>{{ .Title }}</h2>
+    <li><a name="{{ .Title }}"></a>
       <div>{{ .Content }}</div>
     </li>
     {{ end }}

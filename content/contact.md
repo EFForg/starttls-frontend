@@ -6,8 +6,10 @@ layout: single
 ---
 <strong>General questions or concerns?</strong> Check to see whether our <a href="/faq/">FAQ</a> answers them for you!
 
-<strong>If you're looking to add your email domain to the STARTTLS policy list</strong>, and have a custom policy request, first read through our [email addition guidelines](policylist#add).
+<strong>If you're looking to add your email domain to the STARTTLS policy list, or are already on the list</strong>, and have a custom policy request, first read through our guidelines for [submitting](/policy-list#add)  or [updating](/policy-list#update) policies on the list.
 
-<strong>If you're already on the STARTTLS Policy list</strong>, and are trying to diagnose an issue or update your policy, check out our [guidelines for the list](policylist).
+## Otherwise, shoot us an email:
 
-Otherwise, shoot us an email at <a href="mailto:starttls-policy@eff.org">starttls-policy@eff.org</a>!
+Contact **[starttls-policy@eff.org](mailto:starttls-policy@eff.org)** for any concerns about adding or updating an entry on the STARTTLS policy list.
+
+Let the community know at **[starttls-everywhere@lists.eff.org](mailto:starttls-everywhere@lists.eff.org)** for any general questions about STARTTLS Everywhere!
