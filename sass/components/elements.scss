@@ -143,7 +143,6 @@ input[type=radio]:checked + label:before {
   font-weight: 700;
   margin-bottom: 0;
   padding: 1rem 0 1rem 4rem;
-  z-index: 100;
   a {
     color: $charcoal;
   }
