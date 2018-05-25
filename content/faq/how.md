@@ -1,5 +1,6 @@
 ---
-title: "How does email work?"
+title: How does email work?
+linktitle: how
 date: 2018-05-22T12:23:23-07:00
 weight: 1
 ---
