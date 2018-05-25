@@ -8,8 +8,19 @@
 }
 
 .fail-title {
-  display: none;
+  @include results-checkbox;
 }
+
+.default-title {
+  @include results-checkbox;
+  background: white url("images/green-check-open.svg") no-repeat;
+}
+
+.almost-title {
+  @include results-checkbox;
+  background: white url("images/gold-!-open.svg") no-repeat;
+}
+
 
 .fail {
   .fail-title {
