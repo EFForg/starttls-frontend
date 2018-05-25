@@ -8,9 +8,9 @@ STARTTLS Everywhere is a project to finally secure the delivery of email. It is 
 
 We want to increase STARTTLS adoption, increase the number of mailservers that actually validate certificates, and offer a STARTTLS Policy List to help prevent downgrade attacks on email services.
 
-If you have questions about how STARTTLS Everywhere works, check out our FAQ. If you are an email service provider and are looking to be added to the STARTTLS Everywhere policy list, check out our guidelines here.
+If you have questions about how STARTTLS Everywhere works, check out <a href="/faq">the FAQ</a>. If you are an email service provider and are looking to be added to the STARTTLS Everywhere policy list, <a href="/policy-list">learn more here</a>.
 
-If you like the project, consider donating!
+If you like the project, consider <a href="https://supporters.eff.org/donate/">donating!</a>
 
 <h5>Statistics</h5>
 
