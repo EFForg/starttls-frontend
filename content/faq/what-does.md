@@ -1,8 +1,11 @@
 ---
-title: "What does your STARTTLS checker do?"
+title: what-checker
 date: 2018-05-23T12:29:26-07:00
 weight: 6
 ---
+
+## What does the [STARTTLS Checker](/) do?
+
 <h3>This tool checks whether your email domain…</h3>
 
 <h4><span class="left">Supports <a href="https://en.wikipedia.org/wiki/Opportunistic_TLS">STARTTLS?</a></span>

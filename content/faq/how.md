@@ -1,8 +1,9 @@
 ---
-title: "How does email work?"
+title: how
 date: 2018-05-22T12:23:23-07:00
 weight: 1
 ---
+## How does email work?
 
 Email typically makes more than one hop in order to be delivered.
 Let’s say you have an email address @gmail.com. You open your email client, which might be a desktop app like Thunderbird or Outlook, a mobile app, or a website in your browser, like Gmail and Yahoo both provide.
