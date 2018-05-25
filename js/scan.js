@@ -42,7 +42,7 @@ $(function() {
     });
   });
 
-    $('ul.options li').on('click', function () {
+  $('ul.options li').on('click', function () {
     switch($(this).attr('rel')) {
       case 'yes':
         $(".add-domain-action.submit").show();
@@ -52,7 +52,7 @@ $(function() {
         $(".add-domain-action.submit").hide();
         $(".add-domain-action.learn").show();
         break;
-    }
+      }
   });
 
 });
