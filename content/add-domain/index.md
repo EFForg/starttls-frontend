@@ -1,9 +1,8 @@
 ---
 title: "Adding Your Domain to EFF's STARTTLS Policy List"
-date: 2018-05-16T15:36:26-07:00
-draft: false
-layout: single
+type: add-domain
 ---
+
 <article class="accordion">
   <ul>
     <li class="accordion-title">
@@ -38,30 +37,3 @@ layout: single
     </li>
   </ul>
 </article>
-
-<h2>Add [your domain] to EFF’s  STARTTLS Policy List</h2>
-<p>By adding your domain, you’re protected from downgrade attacks so e-mail servers can send e-mail to you securely.</p>
-<h5>Contact Email</h5>
-<p>We’ll use this e-mail to notify you of the status of your domain and potential deliverability issues.</p>
-<input type="text" value="yourname@hostname.org"></input>
-<h5>Mx Hostnames</h5>
-<p>What hostnames are your TLS certificates valid for? Let us know, so a DNS man-in-the-middle can’t lie to others about your hostnames. </p>
-<p>These hostnames can be [fully qualified domain names](hover: mx.eff.org) or [wildcard subdomains](hover: *.mx.eff.org).</p>
-<div class="js-yes add-domains">
-  <input type="text" value="mx.domain.org"></input>
-  <div class="add-another"> + Add another hostname</div>
-</div>
-<div class="js-no">
-  <input type="text" value="mx.domain.org"></input>
-  <input type="text" value="mx.domain.org"></input>
-  <input type="text" value="mx.domain.org"></input>
-  <input type="text" value="mx.domain.org"></input>
-  <input type="text" value="mx.domain.org"></input>
-  <input type="text" value="mx.domain.org"></input>
-  <input type="text" value="mx.domain.org"></input>
-  <input type="text" value="mx.domain.org"></input>
-</div>
-<p> When you request submission, we will queue [your domain] for submission for one week, and continually run security checks against [your domain]. If it continues to pass this validation, you’ll be added to the list! We will notify you of your domain status via the contact e-mail above.</p>
-<p>When you are added to the list, you are required to continue meeting security guidelines. If for some reason you do not, this could impact deliverability. </p>
-<p>Read more about the STARTTLS Policy list.</p>
-<button>SUBMIT YOUR DOMAIN</button>
