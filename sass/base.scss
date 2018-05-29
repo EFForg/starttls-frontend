@@ -110,6 +110,13 @@ p {
   }
 }
 
+ul {
+  margin: 0 0 1rem 1rem;
+  li {
+    line-height: 26px;
+    margin-bottom: 0.5rem;
+  }
+}
 ol {
   counter-reset: li-counter;
   list-style-type: none;
@@ -148,4 +155,11 @@ ol {
 }
 .right {
   float: right;
+}
+
+code {
+  display: inline-block;
+  max-width: 100%;
+  white-space: normal;
+  word-break: break-all;
 }

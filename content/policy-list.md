@@ -17,6 +17,8 @@ You can verify the policy file with:
 
 ```
 gpg2 --recv-key A2CFB51FA275A7286234E7B24D17C995CD9775F2
+```
+```
 gpg2 --trusted-key 4D17C995CD9775F2 --verify policy.json.asc policy.json
 
 ```
@@ -87,4 +89,3 @@ The site operator understands:
 
 We will require a form of DNS validation in order to validate that the pinning request comes from the site operator.
 To pin your mailserver, contact us with more information about your request at [starttls-policy@eff.org](mailto:starttls-policy@eff.org).
-
