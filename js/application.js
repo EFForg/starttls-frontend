@@ -20,21 +20,17 @@ $(function() {
   $(".copy-url").click(function() {
     urlCopied.innerHTML = window.location.href;
   });
-});
 
-//function copyUrl() {
-//    urlCopied.innerHTML = window.location.href;
-//}
+  /*
+  	Copy text from any appropriate field to the clipboard
+    By Craig Buckler, @craigbuckler
+  */
 
-/*
-	Copy text from any appropriate field to the clipboard
-  By Craig Buckler, @craigbuckler
-  use it, abuse it, do whatever you like with it!
-*/
-$(function() {
-	'use strict';
+  'use strict';
   document.body.addEventListener('click', copy, true);
-	function copy(e) {
+  var theUrl = window.location.href;
+  $("#urlCopied").val(theUrl);
+  function copy(e) {
     // find target element
     var
       t = e.target,
@@ -55,5 +51,5 @@ $(function() {
         alert('please press Ctrl/Cmd+C to copy');
       }
     }
-	}
+  }
 });
