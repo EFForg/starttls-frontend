@@ -16,7 +16,15 @@ $(function() {
   $(".add-another").click(function(){
     $(".add-domains").prepend('<input type="text" value="mx.domain.org"></input>');
   })
+
+  $(".copy-url").click(function() {
+    urlCopied.innerHTML = window.location.href;
+  });
 });
+
+//function copyUrl() {
+//    urlCopied.innerHTML = window.location.href;
+//}
 
 /*
 	Copy text from any appropriate field to the clipboard
