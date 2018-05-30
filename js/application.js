@@ -13,6 +13,13 @@ $(function() {
     }
   });
 
+  $(".how").click(function(){
+    linkhref = $(this).attr("href");
+    console.log(linkhref);
+    $(linkhref).parent().next().css("display","block");
+  });
+
+
   // add another domain name to the add domain page
   $(".add-another").click(function(){
     $(".add-domains").prepend('<input type="text" value="mx.domain.org"></input>');
