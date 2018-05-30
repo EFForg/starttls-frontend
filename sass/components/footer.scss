@@ -17,10 +17,14 @@ footer {
   .social-media {
     a {
       margin-right: 1rem;
-      img {
-        height: auto;
-        width: 50px;
-      }
+    }
+    img {
+      height: auto;
+      width: 50px;
+    }
+    textarea {
+      float: right;
+      opacity: 0; //hide field with URL
     }
   }
   .footer-logo { // logo
