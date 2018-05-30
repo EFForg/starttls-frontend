@@ -42,15 +42,17 @@ $(function() {
     });
   });
 
-  $('#add-your-domain select').change(function(e) {
-    $('.add-domain-action').hide();
-    switch($(this).val()) {
+  $('ul.options li').on('click', function () {
+    switch($(this).attr('rel')) {
       case 'yes':
-      $(".add-domain-action.submit").show();
-      break;
+        $(".add-domain-action.submit").show();
+        $(".add-domain-action.learn").hide();
+        break;
       case 'no':
-      $(".add-domain-action.learn").show();
-      break;
-    }
+        $(".add-domain-action.submit").hide();
+        $(".add-domain-action.learn").show();
+        break;
+      }
   });
+
 });
