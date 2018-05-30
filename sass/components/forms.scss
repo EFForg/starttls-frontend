@@ -1,17 +1,3 @@
-form {
-  padding: 2rem;
-  margin: 0 auto 2rem;
-  max-width: 950px;
-  h4 {
-    font-weight: 700;
-    text-align: center;
-  }
-  p {
-    font-weight: 400;
-    text-align: center;
-  }
-}
-
 label,
 .form-item label,
 .form-actions label {
@@ -44,6 +30,17 @@ input[type=submit] {
 }
 
 form#scan {
+  padding: 2rem;
+  margin: 0 auto 2rem;
+  max-width: 950px;
+  h4 {
+    font-weight: 700;
+    text-align: center;
+  }
+  p {
+    font-weight: 400;
+    text-align: center;
+  }
   background: $cyan-light;
   input[type=text],
   input[type=email],
