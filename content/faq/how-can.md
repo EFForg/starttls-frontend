@@ -1,10 +1,9 @@
 ---
-title: how-can
+linktitle: how-can
+title: How can I secure my mailserver?
 date: 2018-05-23T12:29:52-07:00
 weight: 7
 ---
-
-## How can I secure my mailserver?
 
 <h3>Do you have STARTTLS enabled?</h3>
 If you’re using Postfix, you can use [our Certbot plugin](https://certbot.eff.org) to enable TLS and set up all the relevant configuration parameters for you, which follows Postfix’s guidelines.

@@ -24,3 +24,14 @@
     text-decoration: none;
   }
 }
+
+@mixin results-checkbox {
+  @include susy-breakpoint($md) {
+    background-position: 0 0.5rem;
+  }
+  background: white url("images/red-x-open.svg") no-repeat;
+  background-size: 30px;
+  background-position: 0.5rem;
+  display: none;
+  padding-left: 4rem;
+}
