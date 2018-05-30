@@ -81,6 +81,7 @@ input[type=radio]:checked + label:before {
 }
 
 .accordion {
+  width: 100%;
   .transition {
     transition: all 0.5s ease-in-out;
   }
@@ -96,110 +97,148 @@ input[type=radio]:checked + label:before {
     user-select: none;
   }
 
-  ul {
-    list-style: none;
-    perspective: 900;
-    padding: 0;
+  .accordion-title {
+    @extend .flipIn;
+    @include susy-breakpoint($md) {
+      background-position: 1.2rem 0.4rem;
+      padding-left: 6rem;
+    }
+    animation-delay: 0.5s;
+    background: $gray-light url("images/green-check-open.svg") no-repeat;
+    background-position: 0.2rem;
+    background-size: 40px;
+    border-top: 4px solid white;
+    position: relative;
     margin: 0;
-    li.accordion-title {
-      @extend .flipIn;
-      animation-delay: 0.5s;
-      background: $gray-light url("images/check.svg") no-repeat;
-      background-size: 60px;
-      border-top: 4px solid white;
-      position: relative;
-      margin: 0;
+    padding-bottom: 0;
+    padding-top: 0.5rem;
+    color: $charcoal;
+    font-weight: 700;
+    margin-bottom: 0;
+    padding: 1rem 0 1rem 4rem;
+    a {
+      color: $charcoal;
+    }
+    &:last-of-type {
       padding-bottom: 0;
-      padding-top: 0.5rem;
-      &:last-of-type {
-        padding-bottom: 0;
-      }
-      h4 {
-        color: $charcoal;
-        font-weight: 700;
-        margin-bottom: 0;
-        padding: 1rem 0 0 4rem;
-        a {
-          color: $charcoal;
-        }
-      }
-      i {
-        position: absolute;
-        transform: translate( -6px , 0 );
-        right: 1rem;
-        top: 1.8rem;
-        &:before , &:after { //down arrow
-          @extend .transition;
-          content: "";
-          position: absolute;
-          background-color: $charcoal;
-          width: 4px;
-          height: 12px;
-
-        }
-        &:before {
-          transform: translate( -4px , 0 ) rotate( 45deg );
-        }
-        &:after {
-          transform: translate( 2px , 0 ) rotate( -45deg );
-        }
-      }
-      input[type=checkbox] {
-        position: absolute;
-        cursor: pointer;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        opacity: 0;
-        &:checked {
-          &~.accordion-content {
-            margin-top: 0;
-            max-height: 0;
-            opacity: 0;
-            transform: translate( 0 , 100% );
-          }
-          &~i {
-            &:before {
-              transform: translate( 4px , 0 ) rotate( 45deg );
-            }
-            &:after {
-              transform: translate( -2px , 0 ) rotate( -45deg );
-            }
-          }
-        }
-      }
-      .accordion-content {
+    }
+    i {
+      position: absolute;
+      transform: translate( -6px , 0 );
+      right: 1rem;
+      top: 1.2rem;
+      &:before , &:after { //down arrow
         @extend .transition;
-        overflow: hidden;
-        max-height: 3000px;
-        padding: 1rem;
-        position: relative;
-        opacity: 1;
-        transform: translate( 0, 0 );
+        content: "";
+        position: absolute;
+        background-color: $charcoal;
+        width: 4px;
+        height: 12px;
+      }
+      &:before {
+        transform: translate( -4px , 0 ) rotate( 45deg );
+      }
+      &:after {
+        transform: translate( 2px , 0 ) rotate( -45deg );
       }
     }
   }
-  @keyframes flipdown {
-    0% {
-      opacity: 0;
-      transform-origin: top center;
-      transform: rotateX(-90deg);
+
+  .active {
+    color: black;
+    i {
+      &:before {
+        transform: translate( 4px , 0 ) rotate( 45deg );
+      }
+      &:after {
+        transform: translate( -2px , 0 ) rotate( -45deg );
+      }
     }
-    5% {
-      opacity: 1;
+  }
+  .accordion-content {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+  }
+}
+
+@keyframes flipdown {
+  0% {
+    opacity: 0;
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+  }
+  5% {
+    opacity: 1;
+  }
+  80% {
+    transform: rotateX(8deg);
+  }
+  83% {
+    transform: rotateX(6deg);
+  }
+  92% {
+    transform: rotateX(-3deg);
+  }
+  100% {
+    transform-origin: top center;
+    transform: rotateX(0deg);
+  }
+}
+
+.add-another {
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+// dropdown for do you manage this email server
+.s-hidden {
+  visibility: hidden;
+  padding-right: 10px;
+}
+.select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  color: black;
+  border: none;
+}
+.styledSelect {
+  border: 2px solid $magenta;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  text-align: center;
+  display: inline-block;
+  height: 3.5rem;
+  padding: 0.8rem 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.options {
+  border: 2px solid $magenta;
+  background-color: white;
+  display: none;
+  list-style: none;
+  position: relative;
+  top: 1rem;
+  margin: 0 auto;
+  padding: 0 ;
+  width: 20rem;
+  text-align: center;
+  z-index: 999;
+  li {
+    margin: 0;
+    padding: 0 0.5rem;
+    &:hover {
+      background-color: $magenta;
+      color: white;
     }
-    80% {
-      transform: rotateX(8deg);
-    }
-    83% {
-      transform: rotateX(6deg);
-    }
-    92% {
-      transform: rotateX(-3deg);
-    }
-    100% {
-      transform-origin: top center;
-      transform: rotateX(0deg);
+    &:first-child {
+      display: none;
     }
   }
 }
