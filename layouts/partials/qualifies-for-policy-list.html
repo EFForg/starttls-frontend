@@ -1,5 +1,5 @@
 <div id="add-your-domain">
-  <p>Your e-mail domain qualifies for the STARTTLS Policy List!</p>
+  <h2>Your e-mail domain qualifies for the STARTTLS Policy List!</h2>
 
   <p>Even if you pass the above checks, someone sitting between your server and other mailservers can choose to not deliver any "STARTTLS" messages and fool servers into thinking that the other does not support TLS.</p>
 
@@ -10,6 +10,8 @@
     <option value="yes">Yes, I manage this email server</option>
     <option value="no">No, I do not manage this email server</option>
   </select>
-  <div class="add-domain-action learn"><a href=""><strong>Learn</strong> how to secure your mailserver</a></div>
-  <button class="add-domain-action submit"><a href="/add-domain">How to add your domain</a></button>
+  <div class="manage-buttons">
+    <a href="" class="add-domain-action learn button"><strong>Learn</strong> how to secure your mailserver</a>
+    <a href="/add-domain" class="add-domain-action submit button">How to add your domain</a>
+  </div>
 </div>
