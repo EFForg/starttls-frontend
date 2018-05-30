@@ -26,6 +26,9 @@ footer {
       float: right;
       opacity: 0; //hide field with URL
     }
+    .copy-confirm {
+      display: none;
+    }
   }
   .footer-logo { // logo
     float: left;

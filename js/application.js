@@ -20,6 +20,7 @@ $(function() {
 
   $(".copy-url").click(function() {
     urlCopied.innerHTML = window.location.href;
+    $(".copy-confirm").css("display", "inline-block");
   });
 
   /*
