@@ -15,6 +15,7 @@ footer {
   }
 
   .social-media {
+    transition: all 1s;
     a {
       margin-right: 1rem;
     }
@@ -27,7 +28,9 @@ footer {
       opacity: 0; //hide field with URL
     }
     .copy-confirm {
-      display: none;
+      float: right;
+      font-weight: 400;
+      opacity: 0;
     }
   }
 

@@ -26,7 +26,6 @@ $(function() {
 
   $(".copy-url").click(function() {
     urlCopied.innerHTML = window.location.href;
-    $(".copy-confirm").css("display", "inline-block");
   });
 
   /*
@@ -52,8 +51,10 @@ $(function() {
         document.execCommand('copy');
         inp.blur();
         // copied animation
-        t.classList.add('copied');
-        setTimeout(function() { t.classList.remove('copied'); }, 1500);
+        $(".copy-confirm").css({
+          opacity       : "1",
+          transition : 'opacity 0.2s ease-in-out'
+        });
       }
       catch (err) {
         alert('please press Ctrl/Cmd+C to copy');
