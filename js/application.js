@@ -18,14 +18,4 @@ $(function() {
     }
   });
 
-
-  //$(".accordion-title").click(function(){
-  //  this.classList.toggle("active");
-  //  var panel = $(this).next();
-  //  if (panel.css("max-height") === "100rem") {
-  //    panel.css("max-height","0");
-  //  } else {
-  //    panel.css("max-height","100rem");
-  //  }
-  //});
 });
