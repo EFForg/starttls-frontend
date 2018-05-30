@@ -2,7 +2,7 @@ $(function() {
   $('.js-no').hide();
   $('.js-yes').show();
 
-  //accordion
+  // accordion
   $(".accordion-title").click(function(){
     this.classList.toggle("active");
     var panel = $(this).next();
@@ -13,7 +13,8 @@ $(function() {
     }
   });
 
-  $(".how").click(function(){
+  // open accordion panel when anchor link clicked elsewhere
+  $(".accordion-content p a").click(function(){
     linkhref = $(this).attr("href");
     console.log(linkhref);
     $(linkhref).parent().next().css("display","block");
