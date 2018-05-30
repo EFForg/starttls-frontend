@@ -114,6 +114,9 @@ nav {
       }
     }
     li.menu-logo {
+      @include susy-breakpoint($md) {
+        top: 2px;
+      }
       display: inline-block;
       position: absolute;
       left: 3%;
