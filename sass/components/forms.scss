@@ -49,8 +49,6 @@ form#scan {
   margin: 0 auto 2rem;
   max-width: 950px;
   background: $cyan-light;
-  input[type=text],
-  input[type=email],
   h4 {
     font-weight: 700;
     text-align: center;
@@ -59,6 +57,8 @@ form#scan {
     font-weight: 400;
     text-align: center;
   }
+  input[type=text],
+  input[type=email],
   textarea {
     border: none;
     margin: 1rem auto;
