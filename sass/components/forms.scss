@@ -79,4 +79,18 @@ form#queue {
   label {
     @extend h5;
   }
+
+  .add-another {
+    // Strip button styles
+    background: none;
+    border: none;
+    font-size: 1em;
+
+    font-weight: 700;
+    margin-bottom: 2rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

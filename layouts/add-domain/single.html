@@ -24,20 +24,18 @@
       <p>What hostnames are your TLS certificates valid for? Let us know, so a DNS man-in-the-middle can’t lie to others about your hostnames. </p>
       <p>These hostnames can be [fully qualified domain names](hover: mx.eff.org) or [wildcard subdomains](hover: *.mx.eff.org).</p>
 
-      <div class="js-no">
-        {{ range $i, $sequence := (seq 8) }}
-        <input type="text" name="mx-domain[]" placeholder="mx.domain.org" aria-label="Mx hostname {{ $i }}"></input>
-        {{ end }}
-        <div class="add-another js-yes">+ Add another hostname</div>
-      </div>
+      {{ range $i, $sequence := (seq 8) }}
+      <input type="text" class="mx-domain" name="mx-domain[]" placeholder="mx.domain.org" aria-label="Mx hostname {{ $i }}"></input>
+      {{ end }}
+      <input type="button" class="add-another js-yes" value="+ Add another hostname">
     </fieldset>
 
-    <p> When you request submission, we will queue <span class="your-domain">your domain</span> for submission for one week, and continually run security checks against <span class="your-domain">your domain</span>. If it continues to pass this validation, you’ll be added to the list! We will notify you of your domain status via the contact e-mail above.</p>
+    <p>When you request submission, we will queue <span class="your-domain">your domain</span> for submission for one week, and continually run security checks against <span class="your-domain">your domain</span>. If it continues to pass this validation, you’ll be added to the list! We will notify you of your domain status via the contact e-mail above.</p>
 
     <p>When you are added to the list, you are required to continue meeting security guidelines. If for some reason you do not, this could impact deliverability. </p>
 
     <p>Read more about the STARTTLS Policy list.</p>
 
-    <button type="submit">Submit your domain</button>
+    <input type="submit">Submit your domain</button>
   </form>
 {{ end }}
