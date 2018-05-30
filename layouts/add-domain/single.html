@@ -1,6 +1,13 @@
 {{ define "main" }}
-  <h1 class="title">{{ .Title }}</h1>
-  {{ .Content }}
+  <article class="accordion add-domain-accordion">
+    <div class="accordion-title">
+      {{ .Title }}
+      <i></i>
+    </div>
+    <div class="accordion-content">
+      {{ .Content }}
+    </div>
+  </article>
 
   <h2>Add <span class="your-domain">Your Domain</span> to EFF’s  STARTTLS Policy List</h2>
   <p>By adding your domain, you’re protected from downgrade attacks so e-mail servers can send e-mail to you securely.</p>
