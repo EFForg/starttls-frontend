@@ -11,8 +11,9 @@ button {
   font-weight: 400;
   height: 65px;
   line-height: 1.2rem;
-  padding: 1rem 5rem 0.1rem 2rem;
+  padding: 1rem 5rem 0.9rem 2rem;
   position: relative;
+  text-decoration: none;
   width: 300px;
   a {
     color: white;
@@ -20,7 +21,7 @@ button {
   &:before , &:after {  //arrow
     content: "";
     background-color: white;
-    height: 17px;
+    height: 12px;
     position: absolute;
     width: 4px;
   }
@@ -32,7 +33,7 @@ button {
   &:after {
     transform: translate( 2px , 0 ) rotate( 45deg );
     right: 1.75rem;
-    top: 1.7rem;
+    top: 1.5rem;
   }
 }
 
@@ -104,7 +105,7 @@ input[type=radio]:checked + label:before {
       padding-left: 6rem;
     }
     animation-delay: 0.5s;
-    background: $gray-light url("images/green-check-open.svg") no-repeat;
+    background: $gray-light url("images/grey-check-open.svg") no-repeat;
     background-position: 0.2rem;
     background-size: 40px;
     border-top: 4px solid white;
