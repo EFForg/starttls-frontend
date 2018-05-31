@@ -23,9 +23,9 @@ $(function() {
         $('#add-your-domain').hide();
         $('.result').remove();
 
-        var res = data.response;
-        $.each(res.preferred_hostnames, function(i, hostname) {
-          var result = res.results[hostname];
+        var scan = data.response.scandata;
+        $.each(scan.preferred_hostnames, function(i, hostname) {
+          var result = scan.results[hostname];
           if (result) {
             var $result = $('#result-template').clone();
             $result.removeAttr('id').addClass('result');
