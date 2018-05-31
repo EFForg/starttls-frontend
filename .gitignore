@@ -4,3 +4,4 @@ static/application.js
 static/application.js.map
 node_modules
 static/vendor
+yarn-error.log

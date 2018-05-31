@@ -1,3 +1,6 @@
+/*
+ * Form interactions for POST to /api/scan
+ */
 $(function() {
   $('#scan').submit(function(e) {
     e.preventDefault();
