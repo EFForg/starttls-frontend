@@ -3,8 +3,8 @@ $(function() {
     e.preventDefault();
 
     var $form = $(this),
-      domain = $form.find('input[name="domain"]').val(),
-      url = $form.attr('action');
+    domain = $form.find('input[name="domain"]').val(),
+    url = $form.attr('action');
 
     $.ajax({
       type: 'POST',
@@ -21,6 +21,7 @@ $(function() {
         // remove overview and any past search results.
         $('.checks-overview').hide();
         $('#add-your-domain').hide();
+        $('#share-results').hide();
         $('.result').remove();
 
         var scan = data.response.scandata;
@@ -41,6 +42,7 @@ $(function() {
             $result.appendTo( $('article.accordion') );
           }
 
+          $('#share-results').show();
           // TODO conditional on qualifying for list
           $('#add-your-domain').show();
         });
@@ -51,14 +53,14 @@ $(function() {
   $('ul.options li').on('click', function () {
     switch($(this).attr('rel')) {
       case 'yes':
-        $(".add-domain-action.submit").show();
-        $(".add-domain-action.learn").hide();
-        break;
+      $(".add-domain-action.submit").show();
+      $(".add-domain-action.learn").hide();
+      break;
       case 'no':
-        $(".add-domain-action.submit").hide();
-        $(".add-domain-action.learn").show();
-        break;
-      }
+      $(".add-domain-action.submit").hide();
+      $(".add-domain-action.learn").show();
+      break;
+    }
   });
 
 });
