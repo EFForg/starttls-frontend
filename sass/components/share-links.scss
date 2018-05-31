@@ -3,13 +3,12 @@
 }
 .share-links {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin: 1rem auto;
   max-width: 15rem;
   > a {
     background-repeat: no-repeat;
     display: inline-block;
-    flex: 1;
     height: 3.5rem;
     transition: opacity 0.3s;
     width: 3.5rem;
