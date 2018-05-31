@@ -1,10 +1,9 @@
 ---
-title: what-checker
+linktitle: what-checker
+title: What does the [STARTTLS Checker](/) do?
 date: 2018-05-23T12:29:26-07:00
 weight: 6
 ---
-
-## What does the [STARTTLS Checker](/) do?
 
 <h3>This tool checks whether your email domain…</h3>
 

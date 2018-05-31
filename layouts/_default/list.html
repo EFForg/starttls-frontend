@@ -7,12 +7,17 @@
   <h1 class="title">{{ .Title }}</h1>
   <p>{{ .Content }}
   </p>
-  <ul>
+  <article class="accordion">
     {{ range .Data.Pages.ByWeight }}
-    <li><a name="{{ .Title }}"></a>
-      <div>{{ .Content }}</div>
-    </li>
+    <div class="accordion-title">{{ .Title }}
+      <a name="{{ .LinkTitle }}"></a>
+      <i></i>
+    </div>
+    <div class="accordion-content">
+      <h2>{{ .Title }}</h2>
+      {{ .Content }}
+    </div>
     {{ end }}
-  </ul>
+  </article>
 </div>
 {{ partial "footer" . }}
