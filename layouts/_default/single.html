@@ -1,10 +1,4 @@
-{{ partial "head" . }}
-
-{{ partial "off-canvas" . }}
-
-{{ partial "header" . }}
-<div class="main-content">
+{{ define "main" }}
   <h1 class="title">{{ .Title }}</h1>
-    {{ .Content }}
-</div>
-{{ partial "footer" . }}
+  {{ .Content }}
+{{ end }}
