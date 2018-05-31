@@ -1,10 +1,9 @@
 ---
-title: what-list
+linktitle: what-list
+title: What is the STARTTLS Policy List?
 date: 2018-05-23T12:30:15-07:00
 weight: 8
 ---
-
-## What is the STARTTLS Policy List?
 
 The STARTTLS Policy List is a list of email domains who meet a minimum set of security requirements.
 
@@ -15,4 +14,3 @@ Here are some guidelines for using the list to prevent downgrade attacks. Here a
 You can request your own email domain to be added to the list via our tool.
 
 [**More details about the STARTTLS Policy List**](/starttls-policy)
-

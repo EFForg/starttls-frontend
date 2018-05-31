@@ -2,7 +2,7 @@ $menu-width: 260px;
 $sidebar-color: $gray-dark;
 
 #off-canvas {
-  background-color: $sidebar-color;
+  background-color: black;
   display: block;
   font-weight: 400;
   height: 100%;
@@ -32,6 +32,14 @@ $sidebar-color: $gray-dark;
   }
   .close-menu a {
     text-decoration: none;
+  }
+  .social-media {
+    margin-left: 2.5em;
+    img {
+      height: auto;
+      width: 30px;
+      margin-right: 0.7em;
+    }
   }
 }
 

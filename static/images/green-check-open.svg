@@ -3,8 +3,10 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#72B559;}
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#72B559;}
 </style>
-<path id="XMLID_5_" class="st0" d="M100,100H0V0h100V100z M6,93.9h88V6.1H6V93.9z"/>
-<polygon id="XMLID_2_" class="st0" points="40,80.3 13.4,53.4 26.1,40.5 40,54.6 74.4,19.8 87.1,32.7 "/>
+<rect x="6" y="6.1" class="st0" width="88" height="87.8"/>
+<path id="XMLID_5_" class="st1" d="M100,100H0V0h100V100z M6,93.9h88V6.1H6V93.9z"/>
+<polygon id="XMLID_2_" class="st1" points="40,80.3 13.4,53.4 26.1,40.5 40,54.6 74.4,19.8 87.1,32.7 "/>
 </svg>

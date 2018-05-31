@@ -1,9 +1,9 @@
 ---
-title: insecure
+linktitle: how-can
+title: How can my email be insecure?
 date: 2018-05-22T15:36:31-07:00
 weight: 2
 ---
-## How can my email be insecure?
 
 As mentioned in the [previous section](#how), your email goes through multiple hops! Each of these hops have to be secure and authenticated for your email to reliably delivered securely.
 
