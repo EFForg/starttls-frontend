@@ -13,13 +13,19 @@ $(function() {
         domain: domain
       },
       success: function(data) {
+        if (data.status_code !== 200) {
+          $form.append("<div>Something went wrong. Please try back later.</div>");
+          return;
+        }
+
         // remove overview and any past search results.
         $('.checks-overview').hide();
         $('#add-your-domain').hide();
         $('.result').remove();
 
-        $.each(data.preferred_hostnames, function(i, hostname) {
-          var result = data.results[hostname];
+        var scan = data.response.scandata;
+        $.each(scan.preferred_hostnames, function(i, hostname) {
+          var result = scan.results[hostname];
           if (result) {
             var $result = $('#result-template').clone();
             $result.removeAttr('id').addClass('result');
