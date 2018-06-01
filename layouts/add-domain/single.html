@@ -32,7 +32,7 @@
       <p>These hostnames can be [fully qualified domain names](hover: mx.eff.org) or [wildcard subdomains](hover: *.mx.eff.org).</p>
 
       {{ range $i, $sequence := (seq 8) }}
-      <input type="text" class="mx-domain" name="mx-domain[]" placeholder="mx.domain.org" aria-label="Mx hostname {{ $i }}"></input>
+      <input type="text" class="mx-domain" name="hostnames" placeholder="mx.domain.org" aria-label="Mx hostname {{ $i }}"></input>
       {{ end }}
       <input type="button" class="add-another js-yes" value="+ Add another hostname">
     </fieldset>
