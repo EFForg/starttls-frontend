@@ -5,7 +5,7 @@ date: 2018-05-22T15:36:31-07:00
 weight: 2
 ---
 
-As mentioned in the [previous section](#how), your email goes through multiple hops! Each of these hops have to be secure and authenticated for your email to reliably delivered securely.
+As mentioned in the <a href="#how" class="how">previous section</a>, your email goes through multiple hops! Each of these hops have to be secure and authenticated for your email to reliably delivered securely.
 
 <img src="/images/how-email-insecure.png" alt="how is email insecure diagram">
 
