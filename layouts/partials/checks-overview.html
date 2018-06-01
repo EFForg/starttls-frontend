@@ -1,12 +1,13 @@
-<ul class="checks-overview">
+<div class="checks-overview">
   <article class="accordion">
   {{ range $.Site.Data.checks.list }}
-  <div class="accordion-title">
-    {{ .title | markdownify }}
-    <i></i>
-  </div>
-      <div class="accordion-content">
+    <div class="accordion-title">
+      {{ .title | markdownify }}
+      <i></i>
+    </div>
+    <div class="accordion-content">
         {{ .body | markdownify }}
-      </div>
+    </div>
   {{ end }}
-</ul>
+  </article>
+</div>

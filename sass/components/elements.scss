@@ -156,14 +156,9 @@ input[type=radio]:checked + label:before {
     }
   }
   .accordion-content {
-    //  @extend .transition;
     padding: 0 18px;
     background-color: white;
     display: none;
-    //height: auto;
-    //  max-height: 0;
-    //  overflow: hidden;
-    //  transition: max-height 0.2s ease-out;
   }
 }
 
@@ -246,4 +241,8 @@ input[type=radio]:checked + label:before {
       display: none;
     }
   }
+}
+
+.add-domain-accordion .accordion-content {
+  background-color: $gray-light;
 }

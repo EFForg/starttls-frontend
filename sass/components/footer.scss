@@ -1,8 +1,11 @@
 footer {
+  @include susy-breakpoint($md) {
+    display: table-row;
+  }
   background: black;
   clear: both;
   color: $cyan;
-  display: table-row;
+  display: none;
   padding: 1rem;
   text-transform: uppercase;
   width: 100%;

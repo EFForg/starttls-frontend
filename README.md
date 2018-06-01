@@ -12,11 +12,14 @@
 
 `yarn run build` builds the site to `/public` once.
 
+`yarn run lint` runs the sass linter.
+
 `yarn run serve` watches for changes and serves the site from memory at `localhost:1313`.
 
-If the Scanner API is running on under a different hostname, you can set it using the API_HOSTNAME environment variable, e.g. `API_HOSTNAME="http://localhost:8080" yarn run serve`.
-
-`yarn run lint` runs the sass linter.
+#### Developing with the STARTTLS Scanner API
+1. Clone https://github.com/EFForg/starttls-scanner and follow the Docker setup instructions.
+2. Edit the `.env` file for that project and set `ALLOWED_ORIGINS=http://localhost:1313`.
+3. In the `starttls/frontend` project (this repo), run `API_HOSTNAME="http://localhost:8080" yarn run serve`.
 
 ### Docker
 
