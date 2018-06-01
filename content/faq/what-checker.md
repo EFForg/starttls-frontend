@@ -1,11 +1,11 @@
 ---
 linktitle: what-checker
-title: What does the [STARTTLS Checker](/) do?
+title: What does the STARTTLS Checker do?
 date: 2018-05-23T12:29:26-07:00
 weight: 6
 ---
 
-<h3>This tool checks whether your email domain…</h3>
+<h3><a href="/">This tool</a> checks whether your email domain…</h3>
 
 <!--- TODO: use data/checks.yml to populate the below. -->
 
