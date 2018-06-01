@@ -8,10 +8,6 @@
   }
   .no-select {
     -webkit-tap-highlight-color: black;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
   }
 
@@ -53,40 +49,38 @@
   background-position: 0.2rem;
   background-size: 40px;
   border-top: 4px solid white;
-  position: relative;
-  margin: 0;
-  padding-bottom: 0;
-  padding-top: 0.5rem;
   color: $charcoal;
   font-weight: 700;
-  margin-bottom: 0;
-  padding: 1rem 0 1rem 4rem;
-  a {
-    color: $charcoal;
-  }
-  &:last-of-type {
-    padding-bottom: 0;
-  }
-  i {
+  margin: 0;
+  padding: 1rem 2rem 1rem 6rem;
+  position: relative;
+}
+a {
+  color: $charcoal;
+}
+&:last-of-type {
+  padding-bottom: 0;
+}
+i {
+  position: absolute;
+  transform: translate( -6px , 0 );
+  right: 1rem;
+  top: 1.2rem;
+  &:before , &:after { //down arrow
+    @extend .transition;
+    content: "";
     position: absolute;
-    transform: translate( -6px , 0 );
-    right: 1rem;
-    top: 1.2rem;
-    &:before , &:after { //down arrow
-      @extend .transition;
-      content: "";
-      position: absolute;
-      background-color: $charcoal;
-      width: 4px;
-      height: 12px;
-    }
-    &:before {
-      transform: translate( -4px , 0 ) rotate( 45deg );
-    }
-    &:after {
-      transform: translate( 2px , 0 ) rotate( -45deg );
-    }
+    background-color: $charcoal;
+    width: 4px;
+    height: 12px;
   }
+  &:before {
+    transform: translate( -4px , 0 ) rotate( 45deg );
+  }
+  &:after {
+    transform: translate( 2px , 0 ) rotate( -45deg );
+  }
+}
 }
 
 
@@ -122,5 +116,8 @@
 .accordion-content {
   padding: 1rem 1rem 1rem 0;
   background-color: white;
-  display: none;
+  margin-top: -2rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s;
 }
