@@ -1,0 +1,12 @@
+{{ partial "head" . }}
+
+{{ partial "off-canvas" . }}
+
+{{ partial "header" . }}
+
+<div class="main-content">
+  {{ block "main" . }}
+  {{ end }}
+</div>
+
+{{ partial "footer" . }}
