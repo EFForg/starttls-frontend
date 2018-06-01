@@ -16,6 +16,7 @@ If you’re using Postfix, you can use [our Certbot plugin](https://certbot.eff.
 Otherwise, consult your mailserver’s documentation on how to enable STARTTLS for your email delivery!
 
 In particular, here are some things you should watch out for:
+
  - [Disable SSLv2/SSLv3](disablessl3.com)
  - [Deploy perfect forward secrecy correctly](https://weakdh.org/sysadmin.html).
 
