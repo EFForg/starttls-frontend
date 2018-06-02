@@ -4,6 +4,23 @@
 $(function() {
   var $form = $("#queue");
   init_add_another_mx_hostname();
+
+  $form.submit(function(e) {
+    e.preventDefault();
+
+    var domain = $form.find('input[name="domain"]').val(),
+        url = $form.attr('action');
+
+    $.ajax({
+      type: 'POST',
+      url: url,
+      data: $form.serializeArray()
+    }).done(function(data) {
+      window.location = "/domain-submitted";
+    }).fail(function(data) {
+      $form.prepend("<div>Something went wrong. Please try back later.</div>");
+    });
+  });
 });
 
 function init_add_another_mx_hostname() {
