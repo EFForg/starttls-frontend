@@ -6,6 +6,7 @@ $(function() {
   init_add_another_mx_hostname();
 
   $form.submit(function(e) {
+    $form.find(".errors").text("");
     e.preventDefault();
 
     var domain = $form.find('input[name="domain"]').val(),
@@ -18,7 +19,8 @@ $(function() {
     }).done(function(data) {
       window.location = "/domain-submitted";
     }).fail(function(data) {
-      $form.prepend("<div>Something went wrong. Please try back later.</div>");
+      console.log($("input[type=submit]"))
+      $form.find(".errors").text("Something went wrong. Please try back later.");
     });
   });
 });
