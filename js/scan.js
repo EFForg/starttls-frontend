@@ -24,6 +24,7 @@ $(function() {
         // remove overview and any past search results.
         $('.checks-overview').hide();
         $('#add-your-domain').hide();
+        $('#share-results').hide();
         $('.result').remove();
 
         var scan = data.response.scandata;
@@ -44,6 +45,7 @@ $(function() {
             $result.appendTo( $('article.accordion') );
           }
 
+          $('#share-results').show();
           // TODO conditional on qualifying for list
           $('#add-your-domain').show();
         });
@@ -61,7 +63,7 @@ $(function() {
         $(".add-domain-action.submit").hide();
         $(".add-domain-action.learn").show();
         break;
-      }
+    }
   });
 
 });

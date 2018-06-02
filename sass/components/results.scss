@@ -1,0 +1,19 @@
+#add-your-domain {
+  h2 {
+    background: url("/images/green-check-fill.svg") no-repeat;
+    background-position: 0.2rem;
+    background-size: 40px;
+    padding: 0 1rem 0 4rem;
+  }
+  .select {
+    margin: 0 25% 5rem;
+  }
+  .manage-buttons {
+    clear: left;
+    margin: -1rem auto 2rem;
+    text-align: center;
+  }
+  .learn {
+    background-color: $magenta;
+  }
+}
