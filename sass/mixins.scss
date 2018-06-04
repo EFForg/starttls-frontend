@@ -23,6 +23,14 @@
     color: white;
     text-decoration: none;
   }
+
+  &:disabled {
+    border-color: $gray-dark;
+    background: url("../images/spinner.gif") bottom right no-repeat;
+    background-color: $gray-dark;
+    background-size: contain;
+    cursor: auto;
+  }
 }
 
 @mixin results-checkbox {
