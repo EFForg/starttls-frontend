@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <h1>How secure is <span class="your-domain-name">your domain</span>?</h1>
+
+  {{ partial "fail-no-support" . }}
+  {{ partial "fail-not-secured" . }}
+  {{ partial "not-submitted" . }}
+  {{ partial "pending" . }}
+  {{ partial "perfect" . }}
+
+  <article class="accordion">
+    {{ partial "result-template" . }}
+  </article>
+
+  {{ partial "share-links" . }}
+{{ end }}
