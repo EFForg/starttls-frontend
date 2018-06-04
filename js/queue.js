@@ -4,6 +4,27 @@
 $(function() {
   var $form = $("#queue");
   init_add_another_mx_hostname();
+
+  $form.submit(function(e) {
+    $form.find(".errors").text("");
+    e.preventDefault();
+
+    var domain = $form.find('input[name="domain"]').val(),
+        url = $form.attr('action');
+
+    $.ajax({
+      type: 'POST',
+      url: url,
+      data: $form.serializeArray()
+    }).done(function(data) {
+      window.location = "/domain-submitted";
+    }).fail(function(data) {
+      console.log($("input[type=submit]"))
+      $form.find(".errors").text("Something went wrong. Please try back later.");
+    });
+  });
+
+  $(".next-queue-date").text(next_queue_date())
 });
 
 function init_add_another_mx_hostname() {
@@ -20,4 +41,11 @@ function init_add_another_mx_hostname() {
       // Showed the last field, no more to show
       $add_another.hide()
   });
+}
+
+function next_queue_date() {
+  var day_of_week = 3; // Wednesday
+  var d = new Date()
+  d.setDate(d.getDate() + (day_of_week + 7 - d.getDay()) % 7);
+  return d.toLocaleDateString("en-US")
 }

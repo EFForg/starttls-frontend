@@ -18,21 +18,22 @@
     <div id="domain-description">
       <p>Sydney please fill out this help text for noscript users who need to reenter their domain :)</p>
     </div>
-    <input name="domain" id="domain-input" type="text" aria-describedby="domain-description" placeholder="example.com"></input>
+    <input name="domain" id="domain-input" type="text" required aria-describedby="domain-description" placeholder="example.com"></input>
 
     <label for="email-input">Contact Email</label>
     <div id="email-description">
       <p>We’ll use this e-mail to notify you of the status of your domain and potential deliverability issues.</p>
     </div>
-    <input name="email" id="email-input" type="text" aria-describedby="email-description" placeholder="yourname@hostname.org"></input>
+    <input name="email" id="email-input" type="email" required aria-describedby="email-description" placeholder="yourname@hostname.org"></input>
 
     <fieldset>
       <legend>Mx Hostnames</legend>
       <p>What hostnames are your TLS certificates valid for? Let us know, so a DNS man-in-the-middle can’t lie to others about your hostnames. </p>
       <p>These hostnames can be [fully qualified domain names](hover: mx.eff.org) or [wildcard subdomains](hover: *.mx.eff.org).</p>
 
-      {{ range $i, $sequence := (seq 8) }}
-      <input type="text" class="mx-domain" name="mx-domain[]" placeholder="mx.domain.org" aria-label="Mx hostname {{ $i }}"></input>
+      <input type="text" class="mx-domain" name="hostnames" placeholder="mx.domain.org" aria-label="Mx hostname 1" required>
+      {{ range $i, $sequence := (seq 2 8) }}
+        <input type="text" class="mx-domain" name="hostnames" placeholder="mx.domain.org" aria-label="Mx hostname {{ $i }}">
       {{ end }}
       <input type="button" class="add-another js-yes" value="+ Add another hostname">
     </fieldset>
@@ -43,6 +44,7 @@
 
     <p>Read more about the STARTTLS Policy list.</p>
 
+    <div class="errors"></div>
     <input type="submit" value="Submit your domain">
   </form>
 {{ end }}
