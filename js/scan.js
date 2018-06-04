@@ -45,7 +45,7 @@ $(function() {
             $result.appendTo( $('article.accordion') );
           }
 
-          if (scan.extra_results.policylist.status === 0) {
+          if (can_add_to_policy_list(scan)) {
             $('#add-your-domain').show();
           }
 
@@ -69,3 +69,8 @@ $(function() {
   });
 
 });
+
+function can_add_to_policy_list(scan) {
+  return scan.status === 0 &&
+    scan.extra_results.policylist.status !== 0;
+}
