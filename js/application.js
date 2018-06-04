@@ -2,14 +2,16 @@ $(function() {
   $('.js-no').hide();
   $('.js-yes').show();
 
-  // accordion
-  $(".accordion-title").click(function(){
+  //accordion
+  $("body").on('click', '.accordion-title', function () {
     this.classList.toggle("active");
     var panel = $(this).next();
-    if (panel.css("display") === "block") {
-      panel.css("display", "none");
+    if (panel.css("max-height") === "0px") {
+      panel.css({"max-height" : "3000px",
+                 "margin-top" : "0" });
     } else {
-      panel.css("display", "block");
+      panel.css({"max-height" : "0px",
+                 "margin-top" : "-2rem" });
     }
   });
 
