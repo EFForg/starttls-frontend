@@ -22,12 +22,22 @@
 }
 
 
-.fail {
+.check.fail {
   .fail-title {
     display: block;
   }
 
   .default-title {
+    display: none;
+  }
+}
+
+.check.success {
+  .default-title {
+    display: block;
+  }
+
+  .fail-title {
     display: none;
   }
 }
