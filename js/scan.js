@@ -23,7 +23,7 @@ $(function() {
 
         // remove overview and any past search results.
         $('.checks-overview').hide();
-        $('#add-your-domain').hide();
+        $('.results-overview').hide();
         $('#share-results').hide();
         $('.result').remove();
 
@@ -45,10 +45,7 @@ $(function() {
             $result.appendTo( $('article.accordion') );
           }
 
-          if (can_add_to_policy_list(scan)) {
-            $('#add-your-domain').show();
-          }
-
+          $('#' + status_string(scan)).show()
           $('#share-results').show();
         });
       }
@@ -70,7 +67,22 @@ $(function() {
 
 });
 
-function can_add_to_policy_list(scan) {
-  return scan.status === 0 &&
-    scan.extra_results.policylist.status !== 0;
+function status_string(scan) {
+  var result = "";
+  switch(scan.status) {
+    case 0:
+      switch (scan.extra_results.policylist.status) {
+        case 0:
+          return "perfect"
+        case 1:
+          return "pending"
+        case 2:
+          return "not-submitted"
+      }
+    case 1:
+      // This is pending server using distinct status code.
+      return "fail-not-secured";
+    case 2:
+      return "fail-no-support";
+  }
 }
