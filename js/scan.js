@@ -45,9 +45,11 @@ $(function() {
             $result.appendTo( $('article.accordion') );
           }
 
+          if (scan.extra_results.policylist.status === 0) {
+            $('#add-your-domain').show();
+          }
+
           $('#share-results').show();
-          // TODO conditional on qualifying for list
-          $('#add-your-domain').show();
         });
       }
     });
