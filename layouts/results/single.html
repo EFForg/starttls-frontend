@@ -12,4 +12,6 @@
   </article>
 
   {{ partial "share-links" . }}
+
+  <div id="api-hostname" data-api-hostname="{{ safeURL (getenv "API_HOSTNAME") }}"></div>
 {{ end }}

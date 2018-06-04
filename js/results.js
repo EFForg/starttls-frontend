@@ -2,11 +2,12 @@
  * Form interactions for POST to /api/scan
  */
 $(function() {
+  var hostname = $('#api-hostname').data('api-hostname');
   var domain = window.location.search.substring(1);
 
   $.ajax({
     type: 'POST',
-    url: 'http://localhost:8080/api/scan', // TODO: read hostname from env
+    url: hostname + '/api/scan',
     data: {
       domain: domain
     },
@@ -18,7 +19,7 @@ $(function() {
 
 function handle_scan(data) {
   if (data.status_code !== 200) {
-    $form.append("<div>Something went wrong. Please try back later.</div>");
+    $form.append('<div>Something went wrong. Please try back later.</div>');
     return;
   }
 
