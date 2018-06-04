@@ -35,3 +35,11 @@
   display: none;
   padding-left: 4rem;
 }
+
+@mixin results-title {
+  background: url("/images/green-check-fill.svg");
+  background-repeat: no-repeat;
+  background-position: 0.2rem;
+  background-size: 40px;
+  padding: 0 1rem 0 4rem;
+}
