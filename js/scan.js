@@ -6,8 +6,11 @@ $(function() {
     e.preventDefault();
 
     var $form = $(this),
+      $submit = $form.find('input[type="submit"]')
       domain = $form.find('input[name="domain"]').val(),
       url = $form.attr('action');
+
+    $submit.prop('disabled', true);
 
     $.ajax({
       type: 'POST',
@@ -16,6 +19,8 @@ $(function() {
         domain: domain
       },
       success: function(data) {
+        $submit.prop('disabled', false);
+
         if (data.status_code !== 200) {
           $form.append("<div>Something went wrong. Please try back later.</div>");
           return;
