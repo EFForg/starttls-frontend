@@ -3,6 +3,7 @@ linktitle: what-list
 title: What is the STARTTLS Policy List?
 date: 2018-05-23T12:30:15-07:00
 weight: 8
+level: secure
 ---
 
 The [STARTTLS Policy List](/policy-list) is a list of email domains who meet a minimum set of security requirements.
