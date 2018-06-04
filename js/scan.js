@@ -47,6 +47,7 @@ $(function() {
 
           $('#' + status_string(scan)).show()
           $('#share-results').show();
+          $('.your-domain-name').text(data.response.domain);
         });
       }
     });
