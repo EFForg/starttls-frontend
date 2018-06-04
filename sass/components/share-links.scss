@@ -1,0 +1,31 @@
+#share-results {
+  display: none;
+  .share-title {
+    text-align: center;
+  }
+  .share-links {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem auto;
+    max-width: 15rem;
+    > a {
+      background-repeat: no-repeat;
+      display: inline-block;
+      height: 3.5rem;
+      transition: opacity 0.3s;
+      width: 3.5rem;
+      &:hover {
+        opacity: 0.6;
+      }
+      &.share-twitter  {
+        background-image: url("/images/social-white-twitter.svg");
+      }
+      &.share-facebook  {
+        background-image: url("/images/social-white-facebook.svg");
+      }
+      &.share-google  {
+        background-image: url("/images/social-white-google.svg");
+      }
+    }
+  }
+}

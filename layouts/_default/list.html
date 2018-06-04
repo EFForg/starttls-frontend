@@ -10,7 +10,7 @@
   <article class="accordion">
     {{ range .Data.Pages.ByWeight }}
     <div class="accordion-title">{{ .Title }}
-      <a name="{{ .LinkTitle }}"></a>
+      <a name="{{ .LinkTitle }}" id="{{ .LinkTitle }}"></a>
       <i></i>
     </div>
     <div class="accordion-content">

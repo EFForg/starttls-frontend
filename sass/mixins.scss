@@ -23,6 +23,14 @@
     color: white;
     text-decoration: none;
   }
+
+  &:disabled {
+    border-color: $gray-dark;
+    background: url("../images/spinner.gif") bottom right no-repeat;
+    background-color: $gray-dark;
+    background-size: contain;
+    cursor: auto;
+  }
 }
 
 @mixin results-checkbox {
@@ -34,4 +42,12 @@
   background-position: 0.5rem;
   display: none;
   padding-left: 4rem;
+}
+
+@mixin results-title {
+  background: url("/images/green-check-fill.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0.5em;
+  background-size: 40px;
+  padding: 0 1rem 0 4rem;
 }

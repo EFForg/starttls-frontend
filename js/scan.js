@@ -6,8 +6,11 @@ $(function() {
     e.preventDefault();
 
     var $form = $(this),
+      $submit = $form.find('input[type="submit"]')
       domain = $form.find('input[name="domain"]').val(),
       url = $form.attr('action');
+
+    $submit.prop('disabled', true);
 
     $.ajax({
       type: 'POST',
@@ -16,6 +19,8 @@ $(function() {
         domain: domain
       },
       success: function(data) {
+        $submit.prop('disabled', false);
+
         if (data.status_code !== 200) {
           $form.append("<div>Something went wrong. Please try back later.</div>");
           return;
@@ -23,7 +28,8 @@ $(function() {
 
         // remove overview and any past search results.
         $('.checks-overview').hide();
-        $('#add-your-domain').hide();
+        $('.results-overview').hide();
+        $('#share-results').hide();
         $('.result').remove();
 
         var scan = data.response.scandata;
@@ -44,8 +50,9 @@ $(function() {
             $result.appendTo( $('article.accordion') );
           }
 
-          // TODO conditional on qualifying for list
-          $('#add-your-domain').show();
+          $('#' + status_string(scan)).show()
+          $('#share-results').show();
+          $('.your-domain-name').text(data.response.domain);
         });
       }
     });
@@ -61,7 +68,27 @@ $(function() {
         $(".add-domain-action.submit").hide();
         $(".add-domain-action.learn").show();
         break;
-      }
+    }
   });
 
 });
+
+function status_string(scan) {
+  var result = "";
+  switch(scan.status) {
+    case 0:
+      switch (scan.extra_results.policylist.status) {
+        case 0:
+          return "perfect"
+        case 1:
+          return "pending"
+        case 2:
+          return "not-submitted"
+      }
+    case 1:
+      // This is pending server using distinct status code.
+      return "fail-not-secured";
+    case 2:
+      return "fail-no-support";
+  }
+}

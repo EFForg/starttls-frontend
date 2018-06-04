@@ -11,14 +11,18 @@
 
   {{ partial "scan-form" . }}
 
+  {{ partial "fail-no-support" . }}
+  {{ partial "fail-not-secured" . }}
+  {{ partial "not-submitted" . }}
+  {{ partial "pending" . }}
+  {{ partial "perfect" . }}
 
   <h3 class="checks-overview">This tool checks whether your email domain…</h3>
 
   <article class="accordion">
     {{ partial "checks-overview" . }}
     {{ partial "result-template" . }}
-    {{ partial "qualifies-for-policy-list" }}
   </article>
-
+  {{ partial "share-links" . }}
 </div>
 {{ partial "footer" . }}

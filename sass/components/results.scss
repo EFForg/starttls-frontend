@@ -1,0 +1,39 @@
+.results-overview {
+  display: none;
+}
+
+#not-submitted {
+  @include results-title;
+
+  .select {
+    margin: 0 25% 5rem;
+  }
+  .manage-buttons {
+    clear: left;
+    margin: -1rem auto 2rem;
+    text-align: center;
+  }
+  .learn {
+    background-color: $magenta;
+  }
+}
+
+#perfect {
+  @include results-title;
+  background-image: url("/images/green-check-fill.svg");
+}
+
+#pending {
+  @include results-title;
+  background-image: url("/images/gold-!-fill.svg");
+}
+
+#not-submitted {
+  @include results-title;
+  background-image: url("/images/gold-!-fill.svg");
+}
+
+#fail {
+  @include results-title;
+  background-image: url("/images/red-x-fill.svg");
+}

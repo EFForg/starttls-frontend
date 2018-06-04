@@ -3,15 +3,25 @@ $(function() {
   $('.js-yes').show();
 
   //accordion
-  $(".accordion-title").click(function(){
+  $("body").on('click', '.accordion-title', function () {
     this.classList.toggle("active");
     var panel = $(this).next();
-    if (panel.css("display") === "block") {
-      panel.css("display", "none");
+    if (panel.css("max-height") === "0px") {
+      panel.css({"max-height" : "3000px",
+                 "margin-top" : "0" });
     } else {
-      panel.css("display", "block");
+      panel.css({"max-height" : "0px",
+                 "margin-top" : "-2rem" });
     }
   });
+
+  // open accordion panel when anchor link clicked elsewhere
+  $(".accordion-content p a").click(function(){
+    linkhref = $(this).attr("href");
+    console.log(linkhref);
+    $(linkhref).parent().next().css("display","block");
+  });
+
 
   // add another domain name to the add domain page
   $(".add-another").click(function(){
@@ -23,39 +33,61 @@ $(function() {
     urlCopied.innerHTML = window.location.href;
   });
 
+
+  $(".copy-url").click(function() {
+    urlCopied.innerHTML = window.location.href;
+  });
+
+  /*
+  	Copy text from any appropriate field to the clipboard
+    By Craig Buckler, @craigbuckler
+  */
+
+  'use strict';
+  document.body.addEventListener('click', copy, true);
+  var theUrl = window.location.href;
+  $("#urlCopied").val(theUrl);
+  function copy(e) {
+    // find target element
+    var
+      t = e.target,
+      c = t.dataset.copytarget,
+      inp = (c ? document.querySelector(c) : null);
+
+    // is element selectable?
+    if (inp && inp.select) {
+      inp.select();
+      try {
+        document.execCommand('copy');
+        inp.blur();
+        // copied animation
+        $(".copy-confirm").css({
+          opacity       : "1",
+          transition : 'opacity 0.2s ease-in-out'
+        });
+      }
+      catch (err) {
+        alert('please press Ctrl/Cmd+C to copy');
+      }
+    }
+  }
+
   //select menu for Do you manage this email server
   /*
   Reference: http://jsfiddle.net/BB3JK/47/
   */
 
-  // Iterate over each select element
   $('#manage').each(function () {
-
-    // Cache the number of options
     var $this = $(this),
     numberOfOptions = $(this).children('option').length;
-
-    // Hides the select element
     $this.addClass('s-hidden');
-
-    // Wrap the select element in a div
     $this.wrap('<div class="select"></div>');
-
-    // Insert a styled div to sit over the top of the hidden select element
     $this.after('<div class="styledSelect"></div>');
-
-    // Cache the styled div
     var $styledSelect = $this.next('div.styledSelect');
-
-    // Show the first select option in the styled div
     $styledSelect.text($this.children('option').eq(0).text());
-
-    // Insert an unordered list after the styled div and also cache the list
     var $list = $('<ul />', {
       'class': 'options'
     }).insertAfter($styledSelect);
-
-    // Insert a list item into the unordered list for each select option
     for (var i = 0; i < numberOfOptions; i++) {
       $('<li />', {
         text: $this.children('option').eq(i).text(),
@@ -63,10 +95,7 @@ $(function() {
       }).appendTo($list);
     }
 
-    // Cache the list items
     var $listItems = $list.children('li');
-
-    // Show the unordered list when the styled div is clicked (also hides it if the div is clicked again)
     $styledSelect.click(function (e) {
       e.stopPropagation();
       $('div.styledSelect.active').each(function () {
@@ -75,8 +104,6 @@ $(function() {
       $(this).toggleClass('active').next('ul.options').toggle();
     });
 
-    // Hides the unordered list when a list item is clicked and updates the styled div to show the selected list item
-    // Updates the select element to have the value of the equivalent option
     $listItems.click(function (e) {
       e.stopPropagation();
       $styledSelect.text($(this).text()).removeClass('active');
@@ -92,4 +119,5 @@ $(function() {
     });
 
   });
+
 });
