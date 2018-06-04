@@ -1,8 +1,6 @@
 $(function() {
   $('.js-no').hide();
   $('.js-yes').show();
-  var acc = document.getElementsByClassName("accordion");
-  var i;
 
   //accordion
   $("body").on('click', '.accordion-title', function () {
