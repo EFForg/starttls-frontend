@@ -58,11 +58,11 @@ $(function() {
       case 'yes':
         $(".add-domain-action.submit").show();
         $(".add-domain-action.learn").hide();
-      break;
+        break;
       case 'no':
         $(".add-domain-action.submit").hide();
         $(".add-domain-action.learn").show();
-      break;
+        break;
     }
   });
 
