@@ -9,18 +9,6 @@
 
 #not-submitted {
   @include results-title;
-
-  .select {
-    margin: 0 25% 5rem;
-  }
-  .manage-buttons {
-    clear: left;
-    margin: -1rem auto 2rem;
-    text-align: center;
-  }
-  .learn {
-    background-color: $magenta;
-  }
 }
 
 #perfect {
