@@ -49,14 +49,14 @@
   background-position: 0.2rem;
   background-size: 40px;
   border-top: 4px solid white;
-  color: $charcoal;
+  color: $gray-extra-dark;
   font-weight: 700;
   margin: 0;
   padding: 1rem 2rem 1rem 6rem;
   position: relative;
 }
 a {
-  color: $charcoal;
+  color: $gray-extra-dark;
 }
 i {
   @include susy-breakpoint($md) {
@@ -70,7 +70,7 @@ i {
     @extend .transition;
     content: "";
     position: absolute;
-    background-color: $charcoal;
+    background-color: $gray-extra-dark;
     width: 4px;
     height: 12px;
   }
