@@ -146,3 +146,10 @@ input[type=radio]:checked + label:before {
 .yellow-box {
   background-color: $gold-light;
 }
+.spinner {
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-image: url("../images/spinner.gif");
+  margin: auto;
+}

@@ -3,6 +3,7 @@ linktitle: how-can
 title: How can I secure my mailserver?
 date: 2018-05-23T12:29:52-07:00
 weight: 7
+level: secure
 ---
 
 <h3>Do you have STARTTLS enabled?</h3>
