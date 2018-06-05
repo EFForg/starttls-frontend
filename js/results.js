@@ -8,24 +8,27 @@ $(function() {
   var hostname = $('#api-hostname').data('api-hostname') || "";
   var domain = window.location.search.substring(1);
 
+  $('.your-domain-name').text(domain);
+
   $.ajax({
     type: 'POST',
     url: hostname + '/api/scan',
     data: {
       domain: domain
-    },
-    success: handle_scan
-  });
+    }
+  })
+  .done(handle_scan)
+  .fail(handle_error);
 
   $('ul.options li').on('click', toggle_add_domain_actions);
 });
 
-function handle_scan(data) {
-  if (data.status_code !== 200) {
-    $form.append('<div>Something went wrong. Please try back later.</div>');
-    return;
-  }
+function handle_error(data) {
+  $('#loading-results').hide()
+  $('#scan-request-failed').show()
+}
 
+function handle_scan(data) {
   var scan = data.response.scandata;
   $.each(scan.preferred_hostnames, function(i, hostname) {
     var result = scan.results[hostname];
@@ -44,7 +47,6 @@ function handle_scan(data) {
       $result.appendTo( $('article.accordion') );
     }
 
-    $('.your-domain-name').text(data.response.domain);
     $('#' + status_string(scan)).show()
     $('#loading-results').hide()
     $('#results-wrapper').show()
