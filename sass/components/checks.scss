@@ -13,12 +13,12 @@
 
 .default-title {
   @include results-checkbox;
-  background: white url("images/green-check-open.svg") no-repeat;
+  background: $gray-light url("images/green-check-open.svg") no-repeat;
 }
 
 .almost-title {
   @include results-checkbox;
-  background: white url("images/gold-!-open.svg") no-repeat;
+  background: $gray-light url("images/gold-!-open.svg") no-repeat;
 }
 
 
