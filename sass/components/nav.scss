@@ -78,6 +78,10 @@ nav {
         text-align: center;
         flex-grow: 1;
       }
+      &.logo-li {
+        display: inline-block;
+        margin: 0;
+      }
       &.donate {
         display: inline-block;
         margin: 0 auto;
@@ -85,7 +89,7 @@ nav {
           @include button-style();
           background: black;
           color: $magenta;
-          margin: 0 auto;
+          margin: 0 auto 0 6%;
           padding: 0.5rem 0;
           width: 11rem;
           span.donate-mobile {
@@ -113,8 +117,10 @@ nav {
         }
       }
     }
-    li.menu-logo {
+    .menu-logo {
       @include susy-breakpoint($md) {
+        height: 45px;
+        width: 45px;
         top: 1px;
       }
       background-image: url("/images/starttls-small-logo.svg");
@@ -123,7 +129,7 @@ nav {
       position: absolute;
       height: 40px;
       left: 3%;
-      top: 8px;
+      top: 9px;
       transition: all 0.3s;
       width: 40px;
       &:hover {
@@ -135,7 +141,7 @@ nav {
     }
     @include susy-breakpoint($md) {
       max-width: 54rem;
-      li.menu-logo {
+      .menu-logo {
         margin-top: 0;
         position: relative;
         img {
