@@ -1,4 +1,12 @@
 {{ define "main" }}
+<div class="js-no">
+  Javascript is required to view this page. Please visit <a href="/">the scanner</a> to find out how secure an e-mail server is.
+</div>
+<div id="loading-results" class="js-yes">
+  <div class="spinner"></div>
+  <h1>Scanning domain...</h1>
+</div>
+<div id="results-wrapper">
   <h1>How secure is <span class="your-domain-name">your domain</span>?</h1>
 
   {{ partial "fail-no-support" . }}
@@ -14,4 +22,5 @@
   {{ partial "share-links" . }}
 
   <div id="api-hostname" data-api-hostname="{{ safeURL (getenv "API_HOSTNAME") }}"></div>
+</div>
 {{ end }}

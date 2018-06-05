@@ -41,9 +41,10 @@ function handle_scan(data) {
       $result.appendTo( $('article.accordion') );
     }
 
-    $('#' + status_string(scan)).show()
-    $('#share-results').show();
     $('.your-domain-name').text(data.response.domain);
+    $('#' + status_string(scan)).show()
+    $('#loading-results').hide()
+    $('#results-wrapper').show()
   });
 }
 
