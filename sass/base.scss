@@ -103,11 +103,6 @@ p {
   margin-bottom: 1rem;
   padding: 0;
   line-height: 26px;
-  a {
-    text-decoration: none;
-    color: black;
-    border-bottom: 2px solid $magenta;
-  }
 }
 
 ul {
@@ -140,6 +135,16 @@ ol {
       left: -0.6rem;
       text-align: right;
     }
+  }
+}
+
+p a,
+li a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid $magenta;
+  &:hover {
+    border-bottom: 2px solid black;
   }
 }
 .js-no {
