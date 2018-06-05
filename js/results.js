@@ -35,7 +35,7 @@ function handle_scan(data) {
       $result.addClass(result.status ? 'fail' : 'success');
 
       $.each(result.checks, function(key, check) {
-        $check = $result.find('.' + key);
+        var $check = $result.find('.' + key);
         $check.addClass(check.status ? 'fail' : 'success');
       });
       $result.appendTo( $('article.accordion') );
