@@ -141,3 +141,11 @@ input[type=radio]:checked + label:before {
 .add-domain-accordion .accordion-content {
   background-color: $gray-light;
 }
+
+.spinner {
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-image: url("../images/spinner.gif");
+  margin: auto;
+}
