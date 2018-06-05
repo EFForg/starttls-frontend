@@ -42,7 +42,7 @@ function handle_scan(data) {
 
       $.each(result.checks, function(key, check) {
         var $check = $result.find('.' + key);
-        if (key == "connectivity" && check.status == 0)
+        if (key === "connectivity" && check.status === 0)
           return; // Only show the connectivity check when it fails.
         $check.addClass(check.status ? 'fail' : 'success');
       });
