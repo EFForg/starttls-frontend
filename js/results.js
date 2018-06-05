@@ -2,7 +2,10 @@
  * Form interactions for POST to /api/scan
  */
 $(function() {
-  var hostname = $('#api-hostname').data('api-hostname');
+  if (!window.location.pathname.match(/\/results.$/)) {
+    return;
+  }
+  var hostname = $('#api-hostname').data('api-hostname') || "";
   var domain = window.location.search.substring(1);
 
   $.ajax({
