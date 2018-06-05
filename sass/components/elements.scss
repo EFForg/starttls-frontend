@@ -11,6 +11,7 @@ button {
   font-weight: 400;
   height: 65px;
   line-height: 1.2rem;
+  margin: 1.5rem 0;
   padding: 1rem 5rem 0.9rem 2rem;
   position: relative;
   text-decoration: none;
@@ -118,9 +119,11 @@ input[type=radio]:checked + label:before {
   border: 2px solid $magenta;
   background-color: white;
   display: none;
+  font-size: 1rem;
+  line-height: 1rem;
   list-style: none;
   position: relative;
-  top: 1rem;
+  top: 1.1rem;
   margin: 0 auto;
   padding: 0 ;
   width: 20rem;
@@ -135,6 +138,9 @@ input[type=radio]:checked + label:before {
     }
     &:first-child {
       display: none;
+    }
+    &:nth-child(2) {
+      border-bottom: 2px solid $magenta;
     }
   }
 }
