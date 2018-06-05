@@ -100,7 +100,7 @@ input[type=radio]:checked + label:before {
 }
 .select {
   @include susy-breakpoint($md) {
-    margin: 0 25% 5rem;
+    margin: 0 25% 3rem;
   }
   border: none;
   color: black;

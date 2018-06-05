@@ -9,6 +9,11 @@
 
 #not-submitted {
   @include results-title;
+  .what-is {
+    @include susy-breakpoint($md) {
+      margin: 1.5rem 26%;
+    }
+  }
 }
 
 #perfect {
