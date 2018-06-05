@@ -65,6 +65,8 @@ function status_string(scan) {
       return 'fail-not-secured';
     case 2:
       return 'fail-no-support';
+    case 3:
+      return 'could-not-connect';
   }
 }
 
