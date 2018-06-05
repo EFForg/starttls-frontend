@@ -15,7 +15,7 @@
   padding: 0 1rem 3rem;
   width: 100%;
   .title {
-    margin: 1rem 0 2rem;
+    margin: 0;
   }
   @include susy-breakpoint($md) {
     margin: 0 auto;
@@ -33,9 +33,9 @@
 .main-content.list {
   h2 {
     line-height: 1rem;
-    padding: 0;
+    padding: 0 0 1rem;
   }
   h2.secure {
-    padding: 3.5rem 0 0;
+    padding: 3.5rem 0 1rem;
   }
 }
