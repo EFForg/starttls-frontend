@@ -59,6 +59,9 @@ a {
   color: $charcoal;
 }
 i {
+  @include susy-breakpoint($md) {
+    right: 1.5rem;
+  }
   position: absolute;
   transform: translate( -6px , 0 );
   right: 1rem;
