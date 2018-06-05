@@ -14,31 +14,6 @@ footer {
     margin: 0 auto;
     max-width: 750px;
   }
-
-  .social-media {
-    transition: all 1s;
-    a {
-      margin-right: 1rem;
-    }
-    img {
-      height: auto;
-      opacity: 1;
-      width: 50px;
-      &:hover {
-        opacity: 0.6;
-      }
-    }
-    textarea {
-      float: right;
-      opacity: 0; //hide field with URL
-    }
-    .copy-confirm {
-      float: right;
-      font-weight: 400;
-      opacity: 0;
-    }
-  }
-
   .footer-logo { // logo
     float: left;
     display: inline-block;

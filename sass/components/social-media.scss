@@ -1,0 +1,35 @@
+.social-media {
+  transition: all 1s;
+  a {
+    @include susy-breakpoint($md) {
+      margin-right: 1rem;
+    }
+    margin-right: 0;
+  }
+  img {
+    height: auto;
+    opacity: 1;
+    width: 50px;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  textarea {
+    @include susy-breakpoint($md) {
+      height: auto;
+    }
+    float: right;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0; //hide field with URL
+  }
+  .copy-confirm {
+    @include susy-breakpoint($md) {
+      float: right;
+    }
+    color: $cyan;
+    font-weight: 400;
+    opacity: 0;
+  }
+}
