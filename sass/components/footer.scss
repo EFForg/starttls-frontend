@@ -22,7 +22,11 @@ footer {
     }
     img {
       height: auto;
+      opacity: 1;
       width: 50px;
+      &:hover {
+        opacity: 0.6;
+      }
     }
     textarea {
       float: right;
