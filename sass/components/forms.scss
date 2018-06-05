@@ -94,3 +94,10 @@ form#queue {
     }
   }
 }
+
+#queue-errors {
+  display: none;
+  border: 2px solid $red;
+  padding: 10px;
+  font-weight: bold;
+}
