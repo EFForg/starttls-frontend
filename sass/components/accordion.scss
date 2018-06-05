@@ -11,8 +11,6 @@
     user-select: none;
   }
 
-
-
   @keyframes flipdown {
     0% {
       opacity: 0;
@@ -109,8 +107,8 @@ i {
   }
 }
 .accordion-content {
-  padding: 1rem 1rem 1rem 0;
-  background-color: white;
+  padding: 1rem;
+  background-color: $gray-light;
   margin-top: -2rem;
   max-height: 0;
   overflow: hidden;
