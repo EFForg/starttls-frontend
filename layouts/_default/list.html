@@ -5,8 +5,8 @@
 {{ partial "header" . }}
 <div class="main-content list">
   <h1 class="title">{{ .Title }}</h1>
-  <h2>Learn</h2>
   <p>{{ .Content }}</p>
+  <h2>Learn</h2>
   <article class="accordion">
     {{ range where .Data.Pages.ByWeight "Params.level" "learn" }}
     <div class="accordion-title">{{ .Title }}
@@ -20,7 +20,6 @@
     {{ end }}
   </article>
   <h2 class="secure">Secure</h2>
-  <p>{{ .Content }}</p>
   <article class="accordion">
     {{ range where .Data.Pages.ByWeight "Params.level" "secure" }}
     <div class="accordion-title">{{ .Title }}
