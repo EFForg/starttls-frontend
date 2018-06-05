@@ -3,6 +3,7 @@ linktitle: what-checker
 title: What does the STARTTLS Checker do?
 date: 2018-05-23T12:29:26-07:00
 weight: 6
+level: secure
 ---
 
 <h3><a href="/">This tool</a> checks whether your email domain…</h3>

@@ -3,6 +3,7 @@ title: How does email work?
 linktitle: how
 date: 2018-05-22T12:23:23-07:00
 weight: 1
+level: learn
 ---
 
 Email typically makes more than one hop in order to be delivered.

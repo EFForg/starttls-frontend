@@ -3,18 +3,31 @@
 {{ partial "off-canvas" . }}
 
 {{ partial "header" . }}
-<div class="main-content">
+<div class="main-content list">
   <h1 class="title">{{ .Title }}</h1>
-  <p>{{ .Content }}
-  </p>
+  <p>{{ .Content }}</p>
+  <h2>Learn</h2>
   <article class="accordion">
-    {{ range .Data.Pages.ByWeight }}
+    {{ range where .Data.Pages.ByWeight "Params.level" "learn" }}
     <div class="accordion-title">{{ .Title }}
       <a name="{{ .LinkTitle }}" id="{{ .LinkTitle }}"></a>
       <i></i>
     </div>
     <div class="accordion-content">
-      <h2>{{ .Title }}</h2>
+      <h3>{{ .Title }}</h3>
+      {{ .Content }}
+    </div>
+    {{ end }}
+  </article>
+  <h2 class="secure">Secure</h2>
+  <article class="accordion">
+    {{ range where .Data.Pages.ByWeight "Params.level" "secure" }}
+    <div class="accordion-title">{{ .Title }}
+      <a name="{{ .LinkTitle }}" id="{{ .LinkTitle }}"></a>
+      <i></i>
+    </div>
+    <div class="accordion-content">
+      <h3>{{ .Title }}</h3>
       {{ .Content }}
     </div>
     {{ end }}
