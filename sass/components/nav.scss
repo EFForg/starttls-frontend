@@ -115,15 +115,19 @@ nav {
     }
     li.menu-logo {
       @include susy-breakpoint($md) {
-        top: 2px;
+        top: 1px;
       }
+      background-image: url("/images/starttls-small-logo.svg");
+      background-repeat: no-repeat;
       display: inline-block;
       position: absolute;
+      height: 40px;
       left: 3%;
       top: 8px;
+      transition: all 0.3s;
       width: 40px;
-      img {
-        width: 40px;
+      &:hover {
+        background-image: url("/images/starttls-small-logo-hover.svg");
       }
     }
     li.close-menu {
