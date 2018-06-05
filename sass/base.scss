@@ -73,11 +73,13 @@ h1 {
   font-size: 36px;
   line-height: 36px;
   padding: 1rem 0;
+  word-wrap: break-word; // for domain names
 }
 h2 {
   font-size: 27px;
   line-height: 27px;
   padding: 1rem 0;
+  word-wrap: break-word; // for domain names
 }
 h3 {
   font-size: 23px;
