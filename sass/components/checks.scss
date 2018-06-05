@@ -14,6 +14,7 @@
 .default-title {
   @include results-checkbox;
   background: white url("images/green-check-open.svg") no-repeat;
+  background-size: 30px;
 }
 
 .almost-title {
