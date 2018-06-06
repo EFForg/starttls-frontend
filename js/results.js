@@ -42,7 +42,7 @@ function handle_scan(data) {
     }
 
     $('.your-domain-name').text(data.response.domain);
-    $('#' + status_string(scan)).show()
+    $('.' + status_string(scan)).show()
     $('#loading-results').hide()
     $('#results-wrapper').show()
   });
