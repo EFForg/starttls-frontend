@@ -1,3 +1,4 @@
+#scan-request-failed,
 #results-wrapper,
 .results-overview {
   display: none;
@@ -21,16 +22,13 @@
   background-image: url("/images/green-check-fill.svg");
 }
 
-#pending {
-  @include results-title;
-  background-image: url("/images/gold-!-fill.svg");
-}
-
+#pending,
 #not-submitted {
   @include results-title;
   background-image: url("/images/gold-!-fill.svg");
 }
 
+#could-not-connect,
 #fail {
   @include results-title;
   background-image: url("/images/red-x-fill.svg");

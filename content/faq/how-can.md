@@ -6,23 +6,19 @@ weight: 7
 level: secure
 ---
 
-<h3>Do you have STARTTLS enabled?</h3>
-If you’re using Postfix, you can use [our Certbot plugin](https://certbot.eff.org) to enable TLS and set up all the relevant configuration parameters for you, which follows Postfix’s guidelines.
+<h4>Do you have STARTTLS enabled?</h4>
+First thing's first: consult your mailserver's documentation or contact your hosting provider about how to enable STARTTLS for your mail delivery?
 
-Otherwise, consult your mailserver’s documentation on how to enable STARTTLS for your email delivery!
+<h4>Are your TLS parameters secure?</h4>
+There's a tradeoff in the mailserver world you'll need to make between backwards-compatibility (so you can encrypt with as many mailservers as possible) and requiring strong security. Here are some various things we recommend you do to make your mailserver robust, while still allowing it to encrypt with modern mailservers.
 
-<h3>Are your TLS parameters secure?</h3>
-If you’re using Postfix, you can use [our Certbot plugin](https://certbot.eff.org) to set up all the relevant configuration parameters for you, which follows [Postfix’s guidelines](postfix.org/TLS_README.html).
+   - [Disable SSLv2/SSLv3](https://disablessl3.com)
+   - [Deploy perfect forward secrecy correctly](https://weakdh.org/sysadmin.html).
 
-Otherwise, consult your mailserver’s documentation on how to enable STARTTLS for your email delivery!
+<h4>Is your certificate valid?</h4>
+Standard practice is to obtain a certificate matching the hostname of the mailserver. However, you can also obtain a certificate matching your email domain (the part of the email address after the @) for a stronger security guarantee.
 
-In particular, here are some things you should watch out for:
+You can obtain a valid certificate automatically and for free from [Let's Encrypt](https://letsencrypt.org) using [Certbot](https://certbot.eff.org)! Consult your mailserver documentation or contact your hosting provider for how to install these certificates.
 
- - [Disable SSLv2/SSLv3](disablessl3.com)
- - [Deploy perfect forward secrecy correctly](https://weakdh.org/sysadmin.html).
-
-<h3>Is your certificate invalid?</h3>
-You can obtain a valid certificate for free from [LetsEncrypt](https://letsencrypt.org) using [Certbot](https://certbot.eff.org)! Consult your mailserver's documentation on how to install these certificates once you obtain them.
-
-<h3>Are you safe against downgrade attacks?</h3>
-If you already meet all the above requirements, make sure to add your domain to the [STARTTLS Policy List](/policy-list).
+<h4>Are you safe against downgrade attacks?</h4>
+If you already meet all the above requirements, make sure to add your domain to the [STARTTLS Policy List](/policy-list) to protect against downgrade attacks.

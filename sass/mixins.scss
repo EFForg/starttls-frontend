@@ -37,7 +37,7 @@
   @include susy-breakpoint($md) {
     background-position: 0 0.5rem;
   }
-  background: white url("images/red-x-open.svg") no-repeat;
+  background: $gray-light url("images/red-x-open.svg") no-repeat;
   background-size: 30px;
   background-position: 0.5rem;
   display: none;
@@ -45,12 +45,14 @@
 }
 
 @mixin results-title {
+
   @include susy-breakpoint($md) {
     background-size: 40px;
     background-position: 0 0.5rem;
     padding: 0 1rem 0 4rem;
   }
-  background: url("/images/green-check-fill.svg");
+  background: $gray-light url("/images/green-check-fill.svg");
+
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 20px;
