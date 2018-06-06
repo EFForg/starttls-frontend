@@ -27,6 +27,9 @@ $sidebar-color: $gray-dark;
   a {
     border: 0;
     color: white;
+    &:hover {
+      color: $cyan;
+    }
   }
   a.open-menu {
     display: none;
@@ -86,7 +89,7 @@ $sidebar-color: $gray-dark;
 .close-menu {
   position: absolute;
   right: 9px;
-  top: 5px;
+  top: 14px;
   color: rgba(255, 255, 255, 0.9);
   font-size: 32px;
   &:hover {
