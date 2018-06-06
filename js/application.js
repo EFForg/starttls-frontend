@@ -1,4 +1,6 @@
 $(function() {
+  Raven.config('https://a295dfada57e479b8c47633442de8e65@sentry.eff.org/33').install()
+
   $('.js-no').hide();
   $('.js-yes').show();
 

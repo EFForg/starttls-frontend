@@ -5,7 +5,7 @@
   "scripts": {
     "sass:build": "node-sass sass/application.scss static/application.css",
     "sass:watch": "onchange 'sass/**/*.scss*' -- yarn run sass:build",
-    "js:install": "mkdir -p static/vendor && cp node_modules/jquery/dist/jquery.min.js static/vendor/jquery.min.js",
+    "js:install": "mkdir -p static/vendor && cp node_modules/jquery/dist/jquery.min.js static/vendor/ && cp node_modules/raven-js/dist/raven.js static/vendor/",
     "js:build": "yarn run js:install && babel js --out-file static/application.js",
     "js:watch": "yarn run js:install && babel js --watch --out-file static/application.js --source-maps",
     "build": "yarn run sass:build && yarn run js:build && hugo",
@@ -28,6 +28,7 @@
     "node-sass": "^4.5.3",
     "onchange": "^3.2.1",
     "parallelshell": "^3.0.1",
+    "raven-js": "^3.25.2",
     "sass-lint": "^1.12.1",
     "susy": "^2.2.12"
   }
