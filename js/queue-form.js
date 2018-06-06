@@ -6,7 +6,7 @@ $(function() {
   init_add_another_mx_hostname();
 
   $form.submit(function(e) {
-    $form.find(".errors").text("");
+    $form.find(".errors").hide();
     e.preventDefault();
 
     var domain = $form.find('input[name="domain"]').val(),
@@ -18,9 +18,11 @@ $(function() {
       data: $form.serializeArray()
     }).done(function(data) {
       window.location = "/domain-submitted";
-    }).fail(function(data) {
-      console.log($("input[type=submit]"))
-      $form.find(".errors").text("Something went wrong. Please try back later.");
+    }).fail(function(e, message) {
+      var message = e.responseText.message || "server error";
+      $form.find("#queue-errors")
+        .text("Error queueing domain: " + message)
+        .show();
     });
   });
 

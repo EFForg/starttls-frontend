@@ -3,7 +3,8 @@
 .add-domain-action.learn,
 .add-domain-action.submit,
 .accordion-title-fail,
-.accordion-title-success {
+.accordion-title-success,
+.check {
   display: none;
 }
 
@@ -24,6 +25,8 @@
 
 
 .check.fail {
+  display: block;
+
   .fail-title {
     display: block;
   }
@@ -34,6 +37,8 @@
 }
 
 .check.success {
+  display: block;
+
   .default-title {
     display: block;
   }

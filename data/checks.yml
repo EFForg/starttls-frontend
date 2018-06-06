@@ -20,6 +20,11 @@ list:
     On the internet, even if you *think* you’re talking to a service named “eff.org”, it could be an impersonator pretending to be “eff.org”. Checking a mail server’s certificate ensures that you really are talking to the actual service.
 
     In order for your certificate to be valid for your email domain, it should be unexpired, chain to a valid root from <a href="https://wiki.mozilla.org/CA/Included_Certificates" target="_blank">Mozilla’s CA certificates list</a>, and one of the names on the certificate should either match the domain (the part of an email address after the @) or the server’s hostname (the name of the server, as indicated by an MX record).
+- key: connectivity
+  title: Server is up and running
+  fail_title: Could not establish connection
+  body: |
+    We couldn't successfully connect to this mailserver to scan it.
 - key: policy_list
   title: Preloaded on our STARTTLS policy list
   body: |
