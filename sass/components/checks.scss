@@ -8,7 +8,12 @@
 }
 
 .fail-title {
+  @include susy-breakpoint($md) {
+    padding-left: 5.7rem;
+  }
   @include results-checkbox;
+  background: white url("images/red-x-open.svg") no-repeat;
+  background-size: 30px;
 }
 
 .default-title {
@@ -21,6 +26,9 @@
 }
 
 .almost-title {
+  @include susy-breakpoint($md) {
+    padding-left: 5.7rem;
+  }
   @include results-checkbox;
   background: white url("images/gold-!-open.svg") no-repeat;
 }
