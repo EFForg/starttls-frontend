@@ -33,11 +33,6 @@ $(function() {
     urlCopied.innerHTML = window.location.href;
   });
 
-
-  $(".copy-url").click(function() {
-    urlCopied.innerHTML = window.location.href;
-  });
-
   /*
   	Copy text from any appropriate field to the clipboard
     By Craig Buckler, @craigbuckler
