@@ -9,6 +9,7 @@
 
 #not-submitted {
   @include results-title;
+  background-image: url("/images/gold-!-fill.svg");
   .what-is {
     @include susy-breakpoint($md) {
       margin: 1.5rem 26%;
@@ -26,12 +27,8 @@
   background-image: url("/images/gold-!-fill.svg");
 }
 
-#not-submitted {
-  @include results-title;
-  background-image: url("/images/gold-!-fill.svg");
-}
-
-#fail {
+#fail-no-support,
+#fail-not-secured {
   @include results-title;
   background-image: url("/images/red-x-fill.svg");
 }
