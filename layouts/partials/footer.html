@@ -21,6 +21,15 @@
       </ul>
     </div>
   </div>
+
+  {{ if isset .Site.Params "AnonStatsID" }}
+    <noscript><img src="https://anon-stats.eff.org/js/?idsite={{ .Site.Params.AnonStatsID }} rec=1&action_name=" style="border:0" height="0" width="0" alt="" /></noscript>
+    <div style="height: 0; width: 0; position: absolute" id="anon-stats"></div>
+    <script type="text/javascript">
+      document.getElementById('anon-stats').innerHTML = '<img src="https://anon-stats.eff.org/js/?idsite={{ .Site.Params.AnonStatsID }}&rec=1&urlref=' + encodeURIComponent(document.referrer) + '&action_name=' + encodeURIComponent(document.title) + '" style="border:0" height="0" width="0" alt="" />';
+    </script>
+  {{ end }}
+
 </footer>
 </div> <!--end page-wrapper-->
 </body>
