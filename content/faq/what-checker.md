@@ -6,7 +6,7 @@ weight: 6
 level: secure
 ---
 
-<h3><a href="/">This tool</a> checks whether your email domain…</h3>
+<h4><a href="/">This tool</a> checks whether your email domain…</h4>
 
 <!--- TODO: use data/checks.yml to populate the below. -->
 

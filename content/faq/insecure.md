@@ -12,11 +12,11 @@ As mentioned in the <a href="#how" class="how">previous section</a>, your email 
 
 <h3>Passive monitoring</h3>
 
-Typically, internet traffic between two computers is secured using Transport Layer Security (link to SSD). Since your email goes through multiple hops (link to how does email work question), if any of the hops it goes through are insecure, then your email is visible to anyone on the same network. This is referred to as “passive monitoring.” For example, if hop (1) is unencrypted, anyone on your WiFi network can read the email your sending!
+Typically, internet traffic between two computers is secured using [Transport Layer Security](https://ssd.eff.org/pt-br/taxonomy/term/361). Since your email goes through multiple hops, if any of the hops it goes through are insecure, then your email is visible to anyone on the same network. This is referred to as “passive monitoring.” For example, if hop (1) is unencrypted, anyone on your WiFi network can read the email your sending!
 
-For hops (1) and (3), you’ll want to make sure the connection between your email client and the mailserver is secure. If you use a web email client through your browser, make sure the site has “HTTPS” at the beginning of the URL-- this means it’s using TLS for the connection. If you use a desktop client, you can check your security settings here (link).
+For hops (1) and (3), you’ll want to make sure the connection between your email client and the mailserver is secure. If you use a web email client through your browser, make sure the site has “HTTPS” at the beginning of the URL-- this means it’s using TLS for the connection.
 
-For hop (2), you’ll want to make sure both your mailserver and the destination mailserver support “STARTTLS,” or TLS for email -- you can use [our tool](/) to do this!
+For hop (2), you’ll want to make sure both your mailserver and the destination mailserver support “STARTTLS,” or TLS for email -- you can use [our STARTTLS checker](/) to do this!
 
 <h3>Active monitoring</h3>
 <img src="/images/active-monitoring.png" alt="active monitoring diagram">
@@ -25,9 +25,9 @@ Although we depicted each individual connection as a single “hop,” beneath t
 
 In order to verify that you really are talking to gmail.com, the computer that you’re connected to typically presents a <em>certificate</em>-- that is, signatures from various authorities on the internet that confirm that this computer is gmail.com.
 
-For hops (1) and (3), if you’re using a webmail client through your browser, you’ll want to check for a “green lock” next to the URL bar, in addition to HTTPS, to make sure you really are talking to the correct computer! If you use a desktop client, you can check your security settings here (link).
+For hops (1) and (3), if you’re using a webmail client through your browser, you’ll want to check for a “green lock” next to the URL bar, in addition to HTTPS, to make sure you really are talking to the correct computer!
 
-For hop (2), you’ll want to make sure both your mailserver and the destination mailserver both support “STARTTLS” <strong>and</strong> presents a <em>valid certificate</em>. You can use [our tool](/) to do this!
+For hop (2), you’ll want to make sure both your mailserver and the destination mailserver both support “STARTTLS” <strong>and</strong> presents a <em>valid certificate</em>. Again, you can use [our tool](/) to do this!
 
 <h3>Downgrade attacks</h3>
 
@@ -44,4 +44,4 @@ In 2014, researchers discovered that governments were [actually doing this](http
 
 This happens because email servers can't tell if someone they're talking to (1) legitimately does not support TLS, or (2) there's an active attacker on the network trying to read the email traffic. The goal of the STARTTLS Policy List is to provide a list of mailservers that support TLS, so you can distinguish between these two worlds, and decide to behave accordingly.
 
-Use [our tool](/) to check if your email server is on the STARTTLS Policy List, our index of high-security email domains, so people can email you securely.
+[Check](/) if your email server is on the [STARTTLS Policy List](/policy-list), our index of high-security email domains, so people can email you securely.
