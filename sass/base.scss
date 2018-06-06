@@ -78,21 +78,20 @@ h1 {
 h2 {
   font-size: 27px;
   line-height: 27px;
-  padding: 1rem 0;
+  padding: 1.3rem 0 0.3rem 0;
   word-wrap: break-word; // for domain names
 }
 h3 {
   font-size: 23px;
   font-weight: 700;
   line-height: 23px;
-  margin-bottom: 1rem;
-  padding: 0 0 1rem;
+  padding: 1.3rem 0 0.3rem 0;
 }
 h4 {
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 20px;
-  margin-bottom: 1rem;
+  padding: 1.3rem 0 0.3rem 0;
 }
 h5  {
   font-size: 18px;
@@ -108,10 +107,13 @@ p {
 }
 
 ul {
-  margin: 0 0 1rem 1rem;
+  margin: 0 0 1rem 2rem;
   li {
     line-height: 26px;
     margin-bottom: 0.5rem;
+    ul {
+      margin: 0.5rem 0 1rem 1.3rem;
+    }
   }
 }
 ol {
@@ -165,9 +167,12 @@ li a {
 }
 
 code {
+  background-color: $gray-light;
   display: inline-block;
   font-size: 1.1rem;
+  margin-bottom: 0.5rem;
   max-width: 100%;
+  padding: 0 0.5rem 0.5rem;
   white-space: normal;
   word-break: break-all;
 }

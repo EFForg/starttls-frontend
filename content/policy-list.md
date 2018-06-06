@@ -36,7 +36,7 @@ If you are using the list, **you must fetch updates at least once every 48 hours
 
 Every policy JSON has an expiry date in the top-level configuration, after which we cannot guarantee deliverability if you are using the list.
 
-### Tooling
+#### Tooling
 
 Our [starttls-policy](https://github.com/EFForg/starttls-everywhere/tree/master/starttls-policy) Python package can fetch updates to and iterate over the existing list. If you use Postfix, we provide utilities to transform the policy list into configuration parameters that Postfix understands.
 
@@ -50,7 +50,7 @@ When submitting your domain to the list through [this form](/add-domain), you mu
  * A list of expected hostnames for your server. At least one of the names on each mailserver's certificate should match one of these patterns.
     * These can be a suffix, like `.eff.org`, or a fully-qualified domain name, like `mx.eff.org`. Suffixes will only match one subdomain label, so `.eff.org` would match names `*.eff.org` and `mx.eff.org`, but not `good.mx.eff.org` or `*.mx.eff.org`. These rules match the ones laid out in the [MTA-STS](https://datatracker.ietf.org/doc/draft-ietf-uta-mta-sts/) IETF draft.
 
-### Validation
+#### Validation
 
 You can use our [email security checker](/) to evaluate your email domain's eligibility for addition to the STARTTLS policy list.
 The strong requirements are that your domain:
@@ -67,7 +67,7 @@ Before adding a domain to the list, we continue to perform validation against th
 
 With that in mind, you can queue your mail domain for the STARTTLS policy list using the [form here](/add-domain)! Alternatively, you can send an e-mail to [starttls-policy@eff.org](mailto:starttls-policy@eff.org) or [submit a pull request](https://github.com/EFForg/starttls-everywhere) to add your domain.
 
-### Continued requirements
+#### Continued requirements
 
 Failure to continue meeting these requirements could result in deliverability issues to your mailserver.
 
