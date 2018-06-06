@@ -7,7 +7,7 @@
   text-align: center;
 }
 
-#not-submitted {
+.not-submitted.results-overview {
   @include results-title;
   background-image: url("/images/gold-!-fill.svg");
   .what-is {
@@ -17,18 +17,22 @@
   }
 }
 
-#perfect {
+.perfect {
   @include results-title;
   background-image: url("/images/green-check-fill.svg");
 }
 
-#pending {
+.pending {
   @include results-title;
   background-image: url("/images/gold-!-fill.svg");
 }
 
-#fail-no-support,
-#fail-not-secured {
+.fail-no-support,
+.fail-not-secured {
   @include results-title;
   background-image: url("/images/red-x-fill.svg");
+}
+
+.actions {
+  margin: 0 auto;
 }
