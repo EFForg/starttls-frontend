@@ -22,11 +22,6 @@ $(function() {
     $(linkhref).parent().next().css("display","block");
   });
 
-  // share link social media icon in footer
-  $(".copy-url").click(function(){
-    urlCopied.innerHTML = window.location.href;
-  });
-
   //select menu for Do you manage this email server
   /*
   Reference: http://jsfiddle.net/BB3JK/47/
