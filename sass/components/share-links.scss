@@ -7,7 +7,7 @@
     justify-content: space-around;
     margin: 1rem auto;
     max-width: 15rem;
-    > a {
+    > a, > img {
       background-repeat: no-repeat;
       display: inline-block;
       height: 3.5rem;
@@ -25,6 +25,17 @@
       &.share-google  {
         background-image: url("/images/social-white-google.svg");
       }
+    }
+  }
+  .url-field {
+    display: none;
+    width: 100%;
+    text-align: center;
+
+    input {
+      display: inline;
+      margin: 0;
+      padding: 5px;
     }
   }
 }
