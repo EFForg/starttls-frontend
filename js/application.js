@@ -3,7 +3,7 @@ $(function() {
   $('.js-yes').show();
 
   //accordion
-  $("body").on('click', '.accordion-title', function () {
+  $("body").on('click touchstart', '.accordion-title', function () {
     this.classList.toggle("active");
     var panel = $(this).next();
     if (panel.css("max-height") === "0px") {
