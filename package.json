@@ -8,8 +8,8 @@
     "js:install": "mkdir -p static/vendor && cp node_modules/jquery/dist/jquery.min.js static/vendor/ && cp node_modules/raven-js/dist/raven.js static/vendor/",
     "js:build": "yarn run js:install && babel js --out-file static/application.js",
     "js:watch": "yarn run js:install && babel js --watch --out-file static/application.js --source-maps",
-    "build": "yarn run sass:build && yarn run js:build && yarn run dotenv && env $(grep -v ^# .env | xargs) hugo",
-    "serve": "yarn run sass:build && parallelshell 'yarn run sass:watch' 'yarn run js:watch' 'env $(grep -v ^# .env | xargs) hugo serve'",
+    "build": "yarn run sass:build && yarn run js:build && yarn run dotenv && hugo --config config.prod.toml,config.toml",
+    "serve": "yarn run sass:build && parallelshell 'yarn run sass:watch' 'yarn run js:watch' 'hugo serve --config config.dev.toml,config.toml'",
     "lint": "./node_modules/.bin/sass-lint -vq"
   },
   "repository": {

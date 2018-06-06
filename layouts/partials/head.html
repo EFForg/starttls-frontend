@@ -11,8 +11,8 @@
   <!--link rel="shortcut icon" href="favicon.ico" type="image/starttls.icon" /-->
 
   <script src="../vendor/raven.js"
-    data-sentry-dsn={{ getenv "SENTRY_PUBLIC_DSN" }}
-    data-sentry-id={{ getenv "SENTRY_PROJECT_ID" }}>
+    data-sentry-dsn="{{ .Site.Params.SentryPublicDSN }}"
+    data-sentry-id="{{ .Site.Params.SentryProjectID }}" >
   </script>
   <script src="../vendor/jquery.min.js"></script>
   <script src="../application.js"></script>
