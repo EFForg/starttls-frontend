@@ -4,14 +4,20 @@ button {
 }
 
 .button2 {
+  @include susy-breakpoint($md) {
+    font-size: 1.1rem;
+    height: auto;
+    line-height: 1.2rem;
+    padding: 1rem 5rem 0.9rem 2rem;
+  }
   background: $magenta;
   color: white;
   display: inline-block;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 400;
-  height: 65px;
-  line-height: 1.2rem;
-  padding: 1rem 5rem 0.9rem 2rem;
+  line-height: 1rem;
+  margin: 1.5rem 0;
+  padding: 1rem 0.5rem 0.9rem 0.4rem;
   position: relative;
   text-decoration: none;
   width: 300px;
@@ -88,24 +94,35 @@ input[type=radio]:checked + label:before {
 
 // dropdown for do you manage this email server
 .s-hidden {
+  max-width: 100%;
   visibility: hidden;
-  padding-right: 10px;
+
 }
 .select {
+  @include susy-breakpoint($md) {
+    margin: 0 25% 3rem;
+  }
+  border: none;
+  color: black;
   cursor: pointer;
   display: inline-block;
+  margin: 0 0 2rem;
+  max-width: 320px;
   position: relative;
-  color: black;
-  border: none;
+  width: 100%;
 }
 .styledSelect {
+  @include susy-breakpoint($md) {
+    padding: 0.8 1rem;
+  }
+  background-color: white;
   border: 2px solid $magenta;
   border-radius: 30px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: center;
   display: inline-block;
   height: 3.5rem;
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 0;
   position: absolute;
   top: 0;
   right: 0;
@@ -117,9 +134,11 @@ input[type=radio]:checked + label:before {
   border: 2px solid $magenta;
   background-color: white;
   display: none;
+  font-size: 1rem;
+  line-height: 1rem;
   list-style: none;
   position: relative;
-  top: 1rem;
+  top: 1.18rem;
   margin: 0 auto;
   padding: 0 ;
   width: 20rem;
@@ -135,13 +154,27 @@ input[type=radio]:checked + label:before {
     &:first-child {
       display: none;
     }
+    &:nth-child(2) {
+      border-bottom: 2px solid $magenta;
+    }
   }
 }
 
+.manage-buttons {
+  @include susy-breakpoint($md) {
+    margin: 0 auto 2rem;
+  }
+  clear: left;
+  margin: 2rem auto;
+  text-align: center;
+}
 .add-domain-accordion .accordion-content {
   background-color: $gray-light;
 }
 
+.yellow-box {
+  background-color: $gold-light;
+}
 .spinner {
   width: 80px;
   height: 80px;
