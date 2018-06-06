@@ -56,7 +56,6 @@ function handle_scan(data) {
 }
 
 function status_string(scan) {
-  var result = "";
   switch(scan.status) {
     case 0:
       switch (scan.extra_results.policylist.status) {
@@ -67,12 +66,11 @@ function status_string(scan) {
         case 2:
           return 'not-submitted'
       }
-    case 1:
-      // This is pending server using distinct status code.
-      return 'fail-not-secured';
     case 2:
+      return 'fail-not-secured';
+    case 4:
       return 'fail-no-support';
-    case 3:
+    case 5:
       return 'could-not-connect';
   }
 }
