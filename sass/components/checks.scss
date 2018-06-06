@@ -12,14 +12,17 @@
 }
 
 .default-title {
+  @include susy-breakpoint($md) {
+    padding-left: 5.7rem;
+  }
   @include results-checkbox;
-  background: $gray-light url("images/green-check-open.svg") no-repeat;
+  background: white url("images/green-check-open.svg") no-repeat;
   background-size: 30px;
 }
 
 .almost-title {
   @include results-checkbox;
-  background: $gray-light url("images/gold-!-open.svg") no-repeat;
+  background: white url("images/gold-!-open.svg") no-repeat;
 }
 
 
