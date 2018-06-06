@@ -25,11 +25,13 @@
     opacity: 0; //hide field with URL
   }
   .copy-confirm {
-    @include susy-breakpoint($md) {
-      float: right;
-    }
+    transition : opacity 0.8s ease;
     color: $cyan;
     font-weight: 400;
     opacity: 0;
+
+    &.active {
+      opacity: 1;
+    }
   }
 }

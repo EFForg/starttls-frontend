@@ -2,11 +2,11 @@
 * Copy url to clipboard.
 */
 $(function() {
-  $(".copy-url").click(copy_url);
+  $('.copy-url').click(copy_url);
 });
 
 function copy_url() {
-  var textArea = document.createElement("textarea");
+  var textArea = document.createElement('textarea');
   textArea.value = window.location.href;
   document.body.appendChild(textArea);
   textArea.focus();
@@ -14,10 +14,10 @@ function copy_url() {
 
   try {
     document.execCommand('copy');
-    $(".copy-confirm").css({
-      opacity       : "1",
-      transition : 'opacity 0.2s ease-in-out'
-    });
+    $('.copy-confirm').addClass('active');
+    setTimeout(function() {
+      $('.copy-confirm').removeClass('active');
+    }, 2000);
   } catch (err) {
     // IE9 and earlier
     alert('Failed to copy to clipboard');
