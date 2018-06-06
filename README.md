@@ -19,7 +19,6 @@
 #### Developing with the STARTTLS Scanner API
 1. Clone https://github.com/EFForg/starttls-scanner and follow the Docker setup instructions.
 2. Edit the `.env` file for that project and set `ALLOWED_ORIGINS=http://localhost:1313`.
-3. In the `starttls/frontend` project (this repo), run `API_HOSTNAME="http://localhost:8080" yarn run serve`.
 
 ### Docker
 
