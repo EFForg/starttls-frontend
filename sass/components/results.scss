@@ -8,8 +8,9 @@
   text-align: center;
 }
 
-#not-submitted {
+.not-submitted.results-overview {
   @include results-title;
+  background-image: url("/images/gold-!-fill.svg");
   .what-is {
     @include susy-breakpoint($md) {
       margin: 1.5rem 26%;
@@ -17,19 +18,19 @@
   }
 }
 
-#perfect {
+.perfect {
   @include results-title;
   background-image: url("/images/green-check-fill.svg");
 }
 
-#pending,
-#not-submitted {
+.pending {
   @include results-title;
   background-image: url("/images/gold-!-fill.svg");
 }
 
-#could-not-connect,
-#fail {
+.could-not-connect
+.fail-no-support,
+.fail-not-secured {
   @include results-title;
   background-image: url("/images/red-x-fill.svg");
 }

@@ -49,7 +49,7 @@ function handle_scan(data) {
       $result.appendTo( $('article.accordion') );
     }
 
-    $('#' + status_string(scan)).show()
+    $('.' + status_string(scan)).show()
     $('#loading-results').hide()
     $('#results-wrapper').show()
   });

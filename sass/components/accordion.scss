@@ -121,6 +121,9 @@ i {
   padding: 1rem 1rem 1rem 0;
   transition: all 0.2s;
   p {
+    @include susy-breakpoint($md) {
+      padding-left: 5.7rem;
+    }
     font-size: 1rem;
     line-height: 1.5rem;
   }
