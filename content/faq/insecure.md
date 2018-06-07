@@ -1,5 +1,5 @@
 ---
-linktitle: how-can
+linktitle: insecure
 title: How can my email be insecure?
 date: 2018-05-22T15:36:31-07:00
 weight: 2

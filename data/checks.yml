@@ -10,16 +10,16 @@ list:
   title: Uses a secure version of TLS
   fail_title: Does not use a secure TLS version
   body: |
-    TLS has changed many times over the years. Researchers have discovered security flaws in some older versions, named “SSLv2” and “SSLv3”, so technologists across the internet are <a href="http://disablessl3.com/" target="_blank">working to deprecate</a> SSLv2/3.
+    TLS has changed many times over the years. Researchers have discovered security flaws in some older versions, named “SSLv2” and “SSLv3”, so technologists across the internet are <a href="https://disablessl3.com/" target="_blank">working to deprecate</a> SSLv2/3.
 
     This checks that your email server does not allow establishing a valid TLS connection over SSLv2/3.
 - key: certificate
   title: Presents a valid certificate
   fail_title: Does not present a valid certificate
   body: |
-    On the internet, even if you *think* you’re talking to a service named “eff.org”, it could be an impersonator pretending to be “eff.org”. Checking a mail server’s certificate ensures that you really are talking to the actual service.
+    On the internet, even if you *think* you’re talking to a service named “eff.org”, it could be an impersonator pretending to be “eff.org”. Checking a mail server’s certificate helps ensure that you really are talking to the actual service.
 
-    In order for your certificate to be valid for your email domain, it should be unexpired, chain to a valid root from <a href="https://wiki.mozilla.org/CA/Included_Certificates" target="_blank">Mozilla’s CA certificates list</a>, and one of the names on the certificate should either match the domain (the part of an email address after the @) or the server’s hostname (the name of the server, as indicated by an MX record).
+    In order for your certificate to be valid for your email domain, it should be unexpired, chain to a <a href="https://wiki.mozilla.org/CA/Included_Certificates" target="_blank">valid root</a>, and one of the names on the certificate should either match the domain (the part of an email address after the @) or the server’s hostname (the name of the server, as indicated by an MX record).
 - key: connectivity
   title: Server is up and running
   fail_title: Could not establish connection

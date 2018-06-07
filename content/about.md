@@ -4,13 +4,13 @@ date: 2018-05-22T11:45:16-07:00
 draft: false
 layout: single
 ---
-STARTTLS Everywhere is a project to finally secure the delivery of email. It is created and maintained by the Electronic Frontier Foundation (EFF), a 501(c)3 nonprofit.
+STARTTLS Everywhere is a project to make email delivery more secure. It is created and maintained by the Electronic Frontier Foundation (EFF), a 501(c)3 nonprofit.
 
 We want *safer hops for email*.  Email goes through multiple computers (or multiple "hops") to get to its destination, and each hop should be as secure as possible. In particular, we want to:
 
  * Increase STARTTLS adoption
  * Increase the number of mailservers that actually validate certificates
- * Maintain a [STARTTLS Policy List](/policy-list) to help prevent [downgrade attacks](/faq#how-can) on email services.
+ * Maintain a [STARTTLS Policy List](/policy-list) to help prevent [downgrade attacks](/faq#insecure) on email services.
 
 If you have questions about how STARTTLS Everywhere works, check out [the FAQ](/faq). If you are an email service provider and are looking to be added to the STARTTLS Everywhere policy list, [learn more here](/policy-list).
 
