@@ -127,4 +127,14 @@ i {
     font-size: 1rem;
     line-height: 1.5rem;
   }
+  blockquote {
+    @include susy-breakpoint($md) {
+      padding-left: 6.7rem;
+    }
+  }
+  h4 a {
+    color: black;
+    border-bottom: 2px solid $magenta;
+    text-decoration: none;
+  }
 }

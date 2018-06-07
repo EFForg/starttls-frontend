@@ -8,8 +8,6 @@ level: secure
 
 <h4><a href="/">This tool</a> checks whether your email domain…</h4>
 
-<!--- TODO: use data/checks.yml to populate the below. -->
-
 <h4>Supports STARTTLS?</h4>
 <ul>
 <li>
