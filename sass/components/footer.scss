@@ -23,7 +23,6 @@ footer {
     }
   }
 
-
   .index {
     @include susy-breakpoint($md) {
       display: flex;
@@ -50,9 +49,6 @@ footer {
       &:hover {
         color: white;
         text-decoration: none;
-      }
-      &:visited {
-        color: inherit;
       }
     }
   }
