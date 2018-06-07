@@ -14,8 +14,7 @@ $(function() {
 
   // open accordion panel when anchor link clicked elsewhere
   $(".accordion-content p a").click(function(){
-    linkhref = $(this).attr("href");
-    console.log(linkhref);
+    var linkhref = $(this).attr("href");
     $(linkhref).parent().next().css("display","block");
   });
 });
