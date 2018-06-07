@@ -12,7 +12,7 @@
   <h2>Add <span class="your-domain">Your Domain</span> to EFF’s  STARTTLS Policy List</h2>
   <p>By adding your domain to the <a href="/policy-list">STARTTLS Policy List</a>, you’re protected from downgrade attacks so e-mail servers can send e-mail to you securely.</p>
 
-  <form id="queue" action="{{ safeURL (getenv "API_HOSTNAME") }}/api/queue" method="POST">
+  <form id="queue" action="{{ safeURL .Site.Params.APIHostname }}/api/queue" method="POST">
 
     <label for="domain-input">Email Domain</label>
     <input name="domain" id="domain-input" type="text" required aria-describedby="domain-description" placeholder="example.com"></input>

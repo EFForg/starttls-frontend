@@ -28,6 +28,6 @@
   {{ partial "not-submitted-actions" . }}
   {{ partial "share-links" . }}
 
-  <div id="api-hostname" data-api-hostname="{{ safeURL (getenv "API_HOSTNAME") }}"></div>
+  <div id="api-hostname" data-api-hostname="{{ safeURL .Site.Params.APIHostname }}"></div>
 </div>
 {{ end }}

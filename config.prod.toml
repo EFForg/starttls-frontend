@@ -1,0 +1,4 @@
+[params]
+  SentryPublicDSN = "a295dfada57e479b8c47633442de8e65"
+  SentryProjectID = "33"
+  AnonStatsID = "30"
