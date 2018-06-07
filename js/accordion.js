@@ -15,6 +15,27 @@ $(function() {
   // open accordion panel when anchor link clicked elsewhere
   $(".accordion-content p a").click(function(){
     var linkhref = $(this).attr("href");
-    $(linkhref).parent().next().css("display","block");
+    $(linkhref).parent().next().css({
+               "max-height" : "3000px",
+               "margin-top" : "0" });
   });
+
+  function remoteFaq() {
+    $(".faq-open").click(function(){
+      var linkhref = $(this).attr("href");
+      linkhref = linkhref.replace('/faq/', '');
+      alert(linkhref);
+      openFaq(linkhref);
+    });
+  }
+  function openFaq(thehref) {
+    setTimeout(function(){
+      alert(linkhref);
+      $(linkhref).parent().next().css({
+        "display": "block",
+        "max-height": "3000px"});
+      }, 2000);
+    }
+  remoteFaq();
+
 });
