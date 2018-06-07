@@ -17,4 +17,9 @@ $(function() {
     googleShare = "https://plus.google.com/share?url="+encodeURIComponent(url);
     window.open(googleShare, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=436,width=400');
   });
+
+  $('.url-field input').val(window.location.href);
+  $('.copy-url').click(function (e) {
+    $('.url-field').toggle().find('input').select();
+  });
 });

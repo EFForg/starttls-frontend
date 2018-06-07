@@ -2,27 +2,33 @@
  * Form interactions for POST to /api/scan
  */
 $(function() {
-  var hostname = $('#api-hostname').data('api-hostname');
+  if (!window.location.pathname.match(/\/results.$/)) {
+    return;
+  }
+  var hostname = $('#api-hostname').data('api-hostname') || "";
   var domain = window.location.search.substring(1);
+
+  $('.your-domain-name').text(domain);
 
   $.ajax({
     type: 'POST',
     url: hostname + '/api/scan',
     data: {
       domain: domain
-    },
-    success: handle_scan
-  });
+    }
+  })
+  .done(handle_scan)
+  .fail(handle_error);
 
   $('ul.options li').on('click', toggle_add_domain_actions);
 });
 
-function handle_scan(data) {
-  if (data.status_code !== 200) {
-    $form.append('<div>Something went wrong. Please try back later.</div>');
-    return;
-  }
+function handle_error(data) {
+  $('#loading-results').hide()
+  $('#scan-request-failed').show()
+}
 
+function handle_scan(data) {
   var scan = data.response.scandata;
   $.each(scan.preferred_hostnames, function(i, hostname) {
     var result = scan.results[hostname];
@@ -35,13 +41,14 @@ function handle_scan(data) {
       $result.addClass(result.status ? 'fail' : 'success');
 
       $.each(result.checks, function(key, check) {
-        $check = $result.find('.' + key);
+        var $check = $result.find('.' + key);
+        if (key === "connectivity" && check.status === 0)
+          return; // Only show the connectivity check when it fails.
         $check.addClass(check.status ? 'fail' : 'success');
       });
       $result.appendTo( $('article.accordion') );
     }
 
-    $('.your-domain-name').text(data.response.domain);
     $('.' + status_string(scan)).show()
     $('#loading-results').hide()
     $('#results-wrapper').show()
@@ -49,7 +56,6 @@ function handle_scan(data) {
 }
 
 function status_string(scan) {
-  var result = "";
   switch(scan.status) {
     case 0:
       switch (scan.extra_results.policylist.status) {
@@ -60,11 +66,12 @@ function status_string(scan) {
         case 2:
           return 'not-submitted'
       }
-    case 1:
-      // This is pending server using distinct status code.
-      return 'fail-not-secured';
     case 2:
+      return 'fail-not-secured';
+    case 4:
       return 'fail-no-support';
+    case 5:
+      return 'could-not-connect';
   }
 }
 

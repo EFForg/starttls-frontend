@@ -1,3 +1,4 @@
+#scan-request-failed,
 #results-wrapper,
 .results-overview {
   display: none;
@@ -27,6 +28,7 @@
   background-image: url("/images/gold-!-fill.svg");
 }
 
+.could-not-connect
 .fail-no-support,
 .fail-not-secured {
   @include results-title;
