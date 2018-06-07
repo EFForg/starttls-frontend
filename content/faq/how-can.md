@@ -1,6 +1,6 @@
 ---
 linktitle: how-can
-title: How can I secure my mailserver?
+title: How can I make my mailserver more secure?
 date: 2018-05-23T12:29:52-07:00
 weight: 7
 level: secure

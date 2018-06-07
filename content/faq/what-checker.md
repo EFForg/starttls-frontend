@@ -35,7 +35,7 @@ This checks that your email server does not allow establishing a valid TLS conne
 </h4>
 <ul>
 <li>
-On the internet, even if you *think* you’re talking to a service named “eff.org”, it could be an impersonator pretending to be “eff.org”. Checking a mail server’s certificate ensures that you really are talking to the actual service.
+On the internet, even if you *think* you’re talking to a service named “eff.org”, it could be an impersonator pretending to be “eff.org”. Checking a mail server’s certificate helps ensure that you really are talking to the actual service.
 </li>
 <li>
 In order for your certificate to be valid for your email domain, it should be unexpired, chain to a valid root from <a href="https://wiki.mozilla.org/CA/Included_Certificates" target="_blank">Mozilla’s CA certificates list</a>, and one of the names on the certificate should either match the domain (the part of an email address after the @) or the server’s hostname (the name of the server, as indicated by an MX record).

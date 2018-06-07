@@ -6,4 +6,4 @@ weight: 4
 level: learn
 ---
 
-Yes, you should make sure your email provider, and your recipient’s email provider both support STARTTLS! As we mentioned in [“How can my email be insecure?”](#how-can), email goes through multiple hops-- the webmail-to-server hop is just one of them.
+Yes, you should make sure your email provider, and your recipient’s email provider both support STARTTLS! As we mentioned in [“How can my email be insecure?”](#insecure), email goes through multiple hops-- the webmail-to-server hop is just one of them.
