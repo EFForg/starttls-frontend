@@ -11,7 +11,7 @@ Let’s say you have an email address @gmail.com. You open your email client, wh
 
 Let’s say you draft an email to your friend, who has an email address @eff.org. What happens when you press “SEND”?
 
-<img src="/images/how-email-works.png">
+<img src="/images/how-email-works.png" alt="how email works">
 
 <ol>
 <li> Your email is sent to and queued for delivery at Gmail’s email servers. Then,</li>
