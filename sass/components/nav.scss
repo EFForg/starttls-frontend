@@ -70,7 +70,8 @@ nav {
           color: white;
         }
         &:hover {
-          &:not(.donate) {
+          &:not(.donate),
+          &:not(.menu-logo) {
             color: white;
           }
         }
@@ -132,13 +133,15 @@ nav {
       background-image: url("/images/starttls-small-logo.svg");
       background-repeat: no-repeat;
       display: inline-block;
-      position: absolute;
       height: 40px;
       left: 3%;
+      position: absolute;
       top: 9px;
+      transition: all 0.2s;
       width: 40px;
       &:hover {
         background-image: url("/images/starttls-small-logo-hover.svg");
+        border: none;
       }
     }
     li.close-menu {
