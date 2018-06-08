@@ -34,3 +34,8 @@
   @include results-title;
   background-image: url("/images/red-x-fill.svg");
 }
+
+.fail .message {
+  color: #bc3f69;
+  font-weight: bold;
+}
