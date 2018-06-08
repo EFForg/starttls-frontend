@@ -6,7 +6,7 @@ $(function() {
 
   $form.submit(function(e) {
     e.preventDefault();
-    var domain = $form.find('input[name="domain"]').val();
+    var domain = $form.find('input[name="domain"]').val().trim();
     window.location = "/results?" + encodeURIComponent(domain);
   });
 });
