@@ -42,6 +42,12 @@ function handle_scan(data) {
 
       $.each(result.checks, function(key, check) {
         var $check = $result.find('.' + key);
+        if (check.messages) {
+          var $messages = $check.find('.message');
+          $.each(check.messages, function(_, message) {
+            $('<p/>').text(message).appendTo($messages);
+          });
+        }
         if (key === "connectivity" && check.status === 0)
           return; // Only show the connectivity check when it fails.
         $check.addClass(check.status ? 'fail' : 'success');
