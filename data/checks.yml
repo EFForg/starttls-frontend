@@ -25,9 +25,3 @@ list:
   fail_title: Could not establish connection
   body: |
     We couldn't successfully connect to this mailserver to scan it.
-- key: policy_list
-  title: Preloaded on our STARTTLS policy list
-  body: |
-    Even if you pass the above checks, someone sitting between your server and other mailservers can choose to drop “STARTTLS” messages and fool servers into thinking that you do not support TLS.
-
-    To prevent this from happening, if you pass all the previous checks, you can add your domain to our index of high-security email domains so servers have another point of reference to discover that you support STARTTLS encryption.
