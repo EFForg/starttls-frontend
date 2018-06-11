@@ -26,7 +26,10 @@
     {{ partial "result-template" . }}
   </article>
 
+  {{ partial "fail-no-support-actions" . }}
+  {{ partial "fail-not-secured-actions" . }}
   {{ partial "not-submitted-actions" . }}
+  {{ partial "pending-actions" . }}
   {{ partial "share-links" . }}
 
   <div id="api-hostname" data-api-hostname="{{ safeURL .Site.Params.APIHostname }}"></div>
