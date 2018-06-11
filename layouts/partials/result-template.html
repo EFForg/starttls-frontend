@@ -1,18 +1,18 @@
+<h2>(Email domain will go here)</h2>
+<h2>Mailboxes</h2>
 <div id="result-template">
-
+  
     <div class="accordion-title"><span class="hostname"></span><i></i>
     </div>
     <div class="accordion-content">
     {{ range $.Site.Data.checks.list }}
       {{ if ne .key "policy_list" }}
-
         <div class="check {{ .key }}">
           <h5 class="default-title">{{ .title | markdownify }}</h5>
           <h5 class="fail-title">{{ .fail_title | markdownify }}</h5>
           <div class="message"></div>
           {{ .body | markdownify }}
       </div>
-
     {{ end }}
   {{ end }}
   </div>
