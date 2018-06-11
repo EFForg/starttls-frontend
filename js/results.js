@@ -20,7 +20,7 @@ $(function() {
   .done(handle_scan)
   .fail(handle_error);
 
-  $('ul.options li').on('click', toggle_add_domain_actions);
+  $('#manage').on('change', toggle_add_domain_actions);
 });
 
 function handle_error(data) {
@@ -83,7 +83,7 @@ function status_string(scan) {
 }
 
 function toggle_add_domain_actions() {
-  switch($(this).attr('rel')) {
+  switch($(this).val()) {
     case 'yes':
       $('.add-domain-action.submit').show();
       $('.add-domain-action.learn').hide();
