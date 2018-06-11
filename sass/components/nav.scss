@@ -41,6 +41,9 @@ nav {
   }
 
   ul {
+    @include susy-breakpoint($md) {
+      max-width: 53rem;
+    }
     display: flex;
     font-size: 0.75rem;
     height: 2rem;
@@ -67,7 +70,8 @@ nav {
           color: white;
         }
         &:hover {
-          &:not(.donate) {
+          &:not(.donate),
+          &:not(.menu-logo) {
             color: white;
           }
         }
@@ -84,6 +88,10 @@ nav {
         margin: 0;
       }
       &.donate {
+        @include susy-breakpoint($md) {
+          margin: 0.8rem 0 0 2rem;
+          width: 3.5rem;
+        }
         display: inline-block;
         margin: 0 auto;
         a {
@@ -112,10 +120,6 @@ nav {
             }
           }
         }
-        @include susy-breakpoint($md) {
-          margin: 0.8rem 0 0;
-          width: 8rem;
-        }
       }
     }
     .menu-logo {
@@ -123,32 +127,25 @@ nav {
         height: 45px;
         width: 45px;
         top: 1px;
+        margin-top: 0;
+        position: relative;
       }
       background-image: url("/images/starttls-small-logo.svg");
       background-repeat: no-repeat;
       display: inline-block;
-      position: absolute;
       height: 40px;
       left: 3%;
+      position: absolute;
       top: 9px;
-      transition: all 0.3s;
+      transition: all 0.2s;
       width: 40px;
       &:hover {
         background-image: url("/images/starttls-small-logo-hover.svg");
+        border: none;
       }
     }
     li.close-menu {
       display: none !important;
-    }
-    @include susy-breakpoint($md) {
-      max-width: 54rem;
-      .menu-logo {
-        margin-top: 0;
-        position: relative;
-        img {
-          width: 44px;
-        }
-      }
     }
   }
 }

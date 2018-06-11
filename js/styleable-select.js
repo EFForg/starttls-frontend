@@ -34,8 +34,8 @@ $(function() {
       e.stopPropagation();
       $styledSelect.text($(this).text()).removeClass('active');
       $this.val($(this).attr('rel'));
+      $this.trigger('change');
       $list.hide();
-      /* alert($this.val()); Uncomment this for demonstration! */
     });
 
     // Hides the unordered list when clicking outside of it

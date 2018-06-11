@@ -20,7 +20,7 @@ $(function() {
   .done(handle_scan)
   .fail(handle_error);
 
-  $('ul.options li').on('click', toggle_add_domain_actions);
+  $('#manage').on('change', toggle_add_domain_actions);
 });
 
 function handle_error(data) {
@@ -42,17 +42,22 @@ function handle_scan(data) {
 
       $.each(result.checks, function(key, check) {
         var $check = $result.find('.' + key);
+        if (check.messages) {
+          var $messages = $check.find('.message');
+          $.each(check.messages, function(_, message) {
+            $('<p/>').text(message).appendTo($messages);
+          });
+        }
         if (key === "connectivity" && check.status === 0)
           return; // Only show the connectivity check when it fails.
         $check.addClass(check.status ? 'fail' : 'success');
       });
       $result.appendTo( $('article.accordion') );
     }
-
-    $('.' + status_string(scan)).show()
-    $('#loading-results').hide()
-    $('#results-wrapper').show()
   });
+  $('.' + status_string(scan)).show()
+  $('#loading-results').hide()
+  $('#results-wrapper').show()
 }
 
 function status_string(scan) {
@@ -68,6 +73,8 @@ function status_string(scan) {
       }
     case 2:
       return 'fail-not-secured';
+    case 3:
+      return 'no-mxs';
     case 4:
       return 'fail-no-support';
     case 5:
@@ -76,7 +83,7 @@ function status_string(scan) {
 }
 
 function toggle_add_domain_actions() {
-  switch($(this).attr('rel')) {
+  switch($(this).val()) {
     case 'yes':
       $('.add-domain-action.submit').show();
       $('.add-domain-action.learn').hide();
