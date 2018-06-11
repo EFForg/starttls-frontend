@@ -15,6 +15,7 @@
   <h1>How secure is <span class="your-domain-name">your domain</span>?</h1>
 
   {{ partial "could-not-connect" . }}
+  {{ partial "no-mxs" . }}
   {{ partial "fail-no-support" . }}
   {{ partial "fail-not-secured" . }}
   {{ partial "not-submitted" . }}
@@ -25,7 +26,10 @@
     {{ partial "result-template" . }}
   </article>
 
+  {{ partial "fail-no-support-actions" . }}
+  {{ partial "fail-not-secured-actions" . }}
   {{ partial "not-submitted-actions" . }}
+  {{ partial "pending-actions" . }}
   {{ partial "share-links" . }}
 
   <div id="api-hostname" data-api-hostname="{{ safeURL .Site.Params.APIHostname }}"></div>

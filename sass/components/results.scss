@@ -1,6 +1,7 @@
 #scan-request-failed,
 #results-wrapper,
-.results-overview {
+.results-overview,
+.results-actions {
   display: none;
 }
 
@@ -18,19 +19,20 @@
   }
 }
 
-.perfect {
+.perfect.results-overview {
   @include results-title;
   background-image: url("/images/green-check-fill.svg");
 }
 
-.pending {
+.pending.results-overview {
   @include results-title;
   background-image: url("/images/gold-!-fill.svg");
 }
 
+.no-mxs,
 .could-not-connect,
-.fail-no-support,
-.fail-not-secured {
+.fail-no-support.results-overview,
+.fail-not-secured.results-overview {
   @include results-title;
   background-image: url("/images/red-x-fill.svg");
 }
