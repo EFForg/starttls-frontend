@@ -4,15 +4,13 @@
     </div>
     <div class="accordion-content">
     {{ range $.Site.Data.checks.list }}
-      {{ if ne .key "policy_list" }}
-        <div class="check {{ .key }}">
-          <h5 class="default-title">{{ .title | markdownify }}</h5>
-          <h5 class="fail-title">{{ .fail_title | markdownify }}</h5>
-          <div class="message"></div>
-          {{ .body | markdownify }}
+      <div class="check {{ .key }}">
+        <h5 class="default-title">{{ .title | markdownify }}</h5>
+        <h5 class="fail-title">{{ .fail_title | markdownify }}</h5>
+        <div class="message"></div>
+        {{ .body | markdownify }}
       </div>
     {{ end }}
-  {{ end }}
   </div>
 
 </div>
