@@ -6,7 +6,7 @@ title: STARTTLS Policy List
 layout: single
 ---
 
-The is a list of email domains who meet a minimum set of security requirements. By providing a list of email domains that support TLS encryption and present valid certificates, the STARTTLS Policy List gives mailservers another point of reference to discover whether other mailservers support STARTTLS.
+The STARTTLS Policy List is a list of email domains who meet a minimum set of security requirements. By providing a list of email domains that support TLS encryption and present valid certificates, the STARTTLS Policy List gives mailservers another point of reference to discover whether other mailservers support STARTTLS.
 
 
 The list is hosted [here](https://dl.eff.org/starttls-everywhere/policy.json), and the corresponding signature is [here](https://dl.eff.org/starttls-everywhere/policy.jsona.asac).
@@ -46,7 +46,7 @@ We welcome [contributions](https://github.com/EFForg/starttls-everywhere) for di
 
 When submitting your domain to the list through [this form](/add-domain), you must provide and verify:
 
- * A contact email used by STARTTLS Everywhere to notify the mailserver administrator of any deliverablity concerns.
+ * A contact email used by STARTTLS Everywhere to notify the mailserver administrator of any deliverablity concerns. (We won't use this email for any other purpose).
  * A list of expected hostnames for your server. At least one of the names on each mailserver's certificate should match one of these patterns.
     * These can be a suffix, like `.eff.org`, or a fully-qualified domain name, like `mx.eff.org`. Suffixes will only match one subdomain label, so `.eff.org` would match names `*.eff.org` and `mx.eff.org`, but not `good.mx.eff.org` or `*.mx.eff.org`.
 
@@ -58,26 +58,26 @@ The requirements are that your domain:
  * Supports STARTTLS.
  * Does not support SSLv2/v3.
  * Provides a valid certificate. Validity means:
-    * By default, the certificate's Common Name or a subjectAltName matches either the e-mail domain, or the server hostname.
+    * By default, the certificate's Common Name or a subjectAltName matches either the email domain, or the server hostname.
          * If this check is being performed against a policy entry, we validate the certificate's name against the set of hostname patterns entered for the policy.
     * The certificate is unexpired.
     * There is a valid chain from the certificate to a root included in [Mozilla's trust store](https://wiki.mozilla.org/CA/Included_Certificates) (available as Debian package [ca-certificates](https://packages.debian.org/sid/ca-certificates)).
 
 Before adding a domain to the list, we continue to perform validation against the mailserver for at least one week. If it fails at any point, **it must be resubmitted.**
 
-With that in mind, you can [queue your mail domain](/add-domain) for the STARTTLS policy list. Alternatively, you can send an e-mail to [starttls-policy@eff.org](mailto:starttls-policy@eff.org) or [submit a pull request](https://github.com/EFForg/starttls-everywhere) to add your domain.
+With that in mind, you can [queue your mail domain](/add-domain) for the STARTTLS policy list. Alternatively, you can send an email to [starttls-policy@eff.org](mailto:starttls-policy@eff.org) or [submit a pull request](https://github.com/EFForg/starttls-everywhere) to add your domain.
 
 #### Continued requirements
 
 Failure to continue meeting these requirements could result in deliverability issues to your mailserver, from any mail clients configured to use the STARTTLS policy list.
 
-We continue to validate all the domains on the list daily. If we notice any oddities, we will notify the contact e-mail associated with the policy submission and urge you to either [update or remove your policy](#update).
+We continue to validate all the domains on the list daily. If we notice any oddities, we will notify the contact email associated with the policy submission and urge you to either [update or remove your policy](#update).
 
 ## <a name="update"></a> Updating or removing your policy entry on the list
 
-If you're migrating e-mail hosting, you'll need to update the MX hostnames associated with your domain's policy.
+If you're migrating email hosting, you'll need to update the MX hostnames associated with your domain's policy.
 
-If you'd like to request removal from the list, or an update to your policy entry (or associated contact e-mail), contact us at [starttls-policy@eff.org](mailto:starttls-policy@eff.org)
+If you'd like to request removal from the list, or an update to your policy entry (or associated contact email), contact us at [starttls-policy@eff.org](mailto:starttls-policy@eff.org)
 
 ## <a name="pin"></a>Adding pins to the list
 
