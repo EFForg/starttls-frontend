@@ -1,5 +1,6 @@
 <form id="scan" action="{{ safeURL .Site.Params.APIHostname }}/api/scan" method="POST">
   <h4>How secure is your email server?</h4>
-  <input type="text" name="domain" placeholder="example.com" required pattern="(((xn--)|(XN--))?[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*\.)+[a-zA-Z]{2,}\s*" title="Email domain (everything after the @ symbol)"></input>
+  <p>Enter a valid email domain, the part of your email address after the @.</p>
+  <input type="text" name="domain" placeholder="example.com" required pattern="(((xn--)|(XN--))?[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*\.)+[a-zA-Z]{2,}\s*" title="Email domain. This is the part of your email address after the @."></input>
   <input type="submit" value="check email domain"></input>
 </form>
