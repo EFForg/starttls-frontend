@@ -94,6 +94,11 @@ i {
       transform: translate( -2px , 0 ) rotate( -45deg );
     }
   }
+
+  & + .accordion-content {
+    max-height: 3000px;
+    margin-top: 0;
+  }
 }
 
 .fail {
@@ -113,6 +118,7 @@ i {
     background: $gray-light url("images/gold-!-fill.svg") no-repeat;
   }
 }
+
 .accordion-content {
   background-color: white;
   margin-top: -2rem;
