@@ -9,4 +9,4 @@ Once you confirm your email, your domain will be queued for addition on **<span 
 
 Remember read [our guidelines](/policy-list) about the requirements your mailserver must meet, and continue to meet, in order to stay on the list. If your mailserver ceases to meet these requirements at any point and is at the risk of facing deliverability issues, we will notify you through this email address.
 
-<b>Thanks for helping us secure email for everyone :)</b>
+<b>Thanks for helping us make email more secure for everyone :)</b>
