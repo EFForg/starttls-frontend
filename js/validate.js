@@ -13,8 +13,8 @@ $(function() {
       type: 'POST',
       url:  hostname + '/api/validate',
       data: {
-        token: token
-      }
+        token: token,
+      },
   })
   .done(handle_token)
   .fail(handle_error);
