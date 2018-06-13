@@ -1,6 +1,6 @@
 footer {
   @include susy-breakpoint($md) {
-    display: table-row;
+    display: block;
   }
   background: black;
   clear: both;
