@@ -22,7 +22,26 @@
   {{ partial "pending" . }}
   {{ partial "perfect" . }}
 
+  <h2 class="your-domain-name">Your Domain</h2>
+
   <article class="accordion">
+    {{ range $.Site.Data.policy_check.list }}
+      <div class="check policy-list {{ .key }} active">
+
+        <div class="accordion-title">
+          <span>{{ .title | markdownify }}</span>
+          <i></i>
+        </div>
+        <div class="accordion-content">
+          {{ .body | markdownify }}
+        </div>
+
+      </div>
+    {{ end }}
+  </article>
+
+  <h2>Mailboxes</h2>
+  <article class="accordion domain-results">
     {{ partial "result-template" . }}
   </article>
 
