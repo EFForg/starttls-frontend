@@ -30,7 +30,8 @@ function handle_error(data) {
 
 function handle_scan(data) {
   var scan = data.response.scandata;
-  show_policy_check(scan);
+  if (scan.status !== 0)
+    $('.policy-check-header').hide();
   $.each(scan.preferred_hostnames, function(i, hostname) {
     var result = scan.results[hostname];
     if (result) {
@@ -59,15 +60,6 @@ function handle_scan(data) {
   $('.' + status_string(scan)).show()
   $('#loading-results').hide()
   $('#results-wrapper').show()
-}
-
-function show_policy_check(scan) {
-  if (scan.status !== 0)
-    var status_class = 'fail'
-  else
-    var status_class = status_string(scan)
-  console.log(status_class);
-  $('.check.policy-list.' + status_class).show();
 }
 
 function status_string(scan) {
