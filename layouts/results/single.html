@@ -26,9 +26,9 @@
 
   <article class="accordion">
     {{ range $.Site.Data.policy_check.list }}
-      <div class="check policy-list {{ .key }} active">
+      <div class="check policy-list {{ .key }}">
 
-        <div class="accordion-title">
+        <div class="accordion-title active">
           <span>{{ .title | markdownify }}</span>
           <i></i>
         </div>
