@@ -114,9 +114,14 @@ i {
   }
 }
 
-.almost,
-.not-submitted,
 .pending {
+  .accordion-title {
+    background: $gray-light url("images/gold-clock-fill.svg") no-repeat;
+  }
+}
+
+.almost,
+.not-submitted {
   .accordion-title {
     background: $gray-light url("images/gold-!-fill.svg") no-repeat;
   }
