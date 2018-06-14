@@ -124,7 +124,7 @@ i {
   margin-top: -2rem;
   max-height: 0;
   overflow: hidden;
-  padding: 1rem 1rem 1rem 0rem;
+  padding: 1rem 1rem 1rem 0;
   transition: all 0.2s;
   p {
     @include susy-breakpoint($md) {
