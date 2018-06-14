@@ -107,13 +107,16 @@ i {
   }
 }
 
-.success {
+.success,
+.perfect {
   .accordion-title {
     background: $gray-light url("images/green-check-fill.svg") no-repeat;
   }
 }
 
-.almost {
+.almost,
+.not-submitted,
+.pending {
   .accordion-title {
     background: $gray-light url("images/gold-!-fill.svg") no-repeat;
   }
