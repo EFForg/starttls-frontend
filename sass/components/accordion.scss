@@ -43,7 +43,7 @@
   @extend .flipIn;
   @include susy-breakpoint($md) {
     background-position: 1.2rem 0.4rem;
-    padding-left: 6rem;
+    padding-left: 5.7rem;
   }
   animation-delay: 0.5s;
   background: $gray-light url("images/grey-check-open.svg") no-repeat;
@@ -54,7 +54,7 @@
   cursor: pointer;
   font-weight: 700;
   margin: 0;
-  padding: 1rem 2rem 1rem 6rem;
+  padding: 1rem 2rem 1rem 5.7rem;
   position: relative;
 }
 a {
@@ -124,7 +124,7 @@ i {
   margin-top: -2rem;
   max-height: 0;
   overflow: hidden;
-  padding: 1rem 1rem 1rem 0;
+  padding: 1rem 1rem 1rem 0rem;
   transition: all 0.2s;
   p {
     @include susy-breakpoint($md) {
