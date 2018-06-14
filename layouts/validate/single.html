@@ -1,0 +1,27 @@
+{{ define "main" }}
+
+<div id="validation">
+    <div id="validation-success">
+
+        <h1 class="title">Success!</h1>
+        <p>
+        Your email address has been verified, and <span class="your-domain-here">your domain</span> will be queued for addition on <b><span class="next-queue-date">Wednesday</span></b> as long as it has continued to pass our tests!
+        </p>
+
+        <p>
+        Remember read <a href="/policy-list">our guidelines</a> about the requirements your mailserver must meet, and continue to meet, in order to stay on the list. If your mailserver ceases to meet these requirements at any point and is at the risk of facing deliverability issues, we will notify you through this email address.
+        </p>
+
+        <p><b>Thanks for helping us make email more secure for everyone :)</b></p>
+
+    </div>
+    <div id="validation-failed">
+        <h1 class="title">Email validation failed</h1>
+        <p>
+        Your token has either expired or already been used. To re-validate your email, <a href="/add-domain">try submitting your domain again!</a>
+        </p>
+    </div>
+</div>
+
+  <div id="api-hostname" data-api-hostname="{{ safeURL .Site.Params.APIHostname }}"></div>
+{{ end }}
