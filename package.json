@@ -9,7 +9,7 @@
     "js:build": "yarn run js:install && babel js --out-file static/application.js",
     "js:watch": "yarn run js:install && babel js --watch --out-file static/application.js --source-maps",
     "build": "yarn run sass:build && yarn run js:build && hugo --config config.prod.toml,config.toml",
-    "serve": "yarn run sass:build && parallelshell 'yarn run sass:watch' 'yarn run js:watch' 'hugo serve --config config.toml'",
+    "serve": "yarn run sass:build && parallelshell 'yarn run sass:watch' 'yarn run js:watch' 'hugo serve --config config.dev.toml,config.toml'",
     "lint": "./node_modules/.bin/sass-lint -vq"
   },
   "repository": {
