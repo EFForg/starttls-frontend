@@ -4,4 +4,5 @@ title = "STARTTLS Everywhere"
 [blackfriday]
   plainIDAnchors = true
   hrefTargetBlank = true
-
+[params]
+  APIHostname = "http://localhost:8080"
