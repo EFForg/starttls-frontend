@@ -18,18 +18,38 @@
   {{ partial "no-mxs" . }}
   {{ partial "fail-no-support" . }}
   {{ partial "fail-not-secured" . }}
-  {{ partial "not-submitted" . }}
-  {{ partial "pending" . }}
+  {{ partial "almost-there" . }}
   {{ partial "perfect" . }}
 
+  <h2 class="your-domain-name policy-check-header">Your Domain</h2>
+
   <article class="accordion">
+    {{ range $.Site.Data.policy_check.list }}
+      <div class="check policy-list {{ .key }}">
+
+        <div class="accordion-title active">
+          <span>STARTTLS Policy List</span>
+          <i></i>
+        </div>
+        <div class="accordion-content">
+          {{ .body | markdownify }}
+          {{ if eq .key "not-submitted" }}
+            {{ partial "not-submitted-actions" . }}
+          {{ end }}
+        </div>
+
+      </div>
+    {{ end }}
+  </article>
+
+  <h2>Mailboxes</h2>
+  <article class="accordion domain-results">
     {{ partial "result-template" . }}
   </article>
 
   {{ partial "fail-no-support-actions" . }}
   {{ partial "fail-not-secured-actions" . }}
-  {{ partial "not-submitted-actions" . }}
-  {{ partial "pending-actions" . }}
+
   {{ partial "share-links" . }}
 
   <div id="api-hostname" data-api-hostname="{{ safeURL .Site.Params.APIHostname }}"></div>

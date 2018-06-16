@@ -30,6 +30,8 @@ function handle_error(data) {
 
 function handle_scan(data) {
   var scan = data.response.scandata;
+  if (scan.status !== 0)
+    $('.policy-check-header').hide();
   $.each(scan.preferred_hostnames, function(i, hostname) {
     var result = scan.results[hostname];
     if (result) {
@@ -52,7 +54,7 @@ function handle_scan(data) {
           return; // Only show the connectivity check when it fails.
         $check.addClass(check.status ? 'fail' : 'success');
       });
-      $result.appendTo( $('article.accordion') );
+      $result.appendTo( $('.domain-results') );
     }
   });
   $('.' + status_string(scan)).show()
