@@ -170,13 +170,16 @@ li a {
   margin: 0 auto;
 }
 
-code {
+pre {
   background-color: $gray-light;
+  padding: 0 0.5rem 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+code {
   display: inline-block;
   font-size: 1.1rem;
-  margin-bottom: 0.5rem;
   max-width: 100%;
-  padding: 0 0.5rem 0.5rem;
   white-space: normal;
   word-break: break-all;
 }

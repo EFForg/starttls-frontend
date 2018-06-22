@@ -10,10 +10,13 @@
 
   {{ partial "scan-form" . }}
 
-  <h3 class="checks-overview">This tool checks whether your email domain…</h3>
+  <h4 class="checks-overview">This tool checks whether your email domain…</h4>
 
   <article class="accordion">
     {{ partial "checks-overview" . }}
   </article>
+    <p>
+    If all three pass, your domain may qualify for the <a href="/policy-list">STARTTLS policy list!</a>
+    </p>
 </div>
 {{ partial "footer" . }}
