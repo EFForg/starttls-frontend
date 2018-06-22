@@ -4,7 +4,7 @@ date: 2018-05-22T11:45:16-07:00
 draft: false
 layout: single
 ---
-STARTTLS Everywhere is a project to make email delivery more secure. It is created and maintained by the Electronic Frontier Foundation (EFF), a 501(c)3 nonprofit.
+STARTTLS Everywhere is a project to make email delivery more secure. It is created and maintained by the [Electronic Frontier Foundation (EFF)](https://www.eff.org), a 501\(c\)3 nonprofit.
 
 We want *safer hops for email*.  Email goes through multiple computers (or multiple "hops") to get to its destination, and each hop should be as secure as possible. In particular, we want to:
 
