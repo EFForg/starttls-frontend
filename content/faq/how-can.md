@@ -20,5 +20,5 @@ Standard practice is to obtain a certificate matching the hostname of the mailse
 
 You can obtain a valid certificate automatically and for free from [Let's Encrypt](https://letsencrypt.org) using [Certbot](https://certbot.eff.org)! Consult your mailserver documentation or contact your hosting provider for how to install these certificates.
 
-<h4>Are you safe against downgrade attacks?</h4>
-If you already meet all the above requirements, make sure to add your domain to the [STARTTLS Policy List](/policy-list) to protect against downgrade attacks.
+<h4>Do you have some sort of downgrade prevention?</h4>
+If you already meet all the above requirements, you can add your domain to the [STARTTLS Policy List](/policy-list) to [protect against downgrade attacks](/faq#downgrades).
