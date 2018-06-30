@@ -25,8 +25,6 @@ $(function() {
         .show();
     });
   });
-
-  $(".next-queue-date").text(next_queue_date())
 });
 
 function init_add_another_mx_hostname() {
@@ -43,11 +41,4 @@ function init_add_another_mx_hostname() {
       // Showed the last field, no more to show
       $add_another.hide()
   });
-}
-
-function next_queue_date() {
-  var day_of_week = 3; // Wednesday
-  var d = new Date()
-  d.setDate(d.getDate() + (day_of_week + 7 - d.getDay()) % 7);
-  return d.toLocaleDateString("en-US")
 }
