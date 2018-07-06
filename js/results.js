@@ -17,13 +17,13 @@ $(function() {
       domain: domain
     }
   })
+  .fail(handle_scan_error)
   .done(handle_scan)
-  .fail(handle_error);
 
   $('#manage').on('change', toggle_add_domain_actions);
 });
 
-function handle_error(data) {
+function handle_scan_error() {
   $('#loading-results').hide()
   $('#scan-request-failed').show()
 }
