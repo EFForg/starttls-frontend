@@ -17,13 +17,13 @@ $(function() {
       },
   })
   .done(handle_token)
-  .fail(handle_error);
+  .fail(handle_validate_error);
 });
 
 function handle_token(data) {
   $('#validation-success').show();
 }
 
-function handle_error(data) {
+function handle_validate_error(data) {
   $('#validation-failed').show();
 }
