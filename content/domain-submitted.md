@@ -3,7 +3,7 @@ title: "Almost there!"
 layout: single
 ---
 
-We've sent you an e-mail to confirm that you really do want to add your domain to the list!
+We've sent you an e-mail at your postmaster address to confirm that you really do want to add your domain to the list!
 
 Once you confirm your email, your domain will be queued for addition some time in the next couple of weeks. Your domain will be added to the [STARTTLS Policy List](/policy-list) as long as it has continued to pass our tests!
 
