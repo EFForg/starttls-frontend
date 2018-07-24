@@ -16,7 +16,7 @@ The Internet Society has a [good explanation and list of related resources](http
 
 #### MTA-STS
 
-[MTA-STS](https://datatracker.ietf.org/doc/draft-ietf-uta-mta-sts/) is an upcoming protocol for advertising your mailserver's security policy. Mailserver operators are expected to 1) publish a DNS record indicating MTA-STS support, and 2) serve a JSON file describing their security policy over HTTPS at a `.well-known` address. Without DNSSEC to authenticate the related DNS record, MTA-STS is still a trust-on-first-use protocol, similar to [HSTS](https://tools.ietf.org/html/rfc6797) for the web. It's in last call at the IETF, so few MTA software have implemented it so far.
+[MTA-STS](https://datatracker.ietf.org/doc/draft-ietf-uta-mta-sts/) is an upcoming protocol for advertising your mailserver's security policy. Mailserver operators are expected to 1) publish a DNS record indicating MTA-STS support, and 2) serve a JSON file describing their security policy over HTTPS at a `.well-known` address. Without DNSSEC to authenticate the related DNS record, MTA-STS is still a trust-on-first-use protocol, similar to [HSTS](https://tools.ietf.org/html/rfc6797) for the web. It's in last call at the IETF, so few MTAs have implemented it so far.
 
 #### STARTTLS Policy List
 
