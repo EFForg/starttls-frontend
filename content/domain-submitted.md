@@ -9,4 +9,6 @@ Once you confirm your email, your domain will be queued for addition some time i
 
 Remember read [our guidelines](/policy-list) about the requirements your mailserver must meet, and continue to meet, in order to stay on the list. If your mailserver ceases to meet these requirements at any point and is at the risk of facing deliverability issues, we will notify you through this email address.
 
+We also recommend that you sign up for the [STARTTLS Everywhere mailing list](https://lists.eff.org/mailman/listinfo/starttls-everywhere) in order to stay up to date on new features, changes to policies, and updates to the project. (This is a low-volume mailing list.)
+
 <b>Thanks for helping us make email more secure for everyone :)</b>
