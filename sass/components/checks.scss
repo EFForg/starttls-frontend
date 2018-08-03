@@ -8,6 +8,10 @@
   display: none;
 }
 
+.checks-overview .accordion-title {
+  @include grey-check-header
+}
+
 .fail-title {
   @include susy-breakpoint($md) {
     padding-left: 5.7rem;

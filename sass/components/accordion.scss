@@ -12,8 +12,6 @@
     user-select: none;
   }
 
-
-
   @keyframes flipdown {
     0% {
       opacity: 0;
@@ -41,25 +39,23 @@
 
 .accordion-title {
   @extend .flipIn;
-  @include susy-breakpoint($md) {
-    background-position: 1.2rem 0.4rem;
-    padding-left: 6rem;
-  }
   animation-delay: 0.5s;
-  background: $gray-light url("images/grey-check-open.svg") no-repeat;
-  background-position: 0.2rem;
-  background-size: 40px;
+  position: relative;
   border-top: 4px solid white;
-  color: $gray-extra-dark;
   cursor: pointer;
   font-weight: 700;
-  margin: 0;
-  padding: 1rem 2rem 1rem 6rem;
-  position: relative;
-}
-a {
   color: $gray-extra-dark;
+
+  a {
+    color: $gray-extra-dark;
+  }
 }
+
+.faq .accordion-title {
+  @include grey-check-header;
+}
+
+
 i {
   @include susy-breakpoint($md) {
     right: 1.5rem;
@@ -136,7 +132,7 @@ i {
   transition: all 0.2s;
   p {
     @include susy-breakpoint($md) {
-      padding-left: 5.7rem;
+      padding-left: 4.5rem;
     }
     font-size: 1rem;
     line-height: 1.5rem;

@@ -33,11 +33,11 @@
   }
 }
 
-@mixin results-checkbox {
-  background: $gray-light url("images/red-x-open.svg") no-repeat;
+@mixin check-mark-header {
+  background-color: $gray-light;
+  background-repeat: no-repeat;
   background-size: 50px;
-  display: none;
-  padding: 1rem 2rem 1rem 6rem;
+  padding: 1rem 2rem 1rem 4.5rem;
 
   h2 {
     padding-top: 0;
@@ -46,4 +46,16 @@
   p:last-child {
     margin-bottom: 0;
   }
+}
+
+@mixin grey-check-header {
+  @include check-mark-header;
+  background-image: url("images/grey-check-open.svg");
+  background-position: 0.5rem;
+  background-size: 40px;
+}
+
+@mixin results-checkbox {
+  @include check-mark-header;
+  display: none;
 }

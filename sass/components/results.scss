@@ -9,6 +9,11 @@
   text-align: center;
 }
 
+.check .accordion-title,
+.result .accordion-title {
+  @include check-mark-header;
+}
+
 .not-submitted.results-overview {
   @include results-checkbox;
   background-image: url("/images/green-check-fill.svg");
