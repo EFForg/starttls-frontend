@@ -34,27 +34,16 @@
 }
 
 @mixin results-checkbox {
-  @include susy-breakpoint($md) {
-    background-position: 0 0.5rem;
-  }
   background: $gray-light url("images/red-x-open.svg") no-repeat;
-  background-size: 30px;
-  background-position: 0.5rem;
+  background-size: 50px;
   display: none;
-  padding-left: 4rem;
-}
+  padding: 1rem 2rem 1rem 6rem;
 
-@mixin results-title {
-
-  @include susy-breakpoint($md) {
-    background-size: 40px;
-    background-position: 0 0.5rem;
-    padding: 0 1rem 0 5.7rem;
+  h2 {
+    padding-top: 0;
   }
-  background: $gray-light url("/images/green-check-fill.svg");
 
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: 20px;
-  padding: 0;
+  p:last-child {
+    margin-bottom: 0;
+  }
 }

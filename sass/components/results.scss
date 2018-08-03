@@ -10,7 +10,7 @@
 }
 
 .not-submitted.results-overview {
-  @include results-title;
+  @include results-checkbox;
   background-image: url("/images/green-check-fill.svg");
   .what-is {
     @include susy-breakpoint($md) {
@@ -20,12 +20,12 @@
 }
 
 .perfect.results-overview {
-  @include results-title;
+  @include results-checkbox;
   background-image: url("/images/green-check-fill.svg");
 }
 
 .pending.results-overview {
-  @include results-title;
+  @include results-checkbox;
   background-image: url("/images/green-check-fill.svg");
 }
 
@@ -33,7 +33,7 @@
 .could-not-connect,
 .fail-no-support.results-overview,
 .fail-not-secured.results-overview {
-  @include results-title;
+  @include results-checkbox;
   background-image: url("/images/red-x-fill.svg");
 }
 
