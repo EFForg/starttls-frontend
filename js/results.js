@@ -50,13 +50,19 @@ function handle_scan(data) {
             $('<p/>').text(message).appendTo($messages);
           });
         }
-        if (key === "connectivity" && check.status === 0)
+        if (key === 'connectivity' && check.status === 0)
           return; // Only show the connectivity check when it fails.
         $check.addClass(check.status ? 'fail' : 'success');
       });
       $result.appendTo( $('.domain-results') );
     }
   });
+
+  // If there's only one hostname, the result for that hostname should be open by default.
+  if ($('.domain-results .result').length == 1) {
+    $('.domain-results .result .accordion-title').addClass('active')
+  }
+
   $('.' + status_string(scan)).show()
   $('#loading-results').hide()
   $('#results-wrapper').show()
