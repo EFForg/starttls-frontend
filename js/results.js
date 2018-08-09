@@ -21,6 +21,8 @@ $(function() {
   .done(handle_scan)
 
   $('#manage').on('change', toggle_add_domain_actions);
+  var manage_href = $('.add-domain-action.submit').attr('href');
+  $('.add-domain-action.submit').attr('href', manage_href + '?' + $.param({domain: domain}));
 });
 
 function handle_scan_error() {
