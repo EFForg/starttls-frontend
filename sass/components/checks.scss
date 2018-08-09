@@ -34,6 +34,9 @@
 
 .check.policy-list {
   display: none;
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .checks-overview .accordion-title {
