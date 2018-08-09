@@ -9,13 +9,13 @@
   text-align: center;
 }
 
+.results-overview,
 .check .accordion-title,
 .hostname-result .accordion-title {
   @include check-mark-header;
 }
 
 .not-submitted.results-overview {
-  @include results-checkbox;
   background-image: url("/images/green-check-fill.svg");
   .what-is {
     @include susy-breakpoint($md) {
@@ -24,13 +24,8 @@
   }
 }
 
-.perfect.results-overview {
-  @include results-checkbox;
-  background-image: url("/images/green-check-fill.svg");
-}
-
+.perfect.results-overview,
 .pending.results-overview {
-  @include results-checkbox;
   background-image: url("/images/green-check-fill.svg");
 }
 
@@ -38,8 +33,33 @@
 .could-not-connect,
 .fail-no-support.results-overview,
 .fail-not-secured.results-overview {
-  @include results-checkbox;
   background-image: url("/images/red-x-fill.svg");
+}
+
+.fail {
+  .accordion-title {
+    background: $gray-light url("images/red-x-fill.svg") no-repeat;
+  }
+}
+
+.success,
+.perfect {
+  .accordion-title {
+    background: $gray-light url("images/green-check-fill.svg") no-repeat;
+  }
+}
+
+.pending {
+  .accordion-title {
+    background: $gray-light url("images/gold-clock-fill.svg") no-repeat;
+  }
+}
+
+.almost,
+.not-submitted {
+  .accordion-title {
+    background: $gray-light url("images/gold-!-fill.svg") no-repeat;
+  }
 }
 
 .fail .message {

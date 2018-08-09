@@ -8,37 +8,6 @@
   display: none;
 }
 
-.checks-overview .accordion-title {
-  @include grey-check-header
-}
-
-.fail-title {
-  @include susy-breakpoint($md) {
-    padding-left: 5.7rem;
-  }
-  @include results-checkbox;
-  background: white url("images/red-x-open.svg") no-repeat;
-  background-size: 30px;
-}
-
-.default-title {
-  @include susy-breakpoint($md) {
-    padding-left: 5.7rem;
-  }
-  @include results-checkbox;
-  background: white url("images/green-check-open.svg") no-repeat;
-  background-size: 30px;
-}
-
-.almost-title {
-  @include susy-breakpoint($md) {
-    padding-left: 5.7rem;
-  }
-  @include results-checkbox;
-  background: white url("images/gold-!-open.svg") no-repeat;
-}
-
-
 .check.fail {
   display: block;
 
@@ -66,3 +35,32 @@
 .check.policy-list {
   display: none;
 }
+
+.checks-overview .accordion-title {
+  @include grey-check-header
+}
+
+.fail-title {
+  @include susy-breakpoint($md) {
+    padding-left: 5.7rem;
+  }
+  background: white url("images/red-x-open.svg") no-repeat;
+  background-size: 30px;
+}
+
+.default-title {
+  @include susy-breakpoint($md) {
+    padding-left: 5.7rem;
+  }
+  background: white url("images/green-check-open.svg") no-repeat;
+  background-size: 30px;
+}
+
+.almost-title {
+  @include susy-breakpoint($md) {
+    padding-left: 5.7rem;
+  }
+  background: white url("images/gold-!-open.svg") no-repeat;
+}
+
+
