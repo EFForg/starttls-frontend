@@ -19,9 +19,16 @@ $(function() {
     }).done(function(data) {
       window.location = "/domain-submitted";
     }).fail(function(e, message) {
-      var message = e.responseText.message || "server error";
-      $form.find("#queue-errors")
-        .text("Error queueing domain: " + message)
+      if (e.responseText.message) {
+        var message = e.responseText.message;
+      } else if (e.status == 429) {
+        var message = 'Rate limit exceeded. You may only queue three domains per hour.';
+      } else {
+        Raven.captureMessage('Received ' + e.status + ' with no error message')
+        var message = 'Server error';
+      }
+      $form.find('#queue-errors')
+        .text('Error queueing domain: ' + message)
         .show();
     });
   });

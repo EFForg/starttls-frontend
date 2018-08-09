@@ -24,4 +24,4 @@ list:
   title: Server is up and running
   fail_title: Could not establish connection
   body: |
-    We couldn't successfully connect to this mailserver to scan it.
+    We couldn't successfully connect to this mailserver to scan it. This could be an error on our side, too. If you're having trouble getting the scanner to work, shoot us an email at <a href="mailto:starttls-policy@eff.org">starttls-policy@eff.org</a>.

@@ -12,7 +12,7 @@ We want *safer hops for email*.  Email goes through multiple computers (or multi
  * Maintain a [STARTTLS Policy List](/policy-list) to help prevent [downgrade attacks](/faq#downgrades) on email services.
  * Lower the barriers to entry for running a secure mailserver.
 
-If you have questions about STARTTLS Everywhere, check out [the FAQ](/faq). If you are an email service provider and are looking to be added to the STARTTLS Everywhere policy list, [learn more here](/policy-list).
+If you have questions about STARTTLS Everywhere, check out [the FAQ](/faq). If you are an email service provider, you can also learn more about being [added to the STARTTLS Everywhere policy list](/policy-list).
 
 If you like the project, consider [donating!](https://supporters.eff.org/donate/)
 

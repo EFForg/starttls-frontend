@@ -36,6 +36,10 @@ function handle_scan(data) {
     if (scan.results[hostname])
       showHostnameResult(hostname, scan.results[hostname])
   });
+  // If there's only one hostname, the result for that hostname should be open by default.
+  if ($('.domain-results .result').length == 1) {
+    $('.domain-results .result .accordion-title').addClass('active')
+  }
   $('.' + status_string(scan)).show()
   $('#loading-results').hide()
   $('#results-wrapper').show()
