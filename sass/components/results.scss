@@ -15,6 +15,10 @@
   @include check-mark-header;
 }
 
+.results-overview {
+  margin-bottom: 1.5rem;
+}
+
 .not-submitted.results-overview {
   background-image: url("/images/green-check-fill.svg");
   .what-is {
