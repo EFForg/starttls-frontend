@@ -46,15 +46,14 @@
 .fail-title,
 .default-title,
 .almost-title {
-  padding-left: 3rem;
-  background-position: 0;
-  background-size: 30px;
-  background-repeat: no-repeat;
-
   @include susy-breakpoint($md) {
     background-position: 20px;
     padding-left: 4.5rem;
   }
+  padding-left: 3rem;
+  background-position: 0;
+  background-size: 30px;
+  background-repeat: no-repeat;
 }
 
 .fail-title {
