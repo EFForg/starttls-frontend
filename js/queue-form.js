@@ -5,6 +5,10 @@ $(function() {
   var $form = $("#queue");
   init_add_another_mx_hostname();
 
+  var url = new URL(window.location.href);
+  var domain = url.searchParams.get('domain');
+  if (domain) $('#domain-input').val(domain)
+
   $form.submit(function(e) {
     $form.find(".errors").hide();
     e.preventDefault();
