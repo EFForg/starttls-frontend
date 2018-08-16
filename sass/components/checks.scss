@@ -1,4 +1,4 @@
-#result-template,
+#hostname-result-template,
 #add-your-domain,
 .add-domain-action.learn,
 .add-domain-action.submit,
@@ -7,33 +7,6 @@
 .check {
   display: none;
 }
-
-.fail-title {
-  @include susy-breakpoint($md) {
-    padding-left: 5.7rem;
-  }
-  @include results-checkbox;
-  background: white url("images/red-x-open.svg") no-repeat;
-  background-size: 30px;
-}
-
-.default-title {
-  @include susy-breakpoint($md) {
-    padding-left: 5.7rem;
-  }
-  @include results-checkbox;
-  background: white url("images/green-check-open.svg") no-repeat;
-  background-size: 30px;
-}
-
-.almost-title {
-  @include susy-breakpoint($md) {
-    padding-left: 5.7rem;
-  }
-  @include results-checkbox;
-  background: white url("images/gold-!-open.svg") no-repeat;
-}
-
 
 .check.fail {
   display: block;
@@ -61,4 +34,38 @@
 
 .check.policy-list {
   display: none;
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
+
+.checks-overview .accordion-title {
+  @include grey-check-header
+}
+
+.fail-title,
+.default-title,
+.almost-title {
+  @include susy-breakpoint($md) {
+    background-position: 20px;
+    padding-left: 4.5rem;
+  }
+  padding-left: 3rem;
+  background-position: 0;
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
+
+.fail-title {
+  background-image: url("images/red-x-open.svg");
+}
+
+.default-title {
+  background-image: url("images/green-check-open.svg");
+}
+
+.almost-title {
+  background-image: url("images/gold-!-open.svg");
+}
+
+

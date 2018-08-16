@@ -31,7 +31,9 @@
           <i></i>
         </div>
         <div class="accordion-content">
-          {{ .body | markdownify }}
+          <p>
+            {{ .body | markdownify }}
+          </p>
           {{ if eq .key "not-submitted" }}
             {{ partial "not-submitted-actions" . }}
           {{ end }}
