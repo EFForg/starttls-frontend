@@ -21,7 +21,9 @@ gpg --recv-key B693F33372E965D76D55368616EEA65D03326C9D
 gpg --trusted-key 842AEA40C5BCD6E1 --verify policy.json.asc
 </pre>
 
-Our sample [update_and_verify.sh script](https://github.com/EFForg/starttls-everywhere/blob/master/scripts/update_and_verify.sh) does the same. If you are actively using the list, **you must fetch updates at least once every 48 hours**. We provide [a sample cronjob](https://github.com/EFForg/starttls-everywhere/blob/master/scripts/starttls-policy.cron.d) to do this.
+Our public key is also [published on the same URL](https://dl.eff.org/starttls-everywhere/public-key.txt), if you can't find it in your keyserver.
+
+Our sample [update_and_verify.sh script](https://github.com/EFForg/starttls-everywhere/blob/master/scripts/update_and_verify.sh) does the same as the above. If you are actively using the list, **you must fetch updates at least once every 48 hours**. We provide [a sample cronjob](https://github.com/EFForg/starttls-everywhere/blob/master/scripts/starttls-policy.cron.d) to do this.
 
 Every policy JSON has an expiry date in the top-level configuration, after which we cannot guarantee deliverability if you are using the expired list.
 
@@ -31,7 +33,7 @@ A domain's policy, `enforce` or `testing`, asks that relays which connect to tha
 
 #### Tooling
 
-Our [starttls-policy](https://github.com/EFForg/starttls-everywhere/tree/master/starttls-policy) Python package can fetch updates to and iterate over the existing list. If you use Postfix, we provide utilities to transform the policy list into configuration parameters that Postfix understands.
+Our [starttls-policy](https://github.com/EFForg/starttls-policy-cli) Python package can fetch updates to and iterate over the existing list. If you use Postfix, we provide utilities to transform the policy list into configuration parameters that Postfix understands.
 
 We welcome [contributions](https://github.com/EFForg/starttls-everywhere) for different MTAs!
 
