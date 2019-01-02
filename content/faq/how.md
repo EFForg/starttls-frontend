@@ -11,10 +11,13 @@ Let’s say you have an email address @gmail.com. You open your email client, wh
 
 Then you draft an email to your friend, who has an email address @eff.org. What happens when you press “SEND”?
 
-<img src="/images/how-email-works.png">
+![](/images/how-email-works.png)
 
-<ol>
-<li> Your email is sent to and queued for delivery at Gmail’s email servers.</li>
- <li> Then, Gmail transmits your email to EFF’s email servers, where the email stays and waits until your friend opens their own mail client.</li>
-<li>Your friend’s mail client then asks EFF’s mail server whether they have any outstanding mail, and EFF transmits the relevant messages to your friends computer.</li>
-</ol>
+1.  Your email is sent to and queued for delivery at Gmail’s email
+    servers.
+2.  Then, Gmail transmits your email to EFF’s email servers, where the
+    email stays and waits until your friend opens their own mail client.
+3.  Your friend’s mail client then asks EFF’s mail server whether they
+    have any outstanding mail, and EFF transmits the relevant messages
+    to your friends computer.
+

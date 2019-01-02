@@ -33,28 +33,29 @@
   }
 }
 
-@mixin results-checkbox {
-  @include susy-breakpoint($md) {
-    background-position: 0 0.5rem;
+@mixin check-mark-header {
+  background-color: $gray-light;
+  background-repeat: no-repeat;
+  background-size: 50px;
+  padding: 1rem 2rem 1rem 4.5rem;
+
+  h2 {
+    padding-top: 0;
   }
-  background: $gray-light url("images/red-x-open.svg") no-repeat;
-  background-size: 30px;
-  background-position: 0.5rem;
-  display: none;
-  padding-left: 4rem;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
 
-@mixin results-title {
+@mixin grey-check-header {
+  @include check-mark-header;
+  background-image: url("images/grey-check-open.svg");
+  background-position: 0.5rem;
+  background-size: 40px;
+}
 
-  @include susy-breakpoint($md) {
-    background-size: 40px;
-    background-position: 0 0.5rem;
-    padding: 0 1rem 0 5.7rem;
-  }
-  background: $gray-light url("/images/green-check-fill.svg");
-
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: 20px;
-  padding: 0;
+@mixin results-checkbox {
+  @include check-mark-header;
+  display: none;
 }

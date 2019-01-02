@@ -5,6 +5,10 @@ $(function() {
   var $form = $("#queue");
   init_add_another_mx_hostname();
 
+  var url = new URL(window.location.href);
+  var domain = url.searchParams.get('domain');
+  if (domain) $('#domain-input').val(domain)
+
   $form.submit(function(e) {
     $form.find(".errors").hide();
     e.preventDefault();
@@ -19,14 +23,19 @@ $(function() {
     }).done(function(data) {
       window.location = "/domain-submitted";
     }).fail(function(e, message) {
-      var message = e.responseText.message || "server error";
-      $form.find("#queue-errors")
-        .text("Error queueing domain: " + message)
+      if (e.responseText.message) {
+        var message = e.responseText.message;
+      } else if (e.status == 429) {
+        var message = 'Rate limit exceeded. You may only queue three domains per hour.';
+      } else {
+        Raven.captureMessage('Received ' + e.status + ' with no error message')
+        var message = 'Server error';
+      }
+      $form.find('#queue-errors')
+        .text('Error queueing domain: ' + message)
         .show();
     });
   });
-
-  $(".next-queue-date").text(next_queue_date())
 });
 
 function init_add_another_mx_hostname() {
@@ -43,11 +52,4 @@ function init_add_another_mx_hostname() {
       // Showed the last field, no more to show
       $add_another.hide()
   });
-}
-
-function next_queue_date() {
-  var day_of_week = 3; // Wednesday
-  var d = new Date()
-  d.setDate(d.getDate() + (day_of_week + 7 - d.getDay()) % 7);
-  return d.toLocaleDateString("en-US")
 }

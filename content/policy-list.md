@@ -8,37 +8,32 @@ layout: single
 
 The STARTTLS Policy List is a list of email domains who meet a minimum set of security requirements. By providing a list of email domains that support TLS encryption and present valid certificates, the STARTTLS Policy List gives mailservers another point of reference to discover whether other mailservers support STARTTLS.
 
-
-The list is hosted [here](https://dl.eff.org/starttls-everywhere/policy.json), and the corresponding signature is [here](https://dl.eff.org/starttls-everywhere/policy.jsona.asac).
-
-```
-https://dl.eff.org/starttls-everywhere.policy.json
-```
-```
-https://dl.eff.org/starttls-everywhere.policy.json.asc
-```
-
-[Here](https://github.com/EFForg/starttls-everywhere/blob/master/RULES.md) is a detailed specification of the list's format.
+You can verify the [list](https://dl.eff.org/starttls-everywhere/policy.json) with the corresponding [PGP signature](https://dl.eff.org/starttls-everywhere/policy.json.asc). You can also read more about a [detailed specification](https://github.com/EFForg/starttls-everywhere/blob/master/RULES.md) of the list's format.
 
 ## <a name="use"></a>Using the list
 
-You can and should verify the policy file with:
+To download and verify the most up-to-date version of the STARTTLS policy list:
 
-```
-gpg2 --recv-key A2CFB51FA275A7286234E7B24D17C995CD9775F2
-```
-```
-gpg2 --trusted-key 4D17C995CD9775F2 --verify policy.json.asc policy.json
+<pre>
+wget https://dl.eff.org/starttls-everywhere/policy.json
+wget https://dl.eff.org/starttls-everywhere/policy.json.asc
+gpg --recv-key B693F33372E965D76D55368616EEA65D03326C9D
+gpg --trusted-key 842AEA40C5BCD6E1 --verify policy.json.asc
+</pre>
 
-```
+Our public key is also [published on the same URL](https://dl.eff.org/starttls-everywhere/public-key.txt), if you can't find it in your keyserver.
 
-If you are using the expired list, **you must fetch updates at least once every 48 hours**. We provide [sample cronjobs](https://github.com/EFForg/starttls-everywhere).
+Our sample [update_and_verify.sh script](https://github.com/EFForg/starttls-everywhere/blob/master/scripts/update_and_verify.sh) does the same as the above. If you are actively using the list, **you must fetch updates at least once every 48 hours**. We provide [a sample cronjob](https://github.com/EFForg/starttls-everywhere/blob/master/scripts/starttls-policy.cron.d) to do this.
 
-Every policy JSON has an expiry date in the top-level configuration, after which we cannot guarantee deliverability if you are using the list.
+Every policy JSON has an expiry date in the top-level configuration, after which we cannot guarantee deliverability if you are using the expired list.
+
+#### Behavior
+
+A domain's policy, `enforce` or `testing`, asks that relays which connect to that domain's MX server and cannot initiate a TLS connection to possibly abort sending and report what went wrong to the target domain. That is the behavior specified by [SMTP MTA Strict Transport Security (MTA-STS)](https://tools.ietf.org/html/draft-ietf-uta-mta-sts), an upcoming protocol which this Policy List aims to complement by providing an alternative method for advertising a mail server’s security policy.
 
 #### Tooling
 
-Our [starttls-policy](https://github.com/EFForg/starttls-everywhere/tree/master/starttls-policy) Python package can fetch updates to and iterate over the existing list. If you use Postfix, we provide utilities to transform the policy list into configuration parameters that Postfix understands.
+Our [starttls-policy](https://github.com/EFForg/starttls-policy-cli) Python package can fetch updates to and iterate over the existing list. If you use Postfix, we provide utilities to transform the policy list into configuration parameters that Postfix understands.
 
 We welcome [contributions](https://github.com/EFForg/starttls-everywhere) for different MTAs!
 

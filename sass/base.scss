@@ -123,7 +123,7 @@ ol {
   margin-left: 3em;
   padding: 0 0 2rem;
   li {
-    min-height: 3rem;
+    margin-bottom: 1rem;
     padding-left: 0.5rem;
     position: relative;
     &:before {
@@ -170,13 +170,27 @@ li a {
   margin: 0 auto;
 }
 
-code {
+pre {
   background-color: $gray-light;
+  padding: 0 0.5rem 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+code {
   display: inline-block;
   font-size: 1.1rem;
-  margin-bottom: 0.5rem;
   max-width: 100%;
-  padding: 0 0.5rem 0.5rem;
   white-space: normal;
   word-break: break-all;
+}
+
+.visually-hidden {
+  // For screen-readers.
+  // https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  // sass-lint:disable no-duplicate-properties
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
 }

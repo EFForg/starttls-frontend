@@ -1,0 +1,10 @@
+list:
+  - key: perfect
+    body: |
+        Your mail domain is on the <a href="/faq#what-list">STARTTLS Policy List</a>! This means you're protected against downgrade attacks when receiving email from anyone using the list.
+  - key: pending
+    body: |
+        Your mail domain is queued to be added to the <a href="/policy-list">STARTTLS policy list</a>. We’ll contact you by e-mail when this occurs, or you can check back here.
+  - key: not-submitted
+    body: |
+        To help <a href="/faq#downgrades">mitigate downgrade attacks</a>, you can add your domain to the <a href="/faq#what-list">STARTTLS Policy List</a>, so servers have another point of reference to discover that you support STARTTLS.

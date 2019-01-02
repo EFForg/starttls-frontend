@@ -17,47 +17,57 @@ $(function() {
       domain: domain
     }
   })
+  .fail(handle_scan_error)
   .done(handle_scan)
-  .fail(handle_error);
 
   $('#manage').on('change', toggle_add_domain_actions);
+  var manage_href = $('.add-domain-action.submit').attr('href');
+  $('.add-domain-action.submit').attr('href', manage_href + '?' + $.param({domain: domain}));
 });
 
-function handle_error(data) {
+function handle_scan_error() {
   $('#loading-results').hide()
   $('#scan-request-failed').show()
 }
 
 function handle_scan(data) {
   var scan = data.response.scandata;
+  if (scan.status !== 0)
+    $('.policy-check-header').hide();
   $.each(scan.preferred_hostnames, function(i, hostname) {
-    var result = scan.results[hostname];
-    if (result) {
-      var $result = $('#result-template').clone();
-      $result.removeAttr('id').addClass('result');
-      $result.find('.hostname').text(hostname);
-
-      // result.status == 0 if the check succeeded
-      $result.addClass(result.status ? 'fail' : 'success');
-
-      $.each(result.checks, function(key, check) {
-        var $check = $result.find('.' + key);
-        if (check.messages) {
-          var $messages = $check.find('.message');
-          $.each(check.messages, function(_, message) {
-            $('<p/>').text(message).appendTo($messages);
-          });
-        }
-        if (key === "connectivity" && check.status === 0)
-          return; // Only show the connectivity check when it fails.
-        $check.addClass(check.status ? 'fail' : 'success');
-      });
-      $result.appendTo( $('article.accordion') );
-    }
+    if (scan.results[hostname])
+      showHostnameResult(hostname, scan.results[hostname])
   });
+  // If there's only one hostname, the result for that hostname should be open by default.
+  if ($('.hostname-result').length == 1) {
+    $('.hostname-result .accordion-title').addClass('active')
+  }
   $('.' + status_string(scan)).show()
   $('#loading-results').hide()
   $('#results-wrapper').show()
+}
+
+function showHostnameResult(hostname, result) {
+  var $result = $('#hostname-result-template').clone();
+  $result.removeAttr('id').addClass('hostname-result');
+  $result.find('.hostname').text(hostname);
+
+  // result.status == 0 if the check succeeded
+  $result.addClass(result.status ? 'fail' : 'success');
+
+  $.each(result.checks, function(name, check) {
+    var $check = $result.find('.' + name);
+    if (check.messages) {
+      var $messages = $check.find('.message');
+      $.each(check.messages, function(_, message) {
+        $('<p/>').text(message).appendTo($messages);
+      });
+    }
+    if (name === "connectivity" && check.status === 0)
+      return; // Only show the connectivity check when it fails.
+    $check.addClass(check.status ? 'fail' : 'success');
+  });
+  $result.appendTo( $('.domain-results') );
 }
 
 function status_string(scan) {

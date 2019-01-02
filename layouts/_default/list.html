@@ -3,7 +3,7 @@
 {{ partial "off-canvas" . }}
 
 {{ partial "header" . }}
-<div class="main-content list">
+<div class="main-content list faq">
   <h1 class="title">{{ .Title }}</h1>
   <p>{{ .Content }}</p>
   <h2>Learn</h2>
@@ -26,7 +26,6 @@
       <i></i>
     </div>
     <div class="accordion-content">
-      <h3>{{ .Title }}</h3>
       {{ .Content }}
     </div>
     {{ end }}

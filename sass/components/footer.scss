@@ -12,6 +12,7 @@ footer {
 
   .footer-wrapper {
     margin: 0 auto;
+    padding-top: 15px;
     max-width: 750px;
   }
   .footer-logo { // logo
@@ -19,7 +20,7 @@ footer {
     display: inline-block;
     width: 100%;
     img {
-      width: 300px;
+      height: 45px;
     }
   }
 
