@@ -37,14 +37,19 @@
   background-color: $gray-light;
   background-repeat: no-repeat;
   background-size: 50px;
-  padding: 1rem 2rem 1rem 4.5rem;
+  padding: 0rem 2rem 1rem 3.4rem;
 
   h2 {
-    padding-top: 0;
+    background-color: $gray-extra-dark;
+    color: white;
+    padding: 0.75rem 0 0.75rem 3rem;
   }
 
-  p:last-child {
-    margin-bottom: 0;
+  p {
+    padding: 2rem 0 0.75rem 3rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
