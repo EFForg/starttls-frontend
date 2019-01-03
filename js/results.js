@@ -45,6 +45,8 @@ function handle_scan(data) {
   $('.' + status_string(scan)).show()
   $('#loading-results').hide()
   $('#results-wrapper').show()
+  var resultsTop = document.getElementById("results-wrapper");
+  resultsTop.scrollIntoView()
 }
 
 function showHostnameResult(hostname, result) {
