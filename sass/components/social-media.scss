@@ -1,15 +1,10 @@
 .social-media {
   transition: all 1s;
-  a {
-    @include susy-breakpoint($md) {
-      margin-right: 1rem;
-    }
-    margin-right: 0;
-  }
+  margin-bottom: 1rem;
   img {
     height: auto;
     opacity: 1;
-    width: 50px;
+    width: 60px;
     &:hover {
       opacity: 0.6;
     }
