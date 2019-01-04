@@ -79,6 +79,9 @@ form#queue {
   label {
     @extend h5;
   }
+  .required {
+    color: $magenta;
+  }
 
   .add-another {
     // Strip button styles

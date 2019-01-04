@@ -40,11 +40,20 @@
   padding: 1rem 2rem 1rem 4.5rem;
 
   h2 {
-    padding-top: 0;
+    @include susy-breakpoint($md) {
+      padding: 0.75rem 0 0.75rem 1rem;
+    }
+    background-color: $gray-extra-dark;
+    color: white;
+    padding: 0.75rem 0 0.7rem 1rem;
+    height: 50px;
   }
 
-  p:last-child {
-    margin-bottom: 0;
+  p {
+    padding: 2rem 0 0.75rem 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
