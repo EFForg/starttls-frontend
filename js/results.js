@@ -20,8 +20,6 @@ $(function() {
   .fail(handle_scan_error)
   .done(handle_scan)
 
-  var manage_href = $('#add-domain-action').attr('href');
-  console.log('manage_href='+manage_href);
   $('#add-domain-button').attr('href', '/add-domain?' + $.param({domain: domain}));
 });
 
