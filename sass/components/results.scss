@@ -16,8 +16,13 @@
 }
 
 .results-overview {
+    @include susy-breakpoint($md) {
+    margin-top: 0;
+  }
+  margin-top: 0.1rem;
   margin-bottom: 1.5rem;
-  padding-right: 0;
+  padding: 0 0 1rem 3.1rem;
+
 }
 
 .not-submitted.results-overview {
