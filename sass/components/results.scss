@@ -67,6 +67,9 @@
 
 .almost,
 .not-submitted {
+  h5 {
+    text-align: center;
+  }
   .accordion-title {
     background: $gray-light url("images/gold-!-fill.svg") no-repeat;
   }

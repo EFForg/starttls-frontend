@@ -20,9 +20,7 @@ $(function() {
   .fail(handle_scan_error)
   .done(handle_scan)
 
-  $('#manage').on('change', toggle_add_domain_actions);
-  var manage_href = $('.add-domain-action.submit').attr('href');
-  $('.add-domain-action.submit').attr('href', manage_href + '?' + $.param({domain: domain}));
+  $('#add-domain-button').attr('href', '/add-domain?' + $.param({domain: domain}));
 });
 
 function handle_scan_error() {
@@ -91,18 +89,5 @@ function status_string(scan) {
       return 'fail-no-support';
     case 5:
       return 'could-not-connect';
-  }
-}
-
-function toggle_add_domain_actions() {
-  switch($(this).val()) {
-    case 'yes':
-      $('.add-domain-action.submit').show();
-      $('.add-domain-action.learn').hide();
-      break;
-    case 'no':
-      $('.add-domain-action.submit').hide();
-      $('.add-domain-action.learn').show();
-      break;
   }
 }
