@@ -9,7 +9,7 @@
   <h2>Learn</h2>
   <article class="accordion">
     {{ range where .Data.Pages.ByWeight "Params.level" "learn" }}
-    <div class="accordion-title">{{ .Title }}
+    <div class="accordion-title active">{{ .Title }}
       <a name="{{ .LinkTitle }}" id="{{ .LinkTitle }}"></a>
       <i></i>
     </div>
@@ -21,7 +21,7 @@
   <h2 class="secure">Secure</h2>
   <article class="accordion">
     {{ range where .Data.Pages.ByWeight "Params.level" "secure" }}
-    <div class="accordion-title">{{ .Title }}
+    <div class="accordion-title active">{{ .Title }}
       <a name="{{ .LinkTitle }}" id="{{ .LinkTitle }}"></a>
       <i></i>
     </div>

@@ -1,5 +1,6 @@
 $(function() {
   //accordion
+  $('.accordion-title').removeClass('active');
   $('body').on('click', '.accordion-title', function () {
     this.classList.toggle('active');
   });
