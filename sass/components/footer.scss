@@ -54,3 +54,15 @@ footer {
     }
   }
 }
+// used by social media icons and share links
+.url-field {
+  display: none;
+  width: 100%;
+  text-align: center;
+
+  input {
+    display: inline;
+    margin: 0;
+    padding: 5px;
+  }
+}
