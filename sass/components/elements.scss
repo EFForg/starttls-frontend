@@ -48,6 +48,29 @@ button {
   background: black;
 }
 
+.button-white {
+  @include susy-breakpoint($md) {
+    padding: 0.5rem 1.5rem;
+  }
+  @extend .button;
+  background: white;
+  border-radius: 37px;
+  color: black;
+  font-weight: 400;
+  padding: 0.5rem 2rem 0.5rem 3.25rem;
+  position: relative;
+  text-transform: none;
+  &:before {
+    content: "+";
+    color: $magenta;
+    font-size: 4rem;
+    font-weight: 200;
+    left: 1rem;
+    top: 1rem;
+    position: absolute;
+  }
+}
+
 input[type=checkbox],
 input[type=radio] {
   position: relative;
