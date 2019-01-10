@@ -2,7 +2,7 @@
   <article class="accordion">
   {{ range $.Site.Data.checks.list }}
     {{ if ne .key "connectivity" }}
-      <div class="accordion-title">
+      <div class="accordion-title active">
         {{ .title | markdownify }}
         <i></i>
       </div>
