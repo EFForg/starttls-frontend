@@ -31,10 +31,10 @@ function handle_scan_error() {
 function handle_scan(data) {
   var scan = data.response.scandata;
   if (scan.status !== 0)
-  $('.policy-check-header').hide();
-  $.each(scan.preferred_hostnames, function(i, hostname) {
+    $('.policy-check-header').hide();
+    $.each(scan.preferred_hostnames, function(i, hostname) {
     if (scan.results[hostname])
-    showHostnameResult(hostname, scan.results[hostname])
+      showHostnameResult(hostname, scan.results[hostname])
   });
   // If there's only one hostname, the result for that hostname should be open by default.
   if ($('.hostname-result').length == 1) {
@@ -45,7 +45,6 @@ function handle_scan(data) {
   $('#results-wrapper').show()
   // move to top of results
   var headerHeight = document.getElementsByTagName('header')[0].offsetHeight;
-  console.log(headerHeight);
   window.scrollBy({
     top: headerHeight,
     left: 0,
@@ -71,7 +70,7 @@ function showHostnameResult(hostname, result) {
       });
     }
     if (name === "connectivity" && check.status === 0)
-    return; // Only show the connectivity check when it fails.
+      return; // Only show the connectivity check when it fails.
     $check.addClass(check.status ? 'fail' : 'success');
   });
   $result.appendTo( $('.domain-results') );
@@ -80,21 +79,21 @@ function showHostnameResult(hostname, result) {
 function status_string(scan) {
   switch(scan.status) {
     case 0:
-    switch (scan.extra_results.policylist.status) {
-      case 0:
-      return 'perfect'
-      case 1:
-      return 'pending'
-      case 2:
-      return 'not-submitted'
-    }
+      switch (scan.extra_results.policylist.status) {
+        case 0:
+          return 'perfect'
+        case 1:
+          return 'pending'
+        case 2:
+          return 'not-submitted'
+      }
     case 2:
-    return 'fail-not-secured';
+      return 'fail-not-secured';
     case 3:
-    return 'no-mxs';
+      return 'no-mxs';
     case 4:
-    return 'fail-no-support';
+      return 'fail-no-support';
     case 5:
-    return 'could-not-connect';
+      return 'could-not-connect';
   }
 }
