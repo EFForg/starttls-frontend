@@ -1,6 +1,6 @@
 /*
- * Form interactions for POST to /api/scan
- */
+* Form interactions for POST to /api/scan
+*/
 $(function() {
   if (!window.location.pathname.match(/\/results.$/)) {
     return;
@@ -32,7 +32,7 @@ function handle_scan(data) {
   var scan = data.response.scandata;
   if (scan.status !== 0)
     $('.policy-check-header').hide();
-  $.each(scan.preferred_hostnames, function(i, hostname) {
+    $.each(scan.preferred_hostnames, function(i, hostname) {
     if (scan.results[hostname])
       showHostnameResult(hostname, scan.results[hostname])
   });
@@ -43,8 +43,14 @@ function handle_scan(data) {
   $('.' + status_string(scan)).show()
   $('#loading-results').hide()
   $('#results-wrapper').show()
-  var resultsTop = document.getElementById("results-wrapper");
-  resultsTop.scrollIntoView()
+  // move to top of results
+  var headerHeight = document.getElementsByTagName('header')[0].offsetHeight;
+  window.scrollBy({
+    top: headerHeight,
+    left: 0,
+    behavior: 'smooth'
+  });
+
 }
 
 function showHostnameResult(hostname, result) {
