@@ -55,9 +55,13 @@ footer {
   }
 }
 // used by social media icons and share links
-.url-field {
+[class^="url-field-"] {
+  @include susy-breakpoint($md) {
+    width: 50%;
+  }
   display: none;
-  width: 100%;
+  margin: 0 auto;
+  width: 80%;
   text-align: center;
 
   input {

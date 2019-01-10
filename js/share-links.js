@@ -24,8 +24,12 @@ $(function() {
     window.open(googleShare, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=436,width=400');
   });
 
-  $('.url-field input').val(window.location.href);
-  $('.copy-url').click(function (e) {
-    $('.url-field').toggle().find('input').select();
+  $('[class^="url-field-"] input').val(window.location.href);
+  $('.copy-url-social').click(function (e) {
+    $('.url-field-social').toggle().find('input').select();
+    $('.url-field-social').css('display','inline-flex');
+  });
+  $('.copy-url-share').click(function (e) {
+    $('.url-field-share').toggle().find('input').select();
   });
 });
