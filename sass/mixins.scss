@@ -60,8 +60,9 @@
 @mixin grey-check-header {
   @include check-mark-header;
   background-image: url("images/grey-check-open.svg");
-  background-position: 0.5rem;
-  background-size: 40px;
+  background-position: top 0;
+  background-size: 50px;
+  padding: 0.25rem 2rem 1.6rem 4.5rem;
 }
 
 @mixin results-checkbox {
