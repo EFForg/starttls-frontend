@@ -26,13 +26,16 @@ $(function() {
       if (e.responseText.message) {
         var message = e.responseText.message;
       } else if (e.status == 429) {
-        var message = 'Rate limit exceeded. You may only queue three domains per hour.';
+        // The backend rate limiter doesn't let us a set a message, so we set
+        // one here instead.
+        var message = 'Rate limit exceeded. Please try again later.';
       } else {
         Raven.captureMessage('Received ' + e.status + ' with no error message')
-        var message = 'Server error';
+        var message = 'Something went wrong on our end. ' +
+          'We\'ve reported the error and will look into it.';
       }
       $form.find('#queue-errors')
-        .text('Error queueing domain: ' + message)
+        .text(message)
         .show();
     });
   });
