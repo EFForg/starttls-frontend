@@ -23,8 +23,8 @@ $(function() {
     }).done(function(data) {
       window.location = "/domain-submitted";
     }).fail(function(e, message) {
-      if (e.responseText.message) {
-        var message = e.responseText.message;
+      if (e.responseJSON.message) {
+        var message = e.responseJSON.message;
       } else if (e.status == 429) {
         // The backend rate limiter doesn't let us a set a message, so we set
         // one here instead.
