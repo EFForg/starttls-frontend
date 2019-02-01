@@ -1,6 +1,6 @@
 $(function() {
   //accordion
-  $('.accordion-title').removeClass('active');
+  $('.accordion-title:not(.js-default-open)').removeClass('active');
   $('body').on('click', '.accordion-title', function () {
     this.classList.toggle('active');
   });
