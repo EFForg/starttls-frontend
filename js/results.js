@@ -36,6 +36,7 @@ function handle_scan(data) {
     if (scan.results[hostname])
       showHostnameResult(hostname, scan.results[hostname])
   });
+  if (scan.mta_sts) showMTASTSResult(scan.mta_sts);
   // If there's only one hostname, the result for that hostname should be open by default.
   if ($('.hostname-result').length == 1) {
     $('.hostname-result .accordion-title').addClass('active')
@@ -51,6 +52,27 @@ function handle_scan(data) {
     behavior: 'smooth'
   });
 
+}
+
+function showMTASTSResult(result) {
+  result.status_class = result.status ? 'fail' : 'success';
+  result.all_messages = mtastsMessages(result);
+  var html = Handlebars.templates['mta-sts-result'](result);
+  $('#mta-sts-container').html(html);
+  $('.check.mta-sts').show();
+}
+
+function mtastsMessages(result) {
+  var msgs = result.messages || [];
+  $.each(result.checks, function(name, check) {
+    if (check.messages)
+      msgs = msgs.concat(check.messages);
+  });
+  // Strip leading "Warning:" or "Failure:"
+  msgs = msgs.map(function(msg) {
+    return msg.substring(msg.indexOf(":") + 1);
+  });
+  return msgs
 }
 
 function showHostnameResult(hostname, result) {
