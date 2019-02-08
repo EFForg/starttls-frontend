@@ -54,9 +54,9 @@ function init_toggle_mta_sts() {
   $mta_sts = $('#mta-sts-input');
   $mta_sts.change(function() {
     if ($mta_sts.prop('checked'))
-      $('#mx-hostnames').hide();
+      $('#mx-hostnames').slideUp();
     else
-      $('#mx-hostnames').show();
+      $('#mx-hostnames').slideDown();
   });
 }
 
