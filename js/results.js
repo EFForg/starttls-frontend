@@ -19,9 +19,14 @@ $(function() {
   })
   .fail(handle_scan_error)
   .done(handle_scan)
-
-  $('#add-domain-button').attr('href', '/add-domain?' + $.param({domain: domain}));
 });
+
+function forwardParamsToAddDomain(scan) {
+  $('#add-domain-button').attr('href', '/add-domain?' + $.param({
+    domain: scan.domain,
+    mta_sts: (scan.mta_sts.status == 0)
+  }));
+}
 
 function handle_scan_error() {
   $('#loading-results').hide()
@@ -43,7 +48,8 @@ function handle_scan(data) {
   $('.' + status_string(scan)).show()
   $('#loading-results').hide()
   $('#results-wrapper').show()
-  // move to top of results
+  forwardParamsToAddDomain(scan);
+  // Move to top of results.
   var headerHeight = document.getElementsByTagName('header')[0].offsetHeight;
   window.scrollBy({
     top: headerHeight,

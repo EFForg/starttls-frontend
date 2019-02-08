@@ -23,7 +23,15 @@
     </div>
     <input name="email" id="email-input" type="email" aria-describedby="email-description" placeholder="yourname@example.com"></input>
 
-    <fieldset>
+    <legend>MTA-STS</legend>
+    <div id="mta-sts-description">
+      Do you have a valid MTA-STS policy up? If so we'll grab your TLS policy via MTA-STS and queue your domain onto the STARTTLS Policy List according to those values. Otherwise, we'll ask for your MX hostnames.
+    </div>
+    <input type="checkbox" id="mta-sts-input" name="mta-sts">
+    <label for="mta-sts-input">Yes, my domain supports MTA-STS</label>
+
+
+    <fieldset id="mx-hostnames">
       <legend>MX Hostnames</legend>
       <p>What hostnames are your TLS certificates valid for? Let us know, so a DNS man-in-the-middle can’t lie to others about your hostnames.
       These hostnames can be fully qualified domain names, like `mx.example.com`, or domain suffixes, like .example.com.</p>
