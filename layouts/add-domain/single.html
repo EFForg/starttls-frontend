@@ -38,8 +38,7 @@
       <p>What hostnames are your TLS certificates valid for? Let us know, so a DNS man-in-the-middle can’t lie to others about your hostnames.
       These hostnames can be fully qualified domain names, like `mx.example.com`, or domain suffixes, like .example.com.</p>
 
-      <input type="text" class="mx-domain" name="hostnames" placeholder="mx.example.com" aria-label="Mx hostname 1" required>
-      {{ range $i, $sequence := (seq 2 8) }}
+      {{ range $i, $sequence := (seq 1 8) }}
         <input type="text" class="mx-domain" name="hostnames" placeholder="mx.example.com" aria-label="Mx hostname {{ $i }}">
       {{ end }}
       <input type="button" class="add-another js-yes" value="+ Add another hostname">
