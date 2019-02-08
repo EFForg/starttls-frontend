@@ -68,10 +68,10 @@ function init_add_another_mx() {
   $mxs.slice(1).hide();
 
   $add_another.click(function() {
-    var $hidden_fields = $mxs.filter(":hidden");
+    var $hidden_fields = $mxs.filter(':hidden');
     $hidden_fields.first().show();
     if ($hidden_fields.length <= 1)
       // Showed the last field, no more to show
-      $add_another.hide()
+      $add_another.attr('disabled', true);
   });
 }

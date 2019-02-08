@@ -103,6 +103,9 @@ form#queue {
     &:hover {
       cursor: pointer;
     }
+    &:disabled {
+      cursor: default;
+    }
   }
 }
 
