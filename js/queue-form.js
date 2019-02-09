@@ -40,8 +40,10 @@ $(function() {
 function init_form() {
   var url = new URL(window.location.href);
   var domain = url.searchParams.get('domain');
-  if (domain)
-    $('#domain-input').val(domain)
+  if (domain) {
+    $('#domain-input').val(domain);
+    $('.your-domain').text(domain);
+  }
 
   init_toggle_mta_sts();
   init_add_another_mx();
