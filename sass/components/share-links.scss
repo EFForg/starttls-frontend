@@ -1,4 +1,6 @@
 #share-results {
+  position: relative;
+  transition: all 0.3s;
   .share-title {
     text-align: center;
   }
@@ -7,6 +9,7 @@
     justify-content: space-around;
     margin: 1rem auto;
     max-width: 15rem;
+
     > a, > img {
       background-repeat: no-repeat;
       display: inline-block;
@@ -24,4 +27,14 @@
       }
     }
   }
+}
+.link-input-fix {
+  position: absolute;
+  > a {
+    margin-right: 1rem;
+  }
+}
+
+.copy-fix {
+  padding-left: 2rem;
 }

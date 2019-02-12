@@ -4,8 +4,8 @@ $(function() {
     e.preventDefault();
     var params = $.param({
       text: "STARTTLS is essential for email security. Does " +
-        window.location.search.substring(1) +
-        " support it?",
+      window.location.search.substring(1) +
+      " support it?",
       url: url
     });
     var tweetShare = "https://twitter.com/share?" + params;
@@ -31,5 +31,9 @@ $(function() {
   });
   $('.copy-url-share').click(function (e) {
     $('.url-field-share').toggle().find('input').select();
+    //  $('.share-links').css('position', 'absolute');
+    $( ".share-links" ).toggleClass( "link-input-fix" );
+    $('.url-field-share').toggleClass("copy-fix"); 
+
   });
 });
