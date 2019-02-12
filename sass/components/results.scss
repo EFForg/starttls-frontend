@@ -80,6 +80,23 @@
   font-weight: bold;
 }
 
-#policy-text {
-  white-space: pre-line;
+.mta-sts {
+  h5 {
+    text-align: center;
+  }
+
+  #policy-text {
+    @extend p;
+    background-color: transparent;
+  }
+
+  .messages {
+    padding: 12px;
+    border: 2px solid $magenta;
+    font-size: 1rem;
+  }
+
+  ul {
+    margin: 0 0 0rem 1.5rem;
+  }
 }
