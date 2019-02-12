@@ -27,13 +27,12 @@ $(function() {
   $('[class^="url-field-"] input').val(window.location.href);
   $('.copy-url-social').click(function (e) {
     $('.url-field-social').toggle().find('input').select();
-    $('.url-field-social').css('display','inline-flex');
+    $('.url-field-social').toggleClass("social-copy-fix");
   });
   $('.copy-url-share').click(function (e) {
     $('.url-field-share').toggle().find('input').select();
-    //  $('.share-links').css('position', 'absolute');
     $( ".share-links" ).toggleClass( "link-input-fix" );
-    $('.url-field-share').toggleClass("copy-fix"); 
+    $('.url-field-share').toggleClass("copy-fix");
 
   });
 });
