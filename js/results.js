@@ -55,7 +55,11 @@ function handle_scan(data) {
 }
 
 function showMTASTSResult(result) {
-  result.status_class = result.status ? 'fail' : 'success';
+  var statuses = {
+    0: 'success',
+    1: 'almost',
+  }
+  result.status_class = statuses[result.status] || 'fail';
   result.all_messages = mtastsMessages(result);
   var html = Handlebars.templates['mta-sts-result'](result);
   $('#mta-sts-container').html(html);
