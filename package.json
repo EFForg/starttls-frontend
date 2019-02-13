@@ -8,7 +8,7 @@
     "templates:build": "handlebars js/templates/* -f static/templates.js",
     "templates:watch": "yarn run templates:build && onchange 'js/templates/*' -- yarn run templates:build",
     "js:install": "mkdir -p static/vendor && cp node_modules/jquery/dist/jquery.min.js node_modules/raven-js/dist/raven.js node_modules/handlebars/dist/handlebars.runtime.min.js static/vendor",
-    "js:build": "yarn run js:install && yarn run js:templates && babel js --out-file static/application.js",
+    "js:build": "yarn run js:install && yarn run templates:build && babel js --out-file static/application.js",
     "js:watch": "yarn run js:install && parallelshell 'yarn run templates:watch' 'babel js --watch --out-file static/application.js --source-maps'",
     "build": "yarn run sass:build && yarn run js:build && hugo --config config.prod.toml,config.toml",
     "serve": "yarn run sass:build && parallelshell 'yarn run sass:watch' 'yarn run js:watch' 'hugo serve --config config.dev.toml,config.toml'",
