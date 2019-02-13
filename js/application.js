@@ -5,6 +5,8 @@ $(function() {
 
   // Scroll past fixed header for anchor links.
   var offset = $(':target').offset();
-  var scrollto = offset.top - 60;
-  $('html, body').animate({scrollTop:scrollto}, 0);
+  if (offset) {
+    var scrollto = offset.top - 60;
+    $('html, body').animate({scrollTop:scrollto}, 0);
+  }
 });
