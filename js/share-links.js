@@ -4,8 +4,8 @@ $(function() {
     e.preventDefault();
     var params = $.param({
       text: "STARTTLS is essential for email security. Does " +
-        window.location.search.substring(1) +
-        " support it?",
+      window.location.search.substring(1) +
+      " support it?",
       url: url
     });
     var tweetShare = "https://twitter.com/share?" + params;
@@ -24,8 +24,15 @@ $(function() {
     window.open(googleShare, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=436,width=400');
   });
 
-  $('.url-field input').val(window.location.href);
-  $('.copy-url').click(function (e) {
-    $('.url-field').toggle().find('input').select();
+  $('[class^="url-field-"] input').val(window.location.href);
+  $('.copy-url-social').click(function (e) {
+    $('.url-field-social').toggle().find('input').select();
+    $('.url-field-social').toggleClass("social-copy-fix");
+  });
+  $('.copy-url-share').click(function (e) {
+    $('.url-field-share').toggle().find('input').select();
+    $( ".share-links" ).toggleClass( "link-input-fix" );
+    $('.url-field-share').toggleClass("copy-fix");
+
   });
 });

@@ -34,4 +34,12 @@
       opacity: 1;
     }
   }
+  .url-field-social {
+    @include susy-breakpoint($md) {
+      margin-top: -22px; //prevent page from jumping up on desktop
+    }
+  }
+  .social-copy-fix {
+    display: inline-flex !important;
+  }
 }
