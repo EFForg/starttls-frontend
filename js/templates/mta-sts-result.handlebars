@@ -18,11 +18,15 @@
         {{#ifCond all_messages.length '>' 0}}
           <h5>Do you manage this email server?</h5>
           <div class="messages">
+          {{#ifCond all_messages.length '===' 1}}
+            {{all_messages.[0]}}
+          {{else}}
             <ul>
             {{#each all_messages}}
               <li>{{this}}</li>
             {{/each}}
             </ul>
+          {{/ifCond}}
           </div>
         {{/ifCond}}
       {{else}}
