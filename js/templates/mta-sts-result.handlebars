@@ -15,20 +15,34 @@
         <p>We found the following{{#ifCond status '===' 0}} valid{{/ifCond}} policy on your mailserver:</p>
         <pre id="policy-text">{{policy}}</pre>
 
-        {{#ifCond all_messages.length '>' 0}}
-          <h5>Do you manage this email server?</h5>
-          <div class="messages">
-          {{#ifCond all_messages.length '===' 1}}
-            {{all_messages.[0]}}
-          {{else}}
-            <ul>
-            {{#each all_messages}}
-              <li>{{this}}</li>
-            {{/each}}
-            </ul>
+        <div class="messages">
+        <h5>Do you manage this email server?</h5>
+
+        {{#ifCond all_messages.length '===' 1}}
+          {{#ifCond status '===' 1}}
+            <p>Here's a suggestion for your deployment.</p>
           {{/ifCond}}
-          </div>
+          {{#ifCond status '>' 1}}
+            <p>We found a problem with your MTA-STS deployment.</p>
+          {{/ifCond}}
+          <p>{{all_messages.[0]}}</p>
         {{/ifCond}}
+
+        {{#ifCond all_messages.length '>' 1}}
+          {{#ifCond status '===' 1}}
+            <p>Here are some suggestions for your deployment:</p>
+          {{/ifCond}}
+          {{#ifCond status '>' 1}}
+            <p>We found these potential problems with your MTA-STS deployment:<p>
+          {{/ifCond}}
+          <ul>
+          {{#each all_messages}}
+            <li>{{this}}</li>
+          {{/each}}
+          </ul>
+        {{/ifCond}}
+        </div>
+
       {{else}}
         <p><strong>We couldn't find an MTA-STS record for your domain.<strong></p>
       {{/if}}

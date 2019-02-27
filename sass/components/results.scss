@@ -81,9 +81,6 @@
 }
 
 .mta-sts {
-  h5 {
-    text-align: center;
-  }
 
   #policy-text {
     @extend p;
@@ -91,9 +88,14 @@
   }
 
   .messages {
-    padding: 12px;
+    margin-left: 4rem;
+    padding: 5px 15px;
     border: 2px solid $magenta;
     font-size: 1rem;
+
+    p {
+      padding-left: 0;
+    }
   }
 
   ul {
