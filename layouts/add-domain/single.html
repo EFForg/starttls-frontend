@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <article class="accordion add-domain-accordion">
+  <article class="accordion checks-overview">
     <div class="accordion-title active">
       {{ .Title }}
       <i></i>
@@ -12,6 +12,7 @@
   <form id="queue" action="{{ safeURL .Site.Params.APIHostname }}/api/queue" method="POST">
     <h2>Add <span class="your-domain">Your Domain</span> to EFF’s  STARTTLS Policy List</h2>
     <p>By adding your domain to the <a href="/policy-list" target="_blank">STARTTLS Policy List</a>, you’re protected from downgrade attacks so e-mail servers can send e-mail to you securely.</p>
+    <div class="indent">
     <label for="domain-input">Email Domain<span class="required">*</span></label>
     <input name="domain" id="domain-input" type="text" required aria-describedby="domain-description" placeholder="example.com"></input>
 
@@ -30,9 +31,10 @@
       {{ range $i, $sequence := (seq 2 8) }}
         <input type="text" class="mx-domain" name="hostnames" placeholder="mx.example.com" aria-label="Mx hostname {{ $i }}">
       {{ end }}
-      <input type="button" class="add-another js-yes" value="+ Add another hostname">
+      <span class="plus">+</span>
+      <input type="button" class="add-another js-yes" value="Add another hostname">
     </fieldset>
-
+    </div>
     <p>When you request submission, <strong>we'll send an email to postmaster@<span class="your-domain">{yourdomain}</span></strong> to validate your request, then queue <span class="your-domain">your domain</span> for submission for one week, and continually run security checks against <span class="your-domain">your domain</span>. If it continues to pass these checks, you’ll be added to the list! We will notify you of your domain status via the contact e-mail above, which, if specified, may be different from the postmaster address.</p>
 
     <p>When you are added to the list, you are required to continue meeting security guidelines. If for some reason you do not, this could impact deliverability. </p>

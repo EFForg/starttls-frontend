@@ -1,6 +1,12 @@
 form {
   border: 2px solid $cyan;
   padding: 2rem;
+  .indent {
+    @include susy-breakpoint($md) {
+      padding: 0 0 0 4rem;
+    }
+    padding: 0 0 0 1rem;
+  }
 }
 
 label,
@@ -92,14 +98,21 @@ form#queue {
     // Strip button styles
     background: none;
     border: none;
+    display: inline-block;
     font-size: 1em;
-
     font-weight: 700;
     margin-bottom: 2rem;
-
+    padding: 0;
     &:hover {
       cursor: pointer;
     }
+  }
+  .plus {
+    color: $magenta;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 2rem;
   }
 }
 
