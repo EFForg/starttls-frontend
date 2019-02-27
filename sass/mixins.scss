@@ -59,9 +59,12 @@
 
 @mixin grey-check-header {
   @include check-mark-header;
+  @include susy-breakpoint($md) {
+    background-size: 50px;
+  }
   background-image: url("images/grey-check-open.svg");
   background-position: top 0;
-  background-size: 50px;
+  background-size: 47px;
   padding: 0.25rem 2rem 1.6rem 4.5rem;
 }
 
