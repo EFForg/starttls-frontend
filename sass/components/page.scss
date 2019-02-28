@@ -27,6 +27,12 @@
   h3 {
     padding: 0 1rem 1rem 1rem;
   }
+  p.intro {
+    @include susy-breakpoint($md) {
+      display: inline-block;
+    }
+    display: none;
+  }
 }
 
 .main-content.list {
