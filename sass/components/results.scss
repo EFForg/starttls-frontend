@@ -79,3 +79,26 @@
   color: $red;
   font-weight: bold;
 }
+
+.mta-sts {
+
+  #policy-text {
+    @extend p;
+    background-color: transparent;
+  }
+
+  .messages {
+    margin-left: 4rem;
+    padding: 5px 15px;
+    border: 2px solid $magenta;
+    font-size: 1rem;
+
+    p {
+      padding-left: 0;
+    }
+  }
+
+  ul {
+    margin: 0 0 0rem 1.5rem;
+  }
+}

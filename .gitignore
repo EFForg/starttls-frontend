@@ -2,6 +2,7 @@ public
 static/application.css
 static/application.js
 static/application.js.map
+static/templates.js
 node_modules
 static/vendor
 yarn-error.log
