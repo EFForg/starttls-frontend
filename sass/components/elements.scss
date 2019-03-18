@@ -73,15 +73,16 @@ button {
 
 input[type=checkbox],
 input[type=radio] {
-  position: relative;
+  position: absolute;
   z-index: -9999;
 }
+
 input[type=checkbox] + label,
 input[type=radio] + label {
   @extend body;
   text-transform: none;
   position: relative;
-  padding-left: 12px;
+  padding-left: 2em;
   &:before {
     content: '';
     width: 26px;
@@ -93,6 +94,10 @@ input[type=radio] + label {
     position: absolute;
     top: -3px;
   }
+}
+
+input[type=checkbox]:focus + label:before {
+  border-color: $gray-extra-dark;
 }
 
 input[type=checkbox]:checked + label:before {
