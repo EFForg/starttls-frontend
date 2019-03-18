@@ -20,7 +20,7 @@ textarea {
   max-width: $max-button-width;
   width: 100%;
   &::placeholder {
-    color: #2D2D2D;
+    color: $gray-extra-dark;
   }
 }
 
@@ -36,9 +36,9 @@ legend {
 }
 fieldset {
   border: 0;
-  margin: 0;
+  margin: 0 0 1.5rem 0;
   min-width: 0;
-  padding: 0.01em 0 0 0;
+  padding: 0;
 }
 body:not(:-moz-handler-blocked) fieldset {
   display: table-cell;
@@ -76,11 +76,19 @@ form#scan {
 }
 
 form#queue {
-  label {
+  .label-large {
     @extend h5;
+    padding: 1rem 0 0.5rem;
+    text-transform: uppercase;
+    display: block;
   }
   .required {
     color: $magenta;
+  }
+  input[type=text],
+  input[type=email],
+  textarea {
+    margin-top: 0.5rem;
   }
 
   .add-another {
@@ -94,6 +102,9 @@ form#queue {
 
     &:hover {
       cursor: pointer;
+    }
+    &:disabled {
+      cursor: default;
     }
   }
 }

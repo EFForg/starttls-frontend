@@ -14,22 +14,31 @@
 
   <form id="queue" action="{{ safeURL .Site.Params.APIHostname }}/api/queue" method="POST">
 
-    <label for="domain-input">Email Domain<span class="required">*</span></label>
+    <label for="domain-input" class="label-large")>Email Domain<span class="required">*</span></label>
     <input name="domain" id="domain-input" type="text" required aria-describedby="domain-description" placeholder="example.com"></input>
 
-    <label for="email-input">Contact Email<span class="required">*</span></label>
+    <label for="email-input" class="label-large">Contact Email<span class="required">*</span></label>
     <div id="email-description">
       <p>We’ll use this e-mail to notify you of the status of your domain and potential deliverability issues. If left empty, we'll use the postmaster@example.com address by default.</p>
     </div>
     <input name="email" id="email-input" type="email" aria-describedby="email-description" placeholder="yourname@example.com"></input>
 
     <fieldset>
-      <legend>MX Hostnames</legend>
+      <legend class="label-large">MTA-STS</legend>
+      <div id="mta-sts-description">
+        <p>Do you have a valid MTA-STS policy up? If so we'll grab your TLS policy via MTA-STS and queue your domain onto the STARTTLS Policy List according to those values. Otherwise, we'll ask for your MX hostnames and you'll have to go through a <a href="/policy-list/#add">manual</a> validation process.</p>
+      </div>
+      <input type="checkbox" id="mta-sts-input" name="mta-sts">
+      <label for="mta-sts-input">Yes, my domain supports MTA-STS</label>
+    </fieldset>
+
+
+    <fieldset id="mx-hostnames">
+      <legend class="label-large">MX Hostnames</legend>
       <p>What hostnames are your TLS certificates valid for? Let us know, so a DNS man-in-the-middle can’t lie to others about your hostnames.
       These hostnames can be fully qualified domain names, like `mx.example.com`, or domain suffixes, like .example.com.</p>
 
-      <input type="text" class="mx-domain" name="hostnames" placeholder="mx.example.com" aria-label="Mx hostname 1" required>
-      {{ range $i, $sequence := (seq 2 8) }}
+      {{ range $i, $sequence := (seq 1 8) }}
         <input type="text" class="mx-domain" name="hostnames" placeholder="mx.example.com" aria-label="Mx hostname {{ $i }}">
       {{ end }}
       <input type="button" class="add-another js-yes" value="+ Add another hostname">

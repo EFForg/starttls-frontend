@@ -73,31 +73,38 @@ button {
 
 input[type=checkbox],
 input[type=radio] {
-  position: relative;
+  position: absolute;
   z-index: -9999;
 }
+
 input[type=checkbox] + label,
 input[type=radio] + label {
+  @extend body;
+  text-transform: none;
   position: relative;
+  padding-left: 2em;
   &:before {
     content: '';
-    width: 18px;
-    height: 18px;
+    width: 26px;
+    height: 26px;
     background: white;
     border: 2px solid $gray-dark;
     display: block;
     box-shadow: none;
     position: absolute;
-    top: -1px;
-    left: -20px;
+    top: -3px;
   }
 }
 
+input[type=checkbox]:focus + label:before {
+  border-color: $gray-extra-dark;
+}
+
 input[type=checkbox]:checked + label:before {
-  border: 2px solid $green;
-  background-image: url("../images/check.svg");
-  background-size: 30px;
+  background-image: url("../images/pink-check.svg");
+  background-size: 20px;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 input[type=radio] + label:before {
