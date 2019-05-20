@@ -5,10 +5,10 @@ node_js:
 install:
   - wget https://github.com/gohugoio/hugo/releases/download/v0.37.1/hugo_0.37.1_Linux-64bit.deb
   - sudo dpkg -i hugo*.deb
-  - yarn install
+  - npm install
 
 cache:
   directories:
     - "node_modules"
 
-script: yarn run lint && yarn run build
+script: npm run lint && npm run build
