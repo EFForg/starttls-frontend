@@ -7,7 +7,7 @@
     "sass:watch": "onchange 'sass/**/*.scss*' -- npm run sass:build",
     "templates:build": "handlebars js/templates/* -f static/templates.js",
     "templates:watch": "npm run templates:build && onchange 'js/templates/*' -- npm run templates:build",
-    "js:install": "mkdir -p static/vendor && cp node_modules/jquery/dist/jquery.min.js node_modules/raven-js/dist/raven.js node_modules/handlebars/dist/handlebars.runtime.min.js node_modules/chart.js/dist/Chart.min.js static/vendor",
+    "js:install": "mkdir -p static/vendor && cp node_modules/jquery/dist/jquery.min.js node_modules/raven-js/dist/raven.js node_modules/handlebars/dist/handlebars.runtime.min.js node_modules/chart.js/dist/Chart.bundle.min.js static/vendor",
     "js:build": "npm run js:install && npm run templates:build && babel js --out-file static/application.js",
     "js:watch": "npm run js:install && parallelshell 'npm run templates:watch' 'babel js --watch --out-file static/application.js --source-maps'",
     "build": "npm run sass:build && npm run js:build && hugo --config config.prod.toml,config.toml",

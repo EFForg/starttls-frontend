@@ -25,3 +25,5 @@ In 2015, researchers discovered that ~20% of the Alexa top million domains which
 These results are the motivation for this project.
 
 <small><sup>[1]</sup> Neither Snow Nor Rain Nor MITM . . . An Empirical Analysis of Email Delivery Security https://zakird.com/papers/mail.pdf</small>
+
+<canvas id="adoption-chart" height="200"></canvas>
