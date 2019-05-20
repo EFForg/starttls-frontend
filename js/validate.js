@@ -6,7 +6,7 @@ $(function() {
   if (!window.location.pathname.match(/\/validate.$/)) {
     return;
   }
-  var hostname = $('#api-hostname').data('api-hostname') || "";
+  var hostname = $('html').data('api-hostname') || "";
   var token = window.location.search.substring(1);
 
   $.ajax({

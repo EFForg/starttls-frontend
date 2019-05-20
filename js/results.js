@@ -5,7 +5,7 @@ $(function() {
   if (!window.location.pathname.match(/\/results.$/)) {
     return;
   }
-  var hostname = $('#api-hostname').data('api-hostname') || "";
+  var hostname = $('html').data('api-hostname') || "";
   var domain = window.location.search.substring(1);
 
   $('.your-domain-name').text(domain);
