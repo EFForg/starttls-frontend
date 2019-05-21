@@ -5,16 +5,16 @@
 ### Install
 
 1. [Install Hugo](https://gohugo.io/getting-started/installing/), eg. `sudo apt install hugo`.
-2. Install yarn and Node.
-3. `yarn install`
+2. Install npm and Node.
+3. `npm install`
 
 ### Run
 
-`yarn run build` builds the site to `/public` once.
+`npm run build` builds the site to `/public` once.
 
-`yarn run lint` runs the sass linter.
+`npm run lint` runs the sass linter.
 
-`yarn run serve` watches for changes and serves the site from memory at `localhost:1313`.
+`npm run serve` watches for changes and serves the site from memory at `localhost:1313`.
 
 #### Developing with the STARTTLS Scanner API
 1. Clone https://github.com/EFForg/starttls-scanner and follow the Docker setup instructions.
