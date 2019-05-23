@@ -24,6 +24,13 @@ In 2015, researchers discovered that ~20% of the Alexa top million domains which
 
 These results are the motivation for this project.
 
-<small><sup>[1]</sup> Neither Snow Nor Rain Nor MITM . . . An Empirical Analysis of Email Delivery Security https://zakird.com/papers/mail.pdf</small>
+<strong class="js-yes">Percent of scans on starttls-everywhere.org supporting MTA-STS</strong>
+<canvas id="visitors-chart" height="100"></canvas>
 
-<canvas id="adoption-chart" height="200"></canvas>
+<strong class="js-yes">Domains in the top million<sup>[2]</sup> supporting MTA-STS</strong>
+<canvas id="top-million-chart" height="100"></canvas>
+
+Footnotes
+
+1. <small>Neither Snow Nor Rain Nor MITM . . . An Empirical Analysis of Email Delivery Security https://zakird.com/papers/mail.pdf</small>
+2. <small>Top million domains sourced from https://majestic.com/reports/majestic-million.</small>
