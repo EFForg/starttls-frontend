@@ -9,10 +9,10 @@ $(function() {
     url: hostname + '/api/stats',
   })
   .done(function(resp) {
-    load_chart('top-million-chart', resp.response.top_million, '#f938bd', function(item) {
+    load_chart('top-million-chart', resp.response.TOP_DOMAINS, '#f938bd', function(item) {
       return item.value + ' domains';
     });
-    load_chart('visitors-chart', resp.response.local, '#20c9c9', function(item) {
+    load_chart('visitors-chart', resp.response.LOCAL, '#20c9c9', function(item) {
       return item.value + '% of scans';
     });
   });
