@@ -9,7 +9,8 @@ STARTTLS Everywhere is a project to make email delivery more secure. It is creat
 We want *safer hops for email*.  Email goes through multiple computers (or multiple "hops") to get to its destination, and each hop should be as secure as possible. More specific goals of the project include:
 
  * Improve STARTTLS adoption.
- * Maintain a [STARTTLS Policy List](/policy-list) to help prevent [downgrade attacks](/faq#downgrades) on email services.
+ * Prevent [downgrade attacks](/faq#downgrades) on email services..
+   * Supporting the adoption of technology such as MTA-STS, our [STARTTLS Policy List](/policy-list), and DANE.
  * Lower the barriers to entry for running a secure mailserver.
 
 If you have questions about STARTTLS Everywhere, check out [the FAQ](/faq). If you are an email service provider, you can also learn more about being [added to the STARTTLS Everywhere policy list](/policy-list).
