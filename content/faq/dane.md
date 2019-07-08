@@ -6,7 +6,7 @@ weight: 7
 level: secure
 ---
 
-DANE, or [DNS-based Authentication of Named Entities](https://tools.ietf.org/html/rfc7672) is an Internet standard which could singularly do what MTA-STS + the preload list would cover combined. It's a downgrade-resistant way for mailservers to discover and publish each other's TLS information using another technology called DNSSEC. DNSSEC is a protocol for signing and verifying statements by owners of domain names.
+DANE, or [DNS-based Authentication of Named Entities](https://tools.ietf.org/html/rfc7672) is an Internet standard which could on its own do what MTA-STS + the preload list would cover combined. It's a downgrade-resistant way for mailservers to discover and publish each other's TLS information using another technology called DNSSEC. DNSSEC is a protocol for signing and verifying statements by owners of domain names.
 
 DANE has been around for a while-- so why doesn't everyone use it already, and why do we need MTA-STS in the first place? DNSSEC presents some challenges. 
  * If your domain's TLD doesn't support DNSSEC, then your mailserver cannot utilize DANE. A [large majority](http://stats.research.icann.org/dns/tld_report/) of TLDs are DNSSEC-signed, but many country-code TLDs remain unsigned.

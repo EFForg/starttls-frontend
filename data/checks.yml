@@ -29,6 +29,6 @@ list:
   title: Advertises MTA-STS policy
   fail_title: Does not have MTA-STS policy up
   body: |
-    <a href="/faq#mtasts">MTA-STS</a> is a new standard for protecting mailservers' TLS information from tampering (like STARTTLS downgrades) once a secure connection has been established in the past. If your server supports MTA-STS, other servers can remember and save your TLS information in the future and identify on-path attacks.
+    <a href="/faq#mtasts">MTA-STS</a> is a new standard for protecting mailservers' TLS information from tampering (like STARTTLS downgrades) after the first secure discovery of MTA-STS and successful secure connection. If your server supports MTA-STS, other servers can remember and save your TLS information in the future and identify on-path attacks.
 
     This checks that your email server advertises its own TLS information via MTA-STS, but not whether it saves other servers' TLS information via MTA-STS.
