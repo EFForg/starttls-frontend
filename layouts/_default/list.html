@@ -6,18 +6,6 @@
 <div class="main-content list faq">
   <h1 class="title">{{ .Title }}</h1>
   <p>{{ .Content }}</p>
-  <h2>Learn</h2>
-  <article class="accordion">
-    {{ range where .Data.Pages.ByWeight "Params.level" "learn" }}
-    <div class="accordion-title active">{{ .Title }}
-      <a name="{{ .LinkTitle }}" id="{{ .LinkTitle }}"></a>
-      <i></i>
-    </div>
-    <div class="accordion-content">
-      {{ .Content }}
-    </div>
-    {{ end }}
-  </article>
   <h2 class="secure">Secure</h2>
   <article class="accordion">
     {{ range where .Data.Pages.ByWeight "Params.level" "secure" }}
@@ -30,5 +18,18 @@
     </div>
     {{ end }}
   </article>
+  <h2>Learn</h2>
+  <article class="accordion">
+    {{ range where .Data.Pages.ByWeight "Params.level" "learn" }}
+    <div class="accordion-title active">{{ .Title }}
+      <a name="{{ .LinkTitle }}" id="{{ .LinkTitle }}"></a>
+      <i></i>
+    </div>
+    <div class="accordion-content">
+      {{ .Content }}
+    </div>
+    {{ end }}
+  </article>
+
 </div>
 {{ partial "footer" . }}
