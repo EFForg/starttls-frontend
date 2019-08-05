@@ -3,16 +3,18 @@ $(function() {
     return;
   }
   var hostname = $('html').data('api-hostname') || "";
+  var cyan = '#20c9c9';
+  var magenta = '#f938bd';
 
   $.ajax({
     type: 'GET',
     url: hostname + '/api/stats',
   })
   .done(function(resp) {
-    load_chart('top-million-chart', resp.response.TOP_DOMAINS, '#f938bd', function(item) {
+    load_chart('top-million-chart', resp.response.TOP_DOMAINS, magenta, function(item) {
       return item.value + ' domains';
     });
-    load_chart('visitors-chart', resp.response.LOCAL, '#20c9c9', function(item) {
+    load_chart('visitors-chart', resp.response.LOCAL, cyan, function(item) {
       return item.value + '% of scans';
     });
   });
