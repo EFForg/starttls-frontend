@@ -9,7 +9,7 @@ ENV HUGO_BINARY hugo_${HUGO_VERSION}_linux-64bit
 ENV HUGO_CHECKSUM f7b57c4d9e406719e41c84a4a70d6b332826bf356a15615ed02a450134796f81
 
 RUN apk upgrade --update-cache \
-  && apk add nodejs
+  && apk add nodejs nodejs-npm
 
 RUN mkdir /usr/local/hugo
 ADD https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY}.tar.gz /usr/local/hugo/
