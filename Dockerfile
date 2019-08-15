@@ -1,4 +1,6 @@
 FROM conex.eff.org/techops/nginx-base:latest
+# This Dockerfile refers to private docker repository, and is not meant for
+# general usage!
 
 RUN mkdir /build
 WORKDIR /build
