@@ -1,4 +1,6 @@
-FROM nginx:alpine
+FROM conex.eff.org/techops/nginx-base:latest
+# This Dockerfile refers to private docker repository, and is not meant for
+# general usage!
 
 RUN mkdir /build
 WORKDIR /build
@@ -24,7 +26,7 @@ RUN npm install
 ADD . .
 
 RUN npm run build \
-  && mv ./public/* /usr/share/nginx/html
+  && mv ./public/* /var/www/html
 
 # Remove everything except the build
 RUN rm /usr/local/hugo/hugo \

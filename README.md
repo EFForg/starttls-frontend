@@ -22,8 +22,4 @@
 
 ### Docker
 
-This Dockerfile exists primarily for deploys. However, it can be run with
-```
-docker build -t starttls-frontend .
-docker run --rm --name starttls-frontend-nginx -d -p 8080:80 starttls-frontend
-```
+This Dockerfile relies on a private docker repository and is built for internal use only.
