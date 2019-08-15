@@ -17,7 +17,17 @@ If you have questions about STARTTLS Everywhere, check out [the FAQ](/faq). If y
 
 If you like the project, consider [donating!](https://supporters.eff.org/donate/)
 
-<h5>Statistics</h5>
+<h4>MTA-STS adoption and integration</h5>
+
+MTA-STS is a new Internet standard for e-mail that has many of the same goals as STARTTLS Everywhere. We're tracking its adoption across the top million domains and users of our site. Here are some growth statistics about the deployment of MTA-STS!
+
+<strong class="js-yes">Percent of scans on starttls-everywhere.org supporting MTA-STS</strong>
+<canvas id="visitors-chart" height="100"></canvas>
+
+<strong class="js-yes">Domains in the top million<sup>[2]</sup> supporting MTA-STS</strong>
+<canvas id="top-million-chart" height="100"></canvas>
+
+<h4>Statistics</h5>
 
 In 2015, researchers discovered that ~20% of the Alexa top million domains which have mailservers don’t use STARTTLS, and ~40% present invalid certificates <sup>[1]</sup>. In addition, STARTTLS commands from several countries were being regularly downgraded, as high as 96% of the time.
 
@@ -25,4 +35,7 @@ In 2015, researchers discovered that ~20% of the Alexa top million domains which
 
 These results are the motivation for this project.
 
-<small><sup>[1]</sup> Neither Snow Nor Rain Nor MITM . . . An Empirical Analysis of Email Delivery Security https://zakird.com/papers/mail.pdf</small>
+Footnotes
+
+1. <small>Neither Snow Nor Rain Nor MITM . . . An Empirical Analysis of Email Delivery Security https://zakird.com/papers/mail.pdf</small>
+2. <small>Top million domains sourced from https://majestic.com/reports/majestic-million.</small>
