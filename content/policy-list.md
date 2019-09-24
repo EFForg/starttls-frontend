@@ -12,18 +12,17 @@ You can verify the [list](https://dl.eff.org/starttls-everywhere/policy.json) wi
 
 ## <a name="use"></a>Using the list
 
-To download and verify the most up-to-date version of the STARTTLS policy list:
+An abridged way for fetching and verifying the policy list might be to run the following commands in a writable directory:
 
 <pre>
 wget https://dl.eff.org/starttls-everywhere/policy.json
 wget https://dl.eff.org/starttls-everywhere/policy.json.asc
-gpg --recv-key B693F33372E965D76D55368616EEA65D03326C9D
-gpg --trusted-key 842AEA40C5BCD6E1 --verify policy.json.asc
+wget https://dl.eff.org/starttls-everywhere/public-key.txt
+gpg --dearmor public-key.txt
+gpg --verify --keyring ./public-key.txt.gpg policy.json.asc policy.json
 </pre>
 
-Our public key is also [published on the same URL](https://dl.eff.org/starttls-everywhere/public-key.txt), if you can't find it in your keyserver.
-
-Our sample [update_and_verify.sh script](https://github.com/EFForg/starttls-everywhere/blob/master/scripts/update_and_verify.sh) does the same as the above. If you are actively using the list, **you must fetch updates at least once every 48 hours**. We provide [a sample cronjob](https://github.com/EFForg/starttls-everywhere/blob/master/scripts/starttls-policy.cron.d) to do this.
+We recommend using our [update_and_verify.sh script](https://github.com/EFForg/starttls-everywhere/blob/master/scripts/update_and_verify.sh), which does the above and performs more checks. If you are actively using the list, **you must fetch updates at least once every 48 hours**. We provide [a sample cronjob](https://github.com/EFForg/starttls-everywhere/blob/master/scripts/starttls-policy.cron.d) to do this.
 
 Every policy JSON has an expiry date in the top-level configuration, after which we cannot guarantee deliverability if you are using the expired list.
 
