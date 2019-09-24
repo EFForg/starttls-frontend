@@ -12,14 +12,14 @@ You can verify the [list](https://dl.eff.org/starttls-everywhere/policy.json) wi
 
 ## <a name="use"></a>Using the list
 
-To download and verify the most up-to-date version of the STARTTLS policy list:
+An abridged way for fetching and verifying the policy list might be to run the following commands in a writable directory:
 
 <pre>
 wget https://dl.eff.org/starttls-everywhere/policy.json
 wget https://dl.eff.org/starttls-everywhere/policy.json.asc
 wget https://dl.eff.org/starttls-everywhere/public-key.txt
-gpg --dearmor < public-key.txt > public-key.gpg
-gpg --verify --keyring ./public-key.gpg policy.json.asc policy.json
+gpg --dearmor public-key.txt
+gpg --verify --keyring ./public-key.txt.gpg policy.json.asc policy.json
 </pre>
 
 We recommend using our [update_and_verify.sh script](https://github.com/EFForg/starttls-everywhere/blob/master/scripts/update_and_verify.sh), which does the above and performs more checks. If you are actively using the list, **you must fetch updates at least once every 48 hours**. We provide [a sample cronjob](https://github.com/EFForg/starttls-everywhere/blob/master/scripts/starttls-policy.cron.d) to do this.
