@@ -9,8 +9,8 @@ $(function() {
   var hostname = $('html').data('api-hostname') || "";
   var token = window.location.search.substring(1);
 
-  $("#validation-confirm-button").click(function() {
-    $("#validation-confirm").hide();
+  $('#validation-confirm-button').click(function() {
+    $('#validation-confirm').hide();
     $.ajax({
         type: 'POST',
         url:  hostname + '/api/validate',
