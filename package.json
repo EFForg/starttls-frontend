@@ -27,7 +27,7 @@
     "babel-cli": "^6.26.0",
     "babel-preset-babili": "^0.1.4",
     "chart.js": "^2.7.3",
-    "handlebars": "^4.0.12",
+    "handlebars": "^4.3.0",
     "jquery": "^3.4.0",
     "node-sass": "^4.12.0",
     "onchange": "^3.2.1",
