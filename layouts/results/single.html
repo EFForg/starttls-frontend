@@ -21,28 +21,6 @@
   {{ partial "perfect" . }}
 
   <h2 class="your-domain-name policy-check-header">Your Domain</h2>
-
-  <article class="accordion">
-    {{ range $.Site.Data.policy_check.list }}
-      <div class="check policy-list {{ .key }}">
-
-        <div class="accordion-title active js-default-open">
-          <span>STARTTLS Policy List</span>
-          <i></i>
-        </div>
-        <div class="accordion-content">
-          <p>
-            {{ .body | markdownify }}
-          </p>
-          {{ if eq .key "not-submitted" }}
-            {{ partial "not-submitted-actions" . }}
-          {{ end }}
-        </div>
-
-      </div>
-    {{ end }}
-  </article>
-
   <div id="mta-sts-container"></div>
 
   <h2>Mailboxes</h2>

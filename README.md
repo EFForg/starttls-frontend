@@ -1,3 +1,7 @@
+**Note**: The STARTTLS Everywhere project is not currently being maintained. See [this post](https://www.eff.org/deeplinks/2020/04/winding-down-starttls-everywhere-project-and-future-secure-email) for more information, and check out [this post](https://www.eff.org/deeplinks/2020/04/technical-deep-dive-winding-down-starttls-policy-list) if you may be impacted by this.
+
+-----
+
 # STARTTLS Everywhere Front End
 
 ## Development
