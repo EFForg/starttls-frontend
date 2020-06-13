@@ -9,15 +9,18 @@ $(function() {
   var hostname = $('html').data('api-hostname') || "";
   var token = window.location.search.substring(1);
 
-  $.ajax({
-      type: 'POST',
-      url:  hostname + '/api/validate',
-      data: {
-        token: token,
-      },
-  })
-  .done(handle_token)
-  .fail(handle_validate_error);
+  $('#validation-confirm-button').click(function() {
+    $('#validation-confirm').hide();
+    $.ajax({
+        type: 'POST',
+        url:  hostname + '/api/validate',
+        data: {
+          token: token,
+        },
+    })
+    .done(handle_token)
+    .fail(handle_validate_error);
+  });
 });
 
 function handle_token(data) {
