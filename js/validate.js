@@ -25,5 +25,11 @@ function handle_token(data) {
 }
 
 function handle_validate_error(data) {
-  $('#validation-failed').show();
+  if (data.readyState === 0) {
+    $('#validation-network-error').show();
+  } else if (data.readyState === 4) {
+    $('#validation-failed').show();
+  } else {
+    $('#validation-unknown-error').show();
+  }
 }
